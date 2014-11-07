@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<items>
+  <item id="servicio" type="Servicio" />
+  <item id="actividades" type="Actividades" />
+  <item id="Investigacion" type="Investigación" />
+  <item id="pro-fondos" type="Pro-fondos" />
+  <item id="comite directivo" type="Comite Directivo" />
+</items>

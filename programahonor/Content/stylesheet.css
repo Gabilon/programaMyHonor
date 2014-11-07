@@ -1,0 +1,242 @@
+.navbar-default {
+	background-color: #EDEDED;
+	border-color: #c0c0c0;
+	background: linear-gradient(rgb(226, 226, 226) 0%, rgb(219, 219, 219) 50%, rgb(209, 209, 209) 51%, rgb(254, 254, 254) 100%);
+	margin-bottom: 5px;
+
+
+}
+.navbar-default .navbar-brand {
+	color: black;
+	border-right: 1px solid black;
+
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+	color: black;
+}
+.navbar-default .navbar-text {
+	color: black;
+	
+}
+.navbar-default .navbar-nav > li > a {
+color: black;
+	font-weight: bold;
+	border-right: 1px solid #A1B6CC;
+	
+	
+	
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	background: linear-gradient(rgb(243, 226, 199) 0%, rgb(193, 158, 103) 100%, rgb(233, 212, 179) 100%)
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: white;
+	background: linear-gradient(rgb(243, 226, 199) 0%, rgb(193, 158, 103) 50%, rgb(182, 141, 76) 51%, rgb(233, 212, 179) 100%);background-color: #c09048;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+	color: white;
+	background: linear-gradient(rgb(243, 226, 199) 0%, rgb(193, 158, 103) 50%, rgb(182, 141, 76) 51%, rgb(233, 212, 179) 100%);background-color: #c09048;
+}
+.navbar-default .navbar-toggle {
+	border-color: #5091B1;
+
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background-color: #c09048;
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: white;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+	border-color: #ecf0f1;
+}
+.navbar-default .navbar-link {
+	color: #ecf0f1;
+}
+.navbar-default .navbar-link:hover {
+	color: #ecdbff;
+}
+
+@media (max-width: 767px) {
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+		color: black;
+		font-weight: bold;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+		color: black;
+		background-color: #c09048;
+		background: linear-gradient(rgb(243, 226, 199) 0%, rgb(193, 158, 103) 100%, rgb(233, 212, 179) 100%);
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+		color: black;
+		background: linear-gradient(rgb(243, 226, 199) 0%, rgb(193, 158, 103) 50%, rgb(182, 141, 76) 51%, rgb(233, 212, 179) 100%);background-color: #c09048;
+}
+	}
+
+/*A few lines to perfect*/
+.navbar-static-top {
+    margin-bottom: 0px;
+  }
+
+
+/*Ends Nav-Bar Customization*/
+
+.jumbotron {
+	margin-bottom: 0px;
+}
+
+.form-signin {
+        max-width: 330px;
+        padding: 15px;
+        margin: 0 auto;
+
+      } /*Form view*/
+
+
+.div_white {
+	margin-top: 0px;
+	height: auto;
+	background-color: whitesmoke;
+	border-radius: 5px;
+    margin-left: 7.25%;
+    margin-right: 7.25%;
+}
+
+.container {
+	border-radius: 5px;
+	padding-left: 10px;
+    padding-right: 10px;
+    background-color:whitesmoke;
+
+}
+
+body {
+	background-color: #5091B1;
+}
+
+.navbar {
+	border-radius: 0px 0px 5px 5px;
+}
+
+/*Style for Tabs*/
+/* custom inclusion of right, left and below tabs */
+
+.tabs-below > .nav-tabs,
+.tabs-right > .nav-tabs,
+.tabs-left > .nav-tabs {
+  border-bottom: 0;
+}
+
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+  display: none;
+}
+
+.tab-content > .active,
+.pill-content > .active {
+  display: block;
+}
+
+.tabs-below > .nav-tabs {
+  border-top: 1px solid #ddd;
+}
+
+.tabs-below > .nav-tabs > li {
+  margin-top: -1px;
+  margin-bottom: 0;
+}
+
+.tabs-below > .nav-tabs > li > a {
+  -webkit-border-radius: 0 0 4px 4px;
+     -moz-border-radius: 0 0 4px 4px;
+          border-radius: 0 0 4px 4px;
+}
+
+.tabs-below > .nav-tabs > li > a:hover,
+.tabs-below > .nav-tabs > li > a:focus {
+  border-top-color: #ddd;
+  border-bottom-color: transparent;
+}
+
+.tabs-below > .nav-tabs > .active > a,
+.tabs-below > .nav-tabs > .active > a:hover,
+.tabs-below > .nav-tabs > .active > a:focus {
+  border-color: transparent #ddd #ddd #ddd;
+}
+
+.tabs-left > .nav-tabs > li,
+.tabs-right > .nav-tabs > li {
+  float: none;
+}
+
+.tabs-left > .nav-tabs > li > a,
+.tabs-right > .nav-tabs > li > a {
+  min-width: 74px;
+  margin-right: 0;
+  margin-bottom: 3px;
+}
+
+.tabs-left > .nav-tabs {
+  float: left;
+  margin-right: 19px;
+  border-right: 1px solid #ddd;
+}
+
+.tabs-left > .nav-tabs > li > a {
+  margin-right: -1px;
+  -webkit-border-radius: 4px 0 0 4px;
+     -moz-border-radius: 4px 0 0 4px;
+          border-radius: 4px 0 0 4px;
+}
+
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+  border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+}
+
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+  border-color: #ddd transparent #ddd #ddd;
+  *border-right-color: #ffffff;
+}
+
+.tabs-right > .nav-tabs {
+  float: right;
+  margin-left: 19px;
+  border-left: 1px solid #ddd;
+}
+
+.tabs-right > .nav-tabs > li > a {
+  margin-left: -1px;
+  -webkit-border-radius: 0 4px 4px 0;
+     -moz-border-radius: 0 4px 4px 0;
+          border-radius: 0 4px 4px 0;
+}
+
+.tabs-right > .nav-tabs > li > a:hover,
+.tabs-right > .nav-tabs > li > a:focus {
+  border-color: #eeeeee #eeeeee #eeeeee #dddddd;
+}
+
+.tabs-right > .nav-tabs .active > a,
+.tabs-right > .nav-tabs .active > a:hover,
+.tabs-right > .nav-tabs .active > a:focus {
+  border-color: #ddd #ddd #ddd transparent;
+  *border-left-color: #ffffff;
+}
+
+.panel-primary>.panel-heading {
+
+background-color: #FAA94C;
+}
+
+.panel-primary {
+	border-color: #FAA94C;
+}
+
+.carousel {
+	width: 400px;
+	margin: 0 auto;
+}
