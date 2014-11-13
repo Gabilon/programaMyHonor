@@ -258,6 +258,8 @@
     <Content Include="Content\bootstrap\bootstrap.less" />
     <Content Include="Content\bootstrap\badges.less" />
     <Content Include="Content\bootstrap\alerts.less" />
+    <Content Include="Estudiantes.Master" />
+    <Content Include="Admin.Master" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
@@ -278,6 +280,13 @@
     <Compile Include="Actividades.aspx.vb">
       <DependentUpon>Actividades.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.vb">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.Master.vb">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Aplicar.aspx.designer.vb">
       <DependentUpon>Aplicar.aspx</DependentUpon>
@@ -301,6 +310,13 @@
     <Compile Include="Default.aspx.vb">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Estudiantes.Master.designer.vb">
+      <DependentUpon>Estudiantes.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Estudiantes.Master.vb">
+      <DependentUpon>Estudiantes.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Evaluacion.aspx.designer.vb">
       <DependentUpon>Evaluacion.aspx</DependentUpon>

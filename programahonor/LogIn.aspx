@@ -23,7 +23,7 @@
                             <label for="exampleInputPassword1">Password</label>
                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
                         </div>
-                        <button type="submit" class="btn btn-default">Submit</button><br>
+                        <a href="Aplicar.aspx" class="btn btn-default" role="button">Submit</a>
                     </form>
                 </div>
             </div>

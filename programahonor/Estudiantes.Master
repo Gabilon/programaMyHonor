@@ -1,4 +1,4 @@
-﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site.master.vb" Inherits="programahonor.Site" %>
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Estudiantes.master.vb" Inherits="programahonor.Estudiantes" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +27,6 @@
 </head>
 <body>
     <header>
-   
         <div class= "container">
 
       <div><!--ImgBanner on top of Navbar-->
@@ -49,7 +48,15 @@
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li><a href="Default.aspx">Inicio</a></li>
-                <li><a href="Servicios.aspx">Servicios</a></li>
+                <li class="dropdown">
+                  <a href="Servicios.aspx" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Servicios<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Solicitud</a></li>
+                    <li><a href="#">Aplicar</a></li>
+                    <li><a href="#">Internado</a></li>
+                    <li><a href="#">Reservar Sala</a></li>
+                  </ul>
+                </li> <!--Equipo, Grupo Acesoro, Membrecias tabs End of Dropdown-->
                 <li><a href="Actividades.aspx">Actividades</a></li>
                 <li><a href="#">Registro</a></li>
                 <li class="dropdown">
@@ -63,8 +70,7 @@
 
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="LogIn.aspx">Ingresar</a></li> <!--This connects to the Modal SignIn-->
-                
+                <li><a href="Default.aspx">Salir</a></li> <!--This connects to the Modal SignIn-->
               </ul>
             </div><!--/.nav-collapse -->
           </div>
@@ -72,10 +78,10 @@
       </div>
     <!--Ends the Div-->
 
-             
+
     </header>
-   
-        <aside>
+
+    <aside>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
     </aside>
