@@ -12,7 +12,7 @@
               
                 <h1 style= "text-align: center; padding: 5px;">Comités de Estudiantes</h1>
 
-                <div class= "container-fluid">
+                <div class= "container-fluid" style="padding-bottom: 15px">
                   <ul class="nav nav-pills nav-stacked col-md-2">
                     <li class="active"><a href="#tab_a" data-toggle="pill">Comité de Servicio</a></li>
                     <li><a href="#tab_b" data-toggle="pill">Comité de Actividades Académicas</a></li>

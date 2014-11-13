@@ -49,12 +49,7 @@
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li><a href="Default.aspx">Inicio</a></li>
-                <li class="dropdown">
-                    <a href="Servicios.aspx"class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Servicios<span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="Servicios.aspx">Solicitud</a></li>
-                    </ul>
-                <li><a href="#">Aplicar</a></li>
+                <li><a href="Servicios.aspx">Servicios</a></li>
                 <li><a href="Actividades.aspx">Actividades</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Nosotros<span class="caret"></span></a>
@@ -67,7 +62,7 @@
 
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                <li><a href = "#myModal" data-toggle="modal">Ingresar</a></li> <!--This connects to the Modal SignIn-->
+                <li><a href="LogIn.aspx">Ingresar</a></li> <!--This connects to the Modal SignIn-->
                 
               </ul>
             </div><!--/.nav-collapse -->

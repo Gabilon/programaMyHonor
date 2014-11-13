@@ -26,7 +26,7 @@
           <h4 style = "text-align: center">Actividad de Bienvenida de los Estudiantes del Programa de Honor</h4>
           <p style= "text-align: center">30 de septiembre de 2010</p>
           
-          <div class= "container-fluid">
+          <div class= "container-fluid" style="margin-bottom: 15px">
             <div id="carousel1" class="carousel slide" data-ride="carousel">
                    <!-- Wrapper for slides -->
                    <div class="carousel-inner" role="listbox">
