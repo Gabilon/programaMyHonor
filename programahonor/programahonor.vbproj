@@ -111,6 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Actividades.aspx" />
+    <Content Include="Actividades_Estu.aspx" />
     <Content Include="Aplicar.aspx" />
     <Content Include="comitesEstu.aspx" />
     <Content Include="Content\xml\XMLIGS.xml" />
@@ -262,6 +263,7 @@
     <Content Include="Content\bootstrap\alerts.less" />
     <Content Include="Estudiantes.Master" />
     <Content Include="Admin.Master" />
+    <Content Include="Membre.Master" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
@@ -269,6 +271,7 @@
     <Content Include="Scripts\jquery-ui.min-1.11.1.js" />
     <Content Include="Servicios.aspx" />
     <Content Include="servicios.html" />
+    <Content Include="Servicios_Estu.aspx" />
     <Content Include="testPage.aspx" />
     <Content Include="verAplicacion.aspx" />
     <Content Include="Web.config">
@@ -281,6 +284,13 @@
     </Compile>
     <Compile Include="Actividades.aspx.vb">
       <DependentUpon>Actividades.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Actividades_Estu.aspx.designer.vb">
+      <DependentUpon>Actividades_Estu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Actividades_Estu.aspx.vb">
+      <DependentUpon>Actividades_Estu.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Admin.Master.designer.vb">
@@ -362,6 +372,13 @@
       <DependentUpon>LogIn.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Membre.Master.designer.vb">
+      <DependentUpon>Membre.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Membre.Master.vb">
+      <DependentUpon>Membre.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -400,6 +417,13 @@
     </Compile>
     <Compile Include="Servicios.aspx.vb">
       <DependentUpon>Servicios.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Servicios_Estu.aspx.designer.vb">
+      <DependentUpon>Servicios_Estu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Servicios_Estu.aspx.vb">
+      <DependentUpon>Servicios_Estu.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Site.Master.designer.vb">

@@ -1,4 +1,4 @@
-﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site.master.vb" Inherits="programahonor.Site" %>
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Membre.master.vb" Inherits="programahonor.Membre" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +27,6 @@
 </head>
 <body>
     <header>
-   
         <div class= "container">
 
       <div><!--ImgBanner on top of Navbar-->
@@ -48,9 +47,16 @@
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li><a href="Default.aspx">Inicio</a></li>
-                <li><a href="Servicios.aspx">Servicios</a></li>
-                <li><a href="Actividades.aspx">Actividades</a></li>
+                <li><a href="Default_Estu.aspx">Inicio</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Servicios<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="Servicios.aspx">Información</a></li>
+                    <li><a href="#">Internado</a></li>
+                    <li><a href="#">Reservar Sala</a></li>
+                  </ul>
+                </li> <!--Equipo, Grupo Acesoro, Membrecias tabs End of Dropdown-->
+                <li><a href="Actividades_Estu.aspx">Actividades</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Nosotros<span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
@@ -62,8 +68,7 @@
 
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="LogIn.aspx">Ingresar</a></li> <!--This connects to the Modal SignIn-->
-                
+                <li><a href="Default.aspx">Salir</a></li> <!--This connects to the Modal SignIn-->
               </ul>
             </div><!--/.nav-collapse -->
           </div>
@@ -71,10 +76,10 @@
       </div>
     <!--Ends the Div-->
 
-             
+
     </header>
-   
-        <aside>
+
+    <aside>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
     </aside>
