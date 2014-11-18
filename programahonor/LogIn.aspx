@@ -14,16 +14,20 @@
         <div class ="container-fluid" style="padding-bottom: 15px; margin-left: 60px">
             <div class="row">
                 <div class="col-md-4" style="border-right: 1px solid #333">
-                    <form role="form">
+                    <form role="form" runat="server">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Correo Electrónico">
-                        </div>
+                            <label for="exampleInputEmail1">Usuario</label>
+                            <asp:TextBox ID="Usuario" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="Usuario" CssClass="label label-warning" ErrorMessage="campo requerido." />
+                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+                            <label for="exampleInputPassword1">Contraseña</label>
+                            <asp:TextBox ID="Contrasena" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="Contrasena" CssClass="label label-warning" ErrorMessage="campo requerido." />
                         </div>
-                        <a href="Aplicar.aspx" class="btn btn-default" role="button">Submit</a>
+                         <div class="col-md-1 col-md-offset-8">
+                          <asp:Button ID="btn_Ingresar" runat="server" Text="Button" CssClass="btn btn-primary" />
+                         </div>
                     </form>
                 </div>
             </div>
