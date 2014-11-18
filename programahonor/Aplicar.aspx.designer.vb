@@ -185,6 +185,24 @@ Partial Public Class Aplicar
     Protected WithEvents Stu_Certificate As Global.System.Web.UI.WebControls.FileUpload
 
     '''<summary>
+    '''lbl_Status control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbl_Status As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Stu_Status control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Stu_Status As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''Stu_Authorization control.
     '''</summary>
     '''<remarks>
@@ -210,6 +228,15 @@ Partial Public Class Aplicar
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnGuardarEstudiante As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''btnActualizarEstudiante control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnActualizarEstudiante As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''Tab2 control.

@@ -1,30 +1,23 @@
-.navbar-default {
+.navbar-default { 
 	background-color: #EDEDED;
 	border-color: #c0c0c0;
 	background: linear-gradient(rgb(226, 226, 226) 0%, rgb(219, 219, 219) 50%, rgb(209, 209, 209) 51%, rgb(254, 254, 254) 100%);
-	margin-bottom: 5px;
-
-
+	margin-bottom: 5px; 
 }
 .navbar-default .navbar-brand {
 	color: black;
 	border-right: 1px solid black;
-
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
 	color: black;
 }
 .navbar-default .navbar-text {
 	color: black;
-	
 }
 .navbar-default .navbar-nav > li > a {
 color: black;
 	font-weight: bold;
-	border-right: 1px solid #A1B6CC;
-	
-	
-	
+	border-right: 1px solid #A1B6CC;	
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
 	background: linear-gradient(rgb(243, 226, 199) 0%, rgb(193, 158, 103) 100%, rgb(233, 212, 179) 100%)
@@ -39,7 +32,6 @@ color: black;
 }
 .navbar-default .navbar-toggle {
 	border-color: #5091B1;
-
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
 	background-color: #c09048;
@@ -71,9 +63,20 @@ color: black;
 	.navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
 		color: black;
 		background: linear-gradient(rgb(243, 226, 199) 0%, rgb(193, 158, 103) 50%, rgb(182, 141, 76) 51%, rgb(233, 212, 179) 100%);background-color: #c09048;
-}
-	}
+    }
+	div_white{
+       margin-top: 0px; height:80%; background-color: whitesmoke; border-radius: 5px; 
 
+    }	
+}
+.div_white {
+    margin-left: 7.25%;
+    margin-right: 7.25%;
+	margin-top: 0px;
+	height: auto;
+	background-color: whitesmoke;
+	border-radius: 5px;
+}
 /*A few lines to perfect*/
 .navbar-static-top {
     margin-bottom: 0px;
@@ -85,30 +88,16 @@ color: black;
 .jumbotron {
 	margin-bottom: 0px;
 }
-
 .form-signin {
         max-width: 330px;
         padding: 15px;
         margin: 0 auto;
-
-      } /*Form view*/
-
-
-.div_white {
-	margin-top: 0px;
-	height: auto;
-	background-color: whitesmoke;
-	border-radius: 5px;
-    margin-left: 7.25%;
-    margin-right: 7.25%;
-}
-
+    } /*Form view*/
 .container {
 	border-radius: 5px;
 	padding-left: 10px;
     padding-right: 10px;
     background-color:whitesmoke;
-
 }
 
 body {
@@ -226,8 +215,23 @@ body {
   border-color: #ddd #ddd #ddd transparent;
   *border-left-color: #ffffff;
 }
+.panel-body {
+    padding: 15px;
+    background-color: #95AFC7;
+}
 
-.panel-primary>.panel-heading {
+.panel-primary > .panel-heading {
+    color: #fff;
+    background-color: whitesmoke;
+    border-color: #428bca;
+}
+
+.panel-primary > .panel-heading {
+    color: #fff;
+    background-color: whitesmoke;
+    border-color: #428bca;
+}
+/*.panel-primary>.panel-heading {
 
 background-color: #FAA94C;
 }
@@ -235,7 +239,7 @@ background-color: #FAA94C;
 .panel-primary {
 	border-color: #FAA94C;
 }
-
+*/
 .carousel {
 	width: 400px;
 	margin: 0 auto;
