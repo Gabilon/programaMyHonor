@@ -268,7 +268,7 @@ Public Class Aplicar
             Dim Smtp_Server As New SmtpClient
             Dim e_mail As New MailMessage()
             Smtp_Server.UseDefaultCredentials = True
-            Smtp_Server.Credentials = New Net.NetworkCredential("gabriel.monsalve@upr.edu", "441121837")
+            Smtp_Server.Credentials = New Net.NetworkCredential("gerencia", "441121837")
             Smtp_Server.Port = 587
             Smtp_Server.EnableSsl = True
             Smtp_Server.Host = "smtp.gmail.com"
