@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<items>
+  <item id="solicitando" type="Solicitando" />
+  <item id="evaluando" type="Evaluando" />
+  <item id="admitido" type="Admitido" />
+  <item id="suspendido" type="Suspendido" />
+  <item id="retirado" type="Retirado" />
+</items>

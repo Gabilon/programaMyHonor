@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<items>
+    <item id="Profesor Universitario"  type="Profesor Universitario" />
+    <item id="Lider Comunitario"  type="Lider Comunitario" />
+    <item id="Patrono"  type="Patrono" />
+    <item id="Otro"  type="Otro" />
+</items>

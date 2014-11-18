@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<items>
+    <item id="menos de un año"  type="menos de un año" />
+    <item id="De uno a dos años"  type="De uno a dos años" />
+    <item id="mas de dos años"  type="mas de dos años" />
+
+</items>
