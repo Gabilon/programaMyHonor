@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<items>
+  <item id="" type="---Seleccione Uno---" />
+  <item id="excellent" type="Excelente" />
+  <item id="good" type="Bueno" />
+  <item id="regular" type="Regular" />
+ </items>

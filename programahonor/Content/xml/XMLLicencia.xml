@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<items>
+  <item id="" type="---Seleccione Uno---" />
+  <item id="driver" type="Conductor" />
+  <item id="licenseDriver" type="Chofer" />
+  <item id="none" type="Ninguna" />
+ </items>

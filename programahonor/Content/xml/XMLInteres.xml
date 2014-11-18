@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<items>
+  <item id="internshipSummer" type="Internado de Verano" />
+  <item id="internshipSemmester" type="Internado de Semestre" />
+  <item id="practice" type="Práctica" />
+  <item id="investigation" type="Investigación" />
+ </items>

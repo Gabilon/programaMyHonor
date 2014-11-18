@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<items>
+  <item id="" type="---Seleccione Uno---" />
+  <item id="internship" type="Internado" />
+  <item id="practice" type="Práctica" />
+  <item id="investigation" type="Investigación" />
+ </items>
