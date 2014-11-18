@@ -114,6 +114,7 @@
     <Content Include="Actividades_Estu.aspx" />
     <Content Include="Aplicar.aspx" />
     <Content Include="comitesEstu.aspx" />
+    <Content Include="comitesEstu_Estu.aspx" />
     <Content Include="Content\xml\XMLIGS.xml" />
     <Content Include="Default_Admin.aspx" />
     <Content Include="Default_Estu.aspx" />
@@ -174,6 +175,7 @@
     <Content Include="Images\SelectedTab.png" />
     <Content Include="Images\UnSelectedTab.png" />
     <Content Include="InfoGeneral.aspx" />
+    <Content Include="InfoGeneral_Estu.aspx" />
     <Content Include="Ingresar.aspx" />
     <Content Include="LogIn.aspx" />
     <Content Include="packages.config" />
@@ -315,6 +317,13 @@
       <DependentUpon>comitesEstu.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="comitesEstu_Estu.aspx.designer.vb">
+      <DependentUpon>comitesEstu_Estu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="comitesEstu_Estu.aspx.vb">
+      <DependentUpon>comitesEstu_Estu.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Default.aspx.designer.vb">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
@@ -355,6 +364,13 @@
     </Compile>
     <Compile Include="InfoGeneral.aspx.vb">
       <DependentUpon>InfoGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InfoGeneral_Estu.aspx.designer.vb">
+      <DependentUpon>InfoGeneral_Estu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoGeneral_Estu.aspx.vb">
+      <DependentUpon>InfoGeneral_Estu.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Ingresar.aspx.designer.vb">

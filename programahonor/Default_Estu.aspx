@@ -22,7 +22,7 @@
                             <h3>Información General</h3>
                             <p>Descripción de el programa[Misión, Visión y Metas] y benecicios para el estudiante</p>
                             <p>
-                                <a href="infoGeneral.aspx" class="btn btn-primary" role="button">Ver más</a>
+                                <a href="InfoGeneral_Estu.aspx" class="btn btn-primary" role="button">Ver más</a>
                             </p>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                             <h3>Comités Estudiantes</h3>
                             <p>Agrupar estudiantes que desean activarse o continuar un proyecto de servicio voluntario</p>
                             <p>
-                                <a href="comitesEstu.aspx" class="btn btn-primary" role="button">Ver más</a>
+                                <a href="comitesEstu_Estu.aspx" class="btn btn-primary" role="button">Ver más</a>
                             </p>
                         </div>
                     </div>
