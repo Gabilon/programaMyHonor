@@ -1,26 +1,36 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Estudiantes.Master" CodeBehind="Aplicar.aspx.vb" Inherits="programahonor.Aplicar" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-    <link href="Content/stylesheet.css" rel="stylesheet"/>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="Content/stylesheet.css" rel="stylesheet" />
 
-    <script src="Scripts/jquery-2.1.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    <!--<img src="http://www.uprb.edu/actividades/UPRB-portal-demo/IMAGES/HEADBANNER/HEADER-BANNER-FW_r2_c2.jpg" class="img-responsive" alt="Responsive image" id = "pic">-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="Scripts/bootstrap.min.js"></script>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="div_white">
-       <form role="form" method="post" runat="server"  CssClass="form-horizontal">
+       <form role="form" method="post" runat="server" Class="form-horizontal">
             <div class="tabbable">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                      <asp:Menu ID="Menu1" runat="server" Orientation="horizontal" StaticEnableDefaultPopOutImage="False" CssClass="nav navbar-link" Width="100%">
-                    <Items>
-                        <asp:MenuItem Text="Estudiante" Value="0"></asp:MenuItem>
-                        <asp:MenuItem Text="Ensayo" Value="1"></asp:MenuItem>
-                        <asp:MenuItem Text="Evaluadores" Value="2"></asp:MenuItem>
-                        <asp:MenuItem Text="Adicional" Value="3"></asp:MenuItem>
-                    </Items>
-                </asp:Menu>  <!-- menu listview-->
+                        <asp:Menu ID="Menu1" runat="server" Orientation="horizontal" StaticEnableDefaultPopOutImage="False" CssClass="nav navbar-link" Width="100%">
+                            <Items>
+                                <asp:MenuItem Text="Estudiante" Value="0"></asp:MenuItem>
+                                <asp:MenuItem Text="Ensayo" Value="1"></asp:MenuItem>
+                                <asp:MenuItem Text="Evaluadores" Value="2"></asp:MenuItem>
+                                <asp:MenuItem Text="Adicional" Value="3"></asp:MenuItem>
+                            </Items>
+                        </asp:Menu>  <!-- menu listview-->
                     </div>
                     <div class="panel-body">
                         <asp:MultiView ID="MultiView1" runat="server" ActiveViewIndex="0">
@@ -117,6 +127,12 @@
                                             <asp:FileUpload ID="Stu_Certificate" runat="server" CssClass="form-control" />
                                         </div>
                                     </div>
+                                    <div class="col-md-1 col-sm-1 col-xs-10">
+                                        <div class="form-group">
+                                            <asp:label runat="server" ID="lbl_Status" style="width: 160px; text-align: left;" Font-Bold="True">Estado</asp:label>
+                                            <asp:TextBox ID="Stu_Status" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox>
+                                        </div>
+                                    </div>
                                     <div class="col-md-8 col-sm-10 col-xs-12 col-md-offset-1">
                                         <label style="width: 160px; text-align: left">Autorización:</label>
                                         <p style="border: 1px solid #008B8B; text-align: justify; background: whitesmoke; padding: 7px 5px 5px 8px">
@@ -131,14 +147,17 @@
                                     <div class="col-md-11 col-md-offset-10">
                                         <asp:Button ID="btnGuardarEstudiante" runat="server" Text="Guardar" CssClass="btn btn-primary" ToolTip="Guardar Información de Estudiante" />
                                     </div>
+                                    <div class="col-md-11 col-md-offset-10">
+                                        <asp:Button ID="btnActualizarEstudiante" runat="server" Text="GuardarA" CssClass="btn btn-primary" ToolTip="Actualizar Información de Estudiante" />
+                                    </div>
                                 </div>
                             </asp:View>
                             <!-- estiduante-->
                             <asp:View ID="Tab2" runat="server">
-                                <div class="col-md-11 col-md-offset-5">
-                                        <h4><strong>Ensayo.</strong></h4>
-                                    </div>
-                                <div class="col-md-9 col-sm-5 col-xs-12 col-md-offset-1">
+                                <div class="col-md-4 col-md-push-4">
+                                    <h4><strong>Ensayo.</strong></h4>
+                                </div>
+                                <div class="col-md-9 col-sm-5 col-xs-12">
                                     <ul>
                                         <li class="list-group-item">* Redactar un ensayo de máximo 500 caracteres.</li>
                                         <li class="list-group-item">* Cualidades que debe poseer un estudiante universitario de excelencia.</li>
@@ -146,8 +165,10 @@
                                         <li class="list-group-item">* Como desarrollara su liderato dentro del Programa de Estudios de Honor para alcanzar sus metas de estudio.</li>
                                     </ul>
                                 </div>
-                                <div class="col-md-9 col-sm-5 col-xs-12 col-md-offset-1">
-                                    <asp:TextBox ID="Stu_Ensayo" runat="server" CssClass="input-lg " MaxLength="500" TextMode="MultiLine"></asp:TextBox><br />
+                                <div class="col-md-9 col-sm-5 col-xs-12">
+                                    <div>
+                                         <asp:TextBox ID="Stu_Ensayo" runat="server" CssClass="list-group-item" MaxLength="500" TextMode="MultiLine"></asp:TextBox><br />
+                                    </div>
                                 </div>
                                 <div class="col-md-11 col-md-offset-10">
                                     <asp:Button ID="btnGuardarEnsayo" runat="server" Text="Guardar" CssClass="btn btn-primary" ToolTip="Guardar Ensayo" />&nbsp;&nbsp;&nbsp;
@@ -171,7 +192,7 @@
                                             <div class="form-group">
                                                 <label style="width: 135px; text-align: left;">Ocupación:</label>
                                                 <asp:TextBox runat="server" ID="eval_Ocupacion1" CssClass="form-control"></asp:TextBox>
-                                                    <asp:RequiredFieldValidator runat="server" ControlToValidate="eval_Ocupacion1" CssClass="label label-warning" ErrorMessage="campo requerido" />
+                                                <asp:RequiredFieldValidator runat="server" ControlToValidate="eval_Ocupacion1" CssClass="label label-warning" ErrorMessage="campo requerido" />
                                             </div>
                                         </div>
                                         <div class="col-md-5 col-sm-6 col-xs-12">
@@ -183,21 +204,21 @@
                                         </div>
                                          <div class="col-md-2 col-sm-4 col-xs-12">
                                             <div class="form-group">
-                                                <label style="width: 135px; text-align: left;">Teléfono Personal:</label>
+                                                <label style="width: 135px; text-align:left;">Teléfono Personal:</label>
                                                 <asp:TextBox runat="server" ID="eval_Telpersonal1" CssClass="form-control"></asp:TextBox>
                                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="eval_Telpersonal1" CssClass="label label-warning" ErrorMessage="campo requerido" />
                                             </div>
                                         </div>
                                          <div class="col-md-2 col-sm-4 col-xs-12">
                                             <div class="form-group">
-                                                <label style="width: 135px; text-align: left;">Teléfono Trabajo:</label>
+                                                <label style="width: 135px; text-align:left;">Teléfono Trabajo:</label>
                                                 <asp:TextBox runat="server" ID="eval_Teltrabajo1" CssClass="form-control"></asp:TextBox>
                                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="eval_Teltrabajo1" CssClass="label label-warning" ErrorMessage="campo requerido" />
                                             </div>
                                         </div>
                                          <div class="col-md-2 col-sm-4 col-xs-12">
                                             <div class="form-group">
-                                                <label style="width: 135px; text-align: left;">Correo Electrónico:</label>
+                                                <label style="width: 135px; text-align:left;">Correo Electrónico:</label>
                                                 <asp:TextBox runat="server" ID="eval_Email1" CssClass="form-control"></asp:TextBox>
                                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="eval_Email1" CssClass="label label-warning" ErrorMessage="campo requerido" />
                                             </div>
@@ -210,7 +231,7 @@
                                         </div>
                                         <div class="col-md-3 col-sm-4 col-xs-12">
                                             <div class="form-group">
-                                                <label style="width: 135px; text-align: left;">Nombre Completo:</label>
+                                                <label style="width: 135px; text-align:left;">Nombre Completo:</label>
                                                 <asp:TextBox runat="server" ID="eval_Nombre2" CssClass="form-control"></asp:TextBox>
                                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="eval_Nombre2" CssClass="label label-warning" ErrorMessage="campo requerido" />
                                             </div>
@@ -315,26 +336,26 @@
                             <!-- docentes evaluadores-->
                             <asp:View ID="Tab4" runat="server">
                                 <div class="tab-pane active" id="tab4">
-                                    <div class="col-md-12 table-bordered">
+                                    <div class="col-md-12">
                                          <h4><strong>Información Adicional.</strong></h4>
                                     </div>
-                                    <div class="col-md-6 table-bordered">
+                                    <div class="col-md-6">
                                         <label>En cual de los siguientes comites te interesaria participar?</label>
                                         <asp:CheckBoxList ID="infad_Comites" runat="server" DataSourceID="XmlDcomites" DataTextField="type" DataValueField="id"></asp:CheckBoxList>
-                                            <asp:XmlDataSource ID="XmlDcomites" runat="server" DataFile="~/Content/xml/XMLComites.xml"></asp:XmlDataSource>
+                                        <asp:XmlDataSource ID="XmlDcomites" runat="server" DataFile="~/Content/xml/XMLComites.xml"></asp:XmlDataSource>                                   
                                     </div>
-                                    <div class="col-md-6 table-bordered">
+                                    <div class="col-md-6">
                                         <label>A que tipo de actividades o eventos le gustaria asistir?</label>
-                                        <div class="col-md-12 table-bordered">
+                                        <div class="col-md-12">
                                             <asp:CheckBox ID="infad_Excursiones_edu" runat="server" Text="Excursiones Educativcas" />
                                         </div>
-                                        <div class="col-md-4 table-bordered">
+                                        <div class="col-md-4">
                                             <asp:CheckBox ID="infad_Talleres" runat="server" Text="Talleres" Width="120px" />
                                         </div>
                                         <div class="col-md-7">
                                             <asp:TextBox ID="infad_Talleresde" runat="server" CssClass="form-control" Width="350px"></asp:TextBox>
                                         </div>
-                                        <div class="col-md-4 table-bordered">
+                                        <div class="col-md-4">
                                             <asp:CheckBox ID="infad_Conferencias" runat="server" Text="Conferencias" Width="120px" />
                                         </div>
                                         <div class="col-md-7">
