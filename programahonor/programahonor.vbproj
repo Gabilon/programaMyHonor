@@ -183,7 +183,6 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="prueba.aspx" />
-    <Content Include="Registro.aspx" />
     <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
@@ -403,13 +402,6 @@
     </Compile>
     <Compile Include="prueba.aspx.vb">
       <DependentUpon>prueba.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Registro.aspx.designer.vb">
-      <DependentUpon>Registro.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Registro.aspx.vb">
-      <DependentUpon>Registro.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Servicios.aspx.designer.vb">
