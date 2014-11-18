@@ -65,6 +65,7 @@
                     <li><a href="#">Membrecías</a></li>
                   </ul>
                 </li> <!--Equipo, Grupo Acesoro, Membrecias tabs End of Dropdown-->
+                <li><a href="Ajustes.aspx"></a></li>
 
               </ul>
               <ul class="nav navbar-nav navbar-right">
