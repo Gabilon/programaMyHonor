@@ -115,7 +115,14 @@
     <Content Include="Aplicar.aspx" />
     <Content Include="comitesEstu.aspx" />
     <Content Include="comitesEstu_Estu.aspx" />
+    <Content Include="Content\xml\XMLAñoGraduacion.xml" />
+    <Content Include="Content\xml\XMLDisponibilidad.xml" />
     <Content Include="Content\xml\XMLIGS.xml" />
+    <Content Include="Content\xml\XMLIngles.xml" />
+    <Content Include="Content\xml\XMLInteres.xml" />
+    <Content Include="Content\xml\XMLintPrInv.xml" />
+    <Content Include="Content\xml\XMLLicencia.xml" />
+    <Content Include="Content\xml\XMLTransportacion.xml" />
     <Content Include="Default_Admin.aspx" />
     <Content Include="Default_Estu.aspx" />
     <Content Include="Images\BANNER_COMPLETE.jpg" />
@@ -179,6 +186,7 @@
     <Content Include="Ingresar.aspx" />
     <Content Include="LogIn.aspx" />
     <Content Include="miCuenta_Mem.aspx" />
+    <Content Include="Oferta.aspx" />
     <Content Include="packages.config" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
@@ -274,6 +282,7 @@
     <Content Include="Servicios.aspx" />
     <Content Include="servicios.html" />
     <Content Include="Servicios_Estu.aspx" />
+    <Content Include="Solicitud.aspx" />
     <Content Include="testPage.aspx" />
     <Content Include="verAplicacion.aspx" />
     <Content Include="Web.config">
@@ -421,6 +430,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Oferta.aspx.designer.vb">
+      <DependentUpon>Oferta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Oferta.aspx.vb">
+      <DependentUpon>Oferta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="prueba.aspx.designer.vb">
       <DependentUpon>prueba.aspx</DependentUpon>
     </Compile>
@@ -447,6 +463,13 @@
     </Compile>
     <Compile Include="Site.Master.vb">
       <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Solicitud.aspx.designer.vb">
+      <DependentUpon>Solicitud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Solicitud.aspx.vb">
+      <DependentUpon>Solicitud.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="testPage.aspx.vb">
