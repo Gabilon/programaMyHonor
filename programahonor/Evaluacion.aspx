@@ -349,7 +349,7 @@
                     <div class="col-md-6">
                         <asp:RadioButtonList ID="Eval_FortaDebilidades" runat="server" RepeatDirection="Horizontal" DataSourceID="Eval_ReconocerData" DataTextField="type" DataValueField="id"></asp:RadioButtonList>
                         <asp:XmlDataSource ID="Eval_ReconocerData" runat="server" DataFile="~/Content/xml/XMLCalificacion.xml"></asp:XmlDataSource>
-                        <asp:RequiredFieldValidator runat="server" ControlToValidate="Eval_FortaDebilidade" CssClass="label label warning" ErrorMessage="campo requerido" />
+                        <asp:RequiredFieldValidator runat="server" ControlToValidate="Eval_FortaDebilidades" CssClass="label label warning" ErrorMessage="campo requerido" />
                     </div>
                 </div>
                 <div class=" col-md-12">
@@ -374,7 +374,7 @@
                     <div class="col-md-6">
                         <asp:RadioButtonList ID="Eval_OralEscrita" runat="server" RepeatDirection="Horizontal" DataSourceID="Eval_OralData" DataTextField="type" DataValueField="id"></asp:RadioButtonList>
                         <asp:XmlDataSource ID="Eval_OralData" runat="server" DataFile="~/Content/xml/XMLCalificacion.xml"></asp:XmlDataSource>
-                        <asp:RequiredFieldValidator runat="server" ControlToValidate="Eval_OralEscrital" CssClass="label label warning" ErrorMessage="campo requerido" />
+                        <asp:RequiredFieldValidator runat="server" ControlToValidate="Eval_OralEscrita" CssClass="label label warning" ErrorMessage="campo requerido" />
                     </div>
                 </div>
                 <div class="col-md-12">
