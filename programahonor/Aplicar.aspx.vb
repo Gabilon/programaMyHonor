@@ -10,43 +10,43 @@ Public Class Aplicar
         btnSometer.Enabled = True
 
 
-        'Try
-        '    Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
-        '    Dim cnDB As SqlConnection = New SqlConnection(cadena)
-        '    Dim command As New SqlCommand("select * from Students where StudentNumber = 16929709", cnDB)
-        '    'Dim command As New SqlCommand("SearchStudent", cnDB)
-        '    'Try
-        '    cnDB.Open()
-        '    Dim reader As SqlDataReader = command.ExecuteReader()
-        '    While (reader.Read())
-        '        'StudentName.Text = (reader["StudentName"]).ToString())
-        '        StudentName.Text = reader.GetString(0)
-        '        StudentNumber.Text = reader.GetString(1)
-        '        Stu_Gender.Text = reader.GetString(2)
-        '        Dim fecha As String = reader.GetString(2)
-        '        Stu_Birthday.Text = fecha
-        '        'Stu_Birthday.Text = reader.GetString(3)
-        '        Stu_Email.Text = reader.GetString(4)
-        '        Stu_Phone.Text = reader.GetString(5)
-        '        Stu_Direccion.Text = reader.GetString(6)
-        '        Stu_Postal.Text = reader.GetString(7)
-        '        Stu_Department.Text = reader.GetString(8)
-        '        Stu_Year.Text = reader.GetString(9)
-        '        Stu_Igs.Text = reader.GetString(10)
-        '        ' Stu_Certificate.FileName = reader.GetString(11)
-        '        Stu_Authorization.Text = reader.GetString(12)
-        '        ' Stu_Status.Text = reader.GetString(13)
-        '        'stumail = readmail.GetString(0)
-        '    End While
-        '    cnDB.Close()
-        '    'MsgBox("usuario registrado")
+        Try
+            Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
+            Dim cnDB As SqlConnection = New SqlConnection(cadena)
+            Dim command As New SqlCommand("select * from Students where StudentNumber = 16929709", cnDB)
+            'Dim command As New SqlCommand("SearchStudent", cnDB)
+            'Try
+            cnDB.Open()
+            Dim reader As SqlDataReader = command.ExecuteReader()
+            While (reader.Read())
+                'StudentName.Text = (reader["StudentName"]).ToString())
+                StudentName.Text = reader.GetString(0)
+                StudentNumber.Text = reader.GetString(1)
+                Stu_Gender.Text = reader.GetString(2)
+                Dim fecha As String = reader.GetString(2)
+                Stu_Birthday.Text = fecha
+                'Stu_Birthday.Text = reader.GetString(3)
+                Stu_Email.Text = reader.GetString(4)
+                Stu_Phone.Text = reader.GetString(5)
+                Stu_Direccion.Text = reader.GetString(6)
+                Stu_Postal.Text = reader.GetString(7)
+                Stu_Department.Text = reader.GetString(8)
+                Stu_Year.Text = reader.GetString(9)
+                Stu_Igs.Text = reader.GetString(10)
+                ' Stu_Certificate.FileName = reader.GetString(11)
+                Stu_Authorization.Text = reader.GetString(12)
+                ' Stu_Status.Text = reader.GetString(13)
+                'stumail = readmail.GetString(0)
+            End While
+            cnDB.Close()
+            'MsgBox("usuario registrado")
 
-        '    'Catch ex As Exception
-        '    '    MsgBox("Don't Open Connection")
-        '    'End Try
-        'Catch ex As Exception
+            'Catch ex As Exception
+            '    MsgBox("Don't Open Connection")
+            'End Try
+        Catch ex As Exception
 
-        'End Try
+        End Try
 
     End Sub
 
