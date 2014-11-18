@@ -178,6 +178,7 @@
     <Content Include="InfoGeneral_Estu.aspx" />
     <Content Include="Ingresar.aspx" />
     <Content Include="LogIn.aspx" />
+    <Content Include="miCuenta_Mem.aspx" />
     <Content Include="packages.config" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
@@ -393,6 +394,13 @@
     <Compile Include="Membre.Master.vb">
       <DependentUpon>Membre.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="miCuenta_Mem.aspx.designer.vb">
+      <DependentUpon>miCuenta_Mem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="miCuenta_Mem.aspx.vb">
+      <DependentUpon>miCuenta_Mem.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
