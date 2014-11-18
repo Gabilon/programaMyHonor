@@ -221,15 +221,9 @@ body {
 }
 
 .panel-primary > .panel-heading {
-    color: #fff;
+    
     background-color: whitesmoke;
-    border-color: #428bca;
-}
-
-.panel-primary > .panel-heading {
-    color: #fff;
-    background-color: whitesmoke;
-    border-color: #428bca;
+    
 }
 .carousel {
 	width: 400px;
