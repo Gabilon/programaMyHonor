@@ -19,7 +19,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="div_white">
-       <form role="form" method="post" runat="server" Class="form-horizontal">
+        
+       <form role="form" method="post" runat="server" Class="form-horizontal" style="margin-top: 15px ">
             <div class="tabbable">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
