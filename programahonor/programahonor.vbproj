@@ -114,6 +114,8 @@
     <Content Include="Aplicar.aspx" />
     <Content Include="comitesEstu.aspx" />
     <Content Include="Content\xml\XMLIGS.xml" />
+    <Content Include="Default_Admin.aspx" />
+    <Content Include="Default_Estu.aspx" />
     <Content Include="Images\BANNER_COMPLETE.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -311,6 +313,20 @@
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Default_Admin.aspx.designer.vb">
+      <DependentUpon>Default_Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default_Admin.aspx.vb">
+      <DependentUpon>Default_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Default_Estu.aspx.designer.vb">
+      <DependentUpon>Default_Estu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default_Estu.aspx.vb">
+      <DependentUpon>Default_Estu.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Estudiantes.Master.designer.vb">
       <DependentUpon>Estudiantes.Master</DependentUpon>
     </Compile>
@@ -431,10 +447,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AdminPages\" />
-    <Folder Include="MemberPages\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

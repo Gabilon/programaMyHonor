@@ -1,20 +1,109 @@
 ﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Admin.master.vb" Inherits="programahonor.Admin" %>
 
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head runat="server">
-    <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Programa de Honor UPRB</title>
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+        <link href="Content/stylesheet.css" rel="stylesheet" />
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!--<img src="http://www.uprb.edu/actividades/UPRB-portal-demo/IMAGES/HEADBANNER/HEADER-BANNER-FW_r2_c2.jpg" class="img-responsive" alt="Responsive image" id = "pic">-->
+
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    <header>
+        <div class= "container">
+
+      <div><!--ImgBanner on top of Navbar-->
         
+        <img src="Images/BANNER_COMPLETE.jpg" style= "width: 100%">
+      </div>
+
+      <div class="navbar navbar-default" role="navigation" ><!--NavBar Beggins-->
+          <div class="container-fluid ">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">UPRB Programa de Honor</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand">UPRB Programa de Honor</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="Default.aspx">Inicio</a></li>
+                <li class="dropdown">
+                  <a href="Servicios.aspx" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Servicios<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Solicitud</a></li>
+                    <li><a href="#">Aplicar</a></li>
+                    <li><a href="#">Internado</a></li>
+                    <li><a href="#">Reservar Sala</a></li>
+                  </ul>
+                </li> <!--Equipo, Grupo Acesoro, Membrecias tabs End of Dropdown-->
+                <li><a href="Actividades.aspx">Actividades</a></li>
+                <li><a href="#">Registro</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Nosotros<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Contáctenos</a></li>
+                    <li><a href="#">Docentes Asesoros</a></li>
+                    <li><a href="#">Membrecías</a></li>
+                  </ul>
+                </li> <!--Equipo, Grupo Acesoro, Membrecias tabs End of Dropdown-->
+
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="Default.aspx">Salir</a></li> <!--This connects to the Modal SignIn-->
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div>
+    <!--Ends the Div-->
+
+
+    </header>
+
+    <aside>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
-    </div>
-    </form>
+    </aside>
+
+    
+
+    <%--<script type="text/javascript" src='<%= ResolveUrl("~/Scripts/jquery-2.1.1.min.js")%>'></script>--%>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.dropdown-toggle').dropdown();
+        });
+
+        var url = window.location;
+        // Will only work if string in href matches with location
+        $('ul.nav a[href="' + url + '"]').parent().addClass('active');
+
+        // Will also work for relative and absolute hrefs
+        $('ul.nav a').filter(function () {
+            return this.href == url;
+        }).parent().addClass('active');
+    </script>
 </body>
 </html>
