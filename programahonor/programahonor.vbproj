@@ -112,9 +112,11 @@
   <ItemGroup>
     <Content Include="Actividades.aspx" />
     <Content Include="Actividades_Estu.aspx" />
+    <Content Include="Actividades_Mem.aspx" />
     <Content Include="Aplicar.aspx" />
     <Content Include="comitesEstu.aspx" />
     <Content Include="comitesEstu_Estu.aspx" />
+    <Content Include="comitesEstu_Mem.aspx" />
     <Content Include="Content\xml\XMLAñoGraduacion.xml" />
     <Content Include="Content\xml\XMLDisponibilidad.xml" />
     <Content Include="Content\xml\XMLIGS.xml" />
@@ -125,6 +127,7 @@
     <Content Include="Content\xml\XMLTransportacion.xml" />
     <Content Include="Default_Admin.aspx" />
     <Content Include="Default_Estu.aspx" />
+    <Content Include="Default_Mem.aspx" />
     <Content Include="Images\BANNER_COMPLETE.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -183,6 +186,7 @@
     <Content Include="Images\UnSelectedTab.png" />
     <Content Include="InfoGeneral.aspx" />
     <Content Include="InfoGeneral_Estu.aspx" />
+    <Content Include="InfoGeneral_Mem.aspx" />
     <Content Include="Ingresar.aspx" />
     <Content Include="LogIn.aspx" />
     <Content Include="miCuenta_Mem.aspx" />
@@ -282,6 +286,7 @@
     <Content Include="Servicios.aspx" />
     <Content Include="servicios.html" />
     <Content Include="Servicios_Estu.aspx" />
+    <Content Include="Servicios_Mem.aspx" />
     <Content Include="Solicitud.aspx" />
     <Content Include="testPage.aspx" />
     <Content Include="verAplicacion.aspx" />
@@ -302,6 +307,13 @@
     </Compile>
     <Compile Include="Actividades_Estu.aspx.vb">
       <DependentUpon>Actividades_Estu.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Actividades_Mem.aspx.designer.vb">
+      <DependentUpon>Actividades_Mem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Actividades_Mem.aspx.vb">
+      <DependentUpon>Actividades_Mem.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Admin.Master.designer.vb">
@@ -335,6 +347,13 @@
       <DependentUpon>comitesEstu_Estu.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="comitesEstu_Mem.aspx.designer.vb">
+      <DependentUpon>comitesEstu_Mem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="comitesEstu_Mem.aspx.vb">
+      <DependentUpon>comitesEstu_Mem.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Default.aspx.designer.vb">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
@@ -354,6 +373,13 @@
     </Compile>
     <Compile Include="Default_Estu.aspx.vb">
       <DependentUpon>Default_Estu.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Default_Mem.aspx.designer.vb">
+      <DependentUpon>Default_Mem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default_Mem.aspx.vb">
+      <DependentUpon>Default_Mem.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Estudiantes.Master.designer.vb">
@@ -382,6 +408,13 @@
     </Compile>
     <Compile Include="InfoGeneral_Estu.aspx.vb">
       <DependentUpon>InfoGeneral_Estu.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InfoGeneral_Mem.aspx.designer.vb">
+      <DependentUpon>InfoGeneral_Mem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoGeneral_Mem.aspx.vb">
+      <DependentUpon>InfoGeneral_Mem.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Ingresar.aspx.designer.vb">
@@ -457,6 +490,13 @@
     </Compile>
     <Compile Include="Servicios_Estu.aspx.vb">
       <DependentUpon>Servicios_Estu.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Servicios_Mem.aspx.designer.vb">
+      <DependentUpon>Servicios_Mem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Servicios_Mem.aspx.vb">
+      <DependentUpon>Servicios_Mem.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Site.Master.designer.vb">

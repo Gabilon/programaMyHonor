@@ -262,16 +262,11 @@ Public Class Aplicar
 
     Protected Sub btnSometer_Click(sender As Object, e As EventArgs) Handles btnSometer.Click
 
-        Dim stumail As String = "3"
+        Dim stumail As String = " "
 
         Try
             Dim Smtp_Server As New SmtpClient
             Dim e_mail As New MailMessage()
-            Smtp_Server.UseDefaultCredentials = True
-            Smtp_Server.Credentials = New Net.NetworkCredential("gerencia", "441121837")
-            Smtp_Server.Port = 587
-            Smtp_Server.EnableSsl = True
-            Smtp_Server.Host = "smtp.gmail.com"
 
             e_mail = New MailMessage()
 
@@ -294,7 +289,7 @@ Public Class Aplicar
             End Try
 
 
-            e_mail.From = New MailAddress("gabriel.monsalve@upr.edu")
+            e_mail.From = New MailAddress("grupogerenciaccg@gmail.com")
             e_mail.To.Add(stumail)
             e_mail.Subject = "Confirmacion Registro Solicitud Programa de Honor UPRB"
             e_mail.IsBodyHtml = False

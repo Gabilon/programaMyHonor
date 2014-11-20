@@ -1,26 +1,13 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Actividades.aspx.vb" Inherits="programahonor.Actividades" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Membre.Master" CodeBehind="Actividades_Mem.aspx.vb" Inherits="programahonor.Actividades_Mem" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link href="Content/stylesheet.css" rel="stylesheet" />
 
     <script src="Scripts/jquery-2.1.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-
-
-  <style>
-  h4 {
-    text-align: center;
-  }
-
-  p {
-    text-align: center;
-  }
-
-  </style>
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-      <div class = "div_white">
+    <div class = "div_white">
               
           <h1 style= "text-align: center; padding: 5px;">Actividades Estudiantiles</h1>
           <h4 style = "text-align: center">Actividad de Bienvenida de los Estudiantes del Programa de Honor</h4>
@@ -132,5 +119,4 @@
                  </div> 
                </div>
         </div>
-
 </asp:Content>
