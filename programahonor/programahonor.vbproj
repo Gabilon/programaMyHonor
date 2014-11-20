@@ -339,6 +339,7 @@
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Authentication.vb" />
+    <Compile Include="btnActualizarSolicitud.vb" />
     <Compile Include="ClassSendMail.vb" />
     <Compile Include="comitesEstu.aspx.designer.vb">
       <DependentUpon>comitesEstu.aspx</DependentUpon>
@@ -476,7 +477,7 @@
     </Compile>
     <Compile Include="Oferta.aspx.vb">
       <DependentUpon>Oferta.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="prueba.aspx.designer.vb">
       <DependentUpon>prueba.aspx</DependentUpon>
@@ -518,7 +519,7 @@
     </Compile>
     <Compile Include="Solicitud.aspx.vb">
       <DependentUpon>Solicitud.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="testPage.aspx.vb">
       <DependentUpon>testPage.aspx</DependentUpon>

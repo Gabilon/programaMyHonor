@@ -14,15 +14,6 @@ Option Explicit On
 Partial Public Class Oferta
 
     '''<summary>
-    '''For_Date control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents For_Date As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
     '''For_CompanyName control.
     '''</summary>
     '''<remarks>
@@ -32,112 +23,112 @@ Partial Public Class Oferta
     Protected WithEvents For_CompanyName As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''For_salary control.
+    '''For_Salary control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents For_salary As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents For_Salary As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''For_Department control.
+    '''For_Extracurricular control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents For_Department As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents For_Extracurricular As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''XmlFor_Department control.
+    '''XmlExtracurricular control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents XmlFor_Department As Global.System.Web.UI.WebControls.XmlDataSource
+    Protected WithEvents XmlExtracurricular As Global.System.Web.UI.WebControls.XmlDataSource
 
     '''<summary>
-    '''For_otherBenefits control.
+    '''For_OtherBenefits control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents For_otherBenefits As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents For_OtherBenefits As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''For_schedule control.
+    '''For_Schedule control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents For_schedule As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents For_Schedule As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''For_requirements control.
+    '''For_Requirements control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents For_requirements As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents For_Requirements As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''For_tasks control.
+    '''For_Tasks control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents For_tasks As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents For_Tasks As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''For_contactName control.
+    '''For_ContactName control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents For_contactName As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents For_ContactName As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''For_contactPosition control.
+    '''For_ContactPosition control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents For_contactPosition As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents For_ContactPosition As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''For_contactPhone control.
+    '''For_ContactPhone control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents For_contactPhone As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents For_ContactPhone As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''For_contactExt control.
+    '''For_ContactExt control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents For_contactExt As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents For_ContactExt As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''For_contactOtherPhone control.
+    '''For_ContactOtherPhone control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents For_contactOtherPhone As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents For_ContactOtherPhone As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''For_contactFax control.
@@ -149,49 +140,49 @@ Partial Public Class Oferta
     Protected WithEvents For_contactFax As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''For_physicalAddress control.
+    '''For_CompanyPhysicalAddress control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents For_physicalAddress As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents For_CompanyPhysicalAddress As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''For_postalAddress control.
+    '''For_CompanyPostalAddress control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents For_postalAddress As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents For_CompanyPostalAddress As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''For_comments control.
+    '''For_Comments control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents For_comments As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents For_Comments As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''For_email control.
+    '''For_CompanyEmail control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents For_email As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents For_CompanyEmail As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''For_webPage control.
+    '''For_CompanyWebPage control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents For_webPage As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents For_CompanyWebPage As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''btnGuardarOferta control.
