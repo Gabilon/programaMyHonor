@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Estudiantes.Master" CodeBehind="Solicitud.aspx.vb" Inherits="programahonor.Solicitud" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Membre.Master" CodeBehind="Solicitud.aspx.vb" Inherits="programahonor.Solicitud" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link href="Content/stylesheet.css" rel="stylesheet" />
@@ -14,7 +14,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="div_white">
@@ -23,12 +23,12 @@
                 <div class="col-md-11">
                     <div class="col-md-8 col-md-push-3 ">
                         <label style="text-align: center">
-                            <h4><strong>Universidad de Puerto Rico en Bayamon
+                            <strong>Universidad de Puerto Rico en Bayamon
                                 <br />
                                 Oficina de Internados, Practicas e Investigaciones
                                 <br />
                                 Solicitud
-                            </strong></h4>
+                            </strong>
 
                         </label>
                     </div>
