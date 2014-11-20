@@ -18,18 +18,22 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div class="div_white">
-                <form role="form" method="post" runat="server" class="form-horizontal">
-                      <div class="form-horizontal">
-                                    <div class="col-md-11">
+         <div class="panel-body">
+             <div class="panel-heading">
+                  <div class="col-md-11">
                                         <div class="col-md-8 col-md-push-3 ">
                                             <label style="text-align: center">
-                                             <h4><strong>Universidad de Puerto Rico en Bayamon
+                                             <strong>Universidad de Puerto Rico en Bayamon
                                                 <br />
                                                 Oficina de Internados, Practicas e Investigaciones
                                                 <br />
-                                                Registro de Ofertas</strong></h4>                                             </label>
+                                                Registro de Ofertas</strong>                                             </label>
                                         </div>
                                     </div>
+             </div>
+                <form role="form" method="post" runat="server" class="form-horizontal">
+                      <div class="form-horizontal">
+                                   
                                    
                                     <%--<div class="col-md-2 col-sm-3 col-xs-12">
                                         <div class="form-group">
@@ -170,5 +174,6 @@
                                     </div>
                                 </div>
                 </form>
+         </div>
          </div>
 </asp:Content>
