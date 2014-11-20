@@ -15,6 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="div_white">
@@ -23,12 +24,12 @@
                 <div class="col-md-11">
                     <div class="col-md-8 col-md-push-3 ">
                         <label style="text-align: center">
-                            <strong>Universidad de Puerto Rico en Bayamon
+                            <h4><strong>Universidad de Puerto Rico en Bayamon
                                 <br />
                                 Oficina de Internados, Practicas e Investigaciones
                                 <br />
                                 Solicitud
-                            </strong>
+                            </strong></h4>
 
                         </label>
                     </div>
