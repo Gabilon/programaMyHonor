@@ -95,13 +95,13 @@ Partial Public Class Solicitud
     Protected WithEvents Stu_Department As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''XmlDataSource3 control.
+    '''XmlDepartment control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents XmlDataSource3 As Global.System.Web.UI.WebControls.XmlDataSource
+    Protected WithEvents XmlDepartment As Global.System.Web.UI.WebControls.XmlDataSource
 
     '''<summary>
     '''Sol_Specialty control.
@@ -273,4 +273,13 @@ Partial Public Class Solicitud
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnGuardarSolicitud As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''btnActualizarSolicitud control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnActualizarSolicitud As Global.System.Web.UI.WebControls.Button
 End Class

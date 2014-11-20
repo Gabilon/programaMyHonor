@@ -6,90 +6,78 @@ Public Class Solicitud
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-   
+        
+        btnActualizarSolicitud.Visible = True
 
-        'Try 'Verificacion de usuario autenticado para saber si pertenece al progrma
+        Dim Username As String = Session("usuario").ToString()
 
-        '    Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
-        '    Dim cnDB As SqlConnection = New SqlConnection(cadena)
-        '    'Dim command As New SqlCommand("select * from Students where StudentNumber = 90997925", cnDB)
-        '    Dim command As New SqlCommand("select * from Students where StudentNumber = 654789", cnDB)
-        '    'Dim command As New SqlCommand("SearchStudent", cnDB)
+        Try 'Verificacion de usuario autenticado para saber si pertenece al progrma
 
-        '    Try 'Lectura de datos de estudiante perteneciente al programa de honor
-        '        cnDB.Open()
-        '        Dim reader As SqlDataReader = command.ExecuteReader()
-        '        While (reader.Read())
+            Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
+            Dim cnDB As SqlConnection = New SqlConnection(cadena)
+            Dim command As New SqlCommand() 'instanciamiento de la conexion a la BD
+            command.Connection = cnDB 'Cocatenar cadena de conexion de la base de datos a la instancia
+            command.CommandType = CommandType.StoredProcedure 'Inidcar al command que debera emplear un Store Procedure
+            command.CommandText = "SearchStudent" 'Asignacion del StoreProcedure a emplear
+            command.Parameters.AddWithValue("@StudentNumber", Username) 'parametro para verificar registro del usuario autenticado
 
-        '            StudentName.Text = reader.GetString(0)
-        '            StudentNumber.Text = reader.GetString(1)
-        '            Stu_Gender.Text = reader.GetString(2)
-        '            Dim fecha As String = reader.GetString(2)
-        '            Stu_Birthday.Text = fecha
-        '            Stu_Email.Text = reader.GetString(4)
-        '            Stu_Phone.Text = reader.GetString(5)
-        '            Stu_Direccion.Text = reader.GetString(6)
-        '            Stu_Postal.Text = reader.GetString(7)
-        '            Stu_Department.Text = reader.GetString(8)
-        '            Stu_Year.Text = reader.GetString(9)
-        '            Stu_Igs.Text = reader.GetString(10)
-        '            ' Stu_Certificate.FileName = reader.GetString(11)
-        '            Stu_Authorization.Text = reader.GetString(12)
-        '            Stu_Ensayo.Text = reader.GetString(13)
-        '            lbl_Status.Visible = True
-        '            Stu_Status.Visible = True
-        '            Stu_Status.Text = reader.GetString(16)
+            Try 'Lectura de datos de estudiante perteneciente al programa de honor
 
+                cnDB.Open()
+                Dim reader As SqlDataReader = command.ExecuteReader() 'Lectura del resultado entregado por la BD
+                While (reader.Read())
 
-        '        End While
-        '        cnDB.Close()
+                    StudentName.ReadOnly = True
+                    StudentName.Text = reader.GetString(0)
+                    StudentNumber.ReadOnly = True
+                    StudentNumber.Text = reader.GetString(1)
+                    Stu_Gender.Text = reader.GetString(2)
+                    Stu_Email.ReadOnly = True
+                    Stu_Email.Text = reader.GetString(4)
+                    Stu_Phone.ReadOnly = True
+                    Stu_Phone.Text = reader.GetString(5)
+                    Stu_Direccion.ReadOnly = True
+                    Stu_Direccion.Text = reader.GetString(6)
+                    Stu_Postal.ReadOnly = True
+                    Stu_Postal.Text = reader.GetString(7)
+                    Stu_Department.Text = reader.GetString(8)
+                    Stu_Year.Text = reader.GetString(9)
+                    Stu_Igs.Text = reader.GetString(10)
 
-        '    Catch ex As Exception
-        '        '    MsgBox("Don't Open Connection")
-        '    End Try
-        'Catch ex As Exception
-        '    Response.Redirect("Aplicar.aspx")
-        'End Try
+                End While
+                cnDB.Close()
+
+            Catch ex As Exception
+                Response.Write("<script>alert('Imposible Atender su solicitud, De persistir el problema comuniquese el Programa de Honor UPRB'); </script>")
+            End Try
+        Catch ex As Exception
+
+            Response.Redirect("Solicitud.aspx")
+        End Try
+
     End Sub
 
     Protected Sub btnGuardarSolicitud_Click(sender As Object, e As EventArgs) Handles btnGuardarSolicitud.Click
-        'Instanciamiento de la base de datos y Store procedure para insereccion de datos del estudiante que solicita
         Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
         Dim cnDB As SqlConnection = New SqlConnection(cadena)
-        Dim command As New SqlCommand("AddSolicitud", cnDB)
+        Dim command As New SqlCommand("AddSolcitud", cnDB)
         command.CommandType = CommandType.StoredProcedure
 
+        command.Parameters.Add("@solicitud_id", SqlDbType.UniqueIdentifier).Value = ""
 
         command.Parameters.Add("@Sol_Specialty", SqlDbType.VarChar).Value = Sol_Specialty.Text
         command.Parameters.Add("@Sol_GraduationDate", SqlDbType.VarChar).Value = Sol_GraduationDate.Text
         command.Parameters.Add("@Sol_Transportation", SqlDbType.VarChar).Value = Sol_Transportation.Text
-        '    command.Parameters.Add("@Stu_Birthday", SqlDbType.Date).Value = Date.ParseExact(Stu_Birthday.Text.ToString(), "dd/MM/yyyy", System.Globalization.DateTimeFormatInfo.InvariantInfo)
         command.Parameters.Add("@Sol_License", SqlDbType.VarChar).Value = Sol_License.Text
         command.Parameters.Add("@Sol_English", SqlDbType.VarChar).Value = Sol_English.Text
         command.Parameters.Add("@Sol_Interest", SqlDbType.VarChar).Value = Sol_Interest.Text
         command.Parameters.Add("@Sol_Availability", SqlDbType.VarChar).Value = Sol_Availability.Text
-        '    command.Parameters.Add("@Stu_Department", SqlDbType.VarChar).Value = Stu_Department.Text
-        '    command.Parameters.Add("@Stu_Year", SqlDbType.VarChar).Value = Stu_Year.Text
-        '    command.Parameters.Add("@Stu_Igs", SqlDbType.VarChar).Value = Stu_Igs.Text
-        '    command.Parameters.Add("@Stu_Certificate", SqlDbType.VarChar).Value = Stu_Certificate.FileName
-        '    command.Parameters.Add("@Stu_Authorization", SqlDbType.VarChar).Value = Stu_Authorization.Text
-        '    command.Parameters.Add("@Stu_AplicationDAte", SqlDbType.Date).Value = Date.Today().ToString("D")
-        '    command.Parameters.Add("@Stu_Status", SqlDbType.VarChar).Value = "solicitando"
 
-        '    Try
-        '        cnDB.Open()
-        '        command.ExecuteNonQuery()
-        '        cnDB.Close()
+        command.Parameters.Add("@Sol_Resume", SqlDbType.VarChar).Value = Sol_Resume.FileName
 
-        '        Response.Write("<script>alert('Información Guardada'); </script>")
-
-        '    Catch ex As Exception
-
-        '        Response.Write("<script>alert('Informacion No Guardada'); </script>")
-
-        '    End Try
-
-        '    ' Response.Redirect("~/")
-
+        command.Parameters.Add("@fecha_creacion", SqlDbType.Date).Value = Date.Today().ToString("D")
+        command.Parameters.Add("@usuario_creacion", SqlDbType.VarChar).Value = Session("usuario").ToString()
+        'command.Parameters.Add("@fecha_actualizo", SqlDbType.Date).Value = fecha_actualizo.Date
+        'command.Parameters.Add("@usuario_actualizo", SqlDbType.VarChar).Value = usuario_actualizo.Text
     End Sub
 End Class

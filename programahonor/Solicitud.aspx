@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/SiteEst.Master" CodeBehind="Solicitud.aspx.vb" Inherits="programahonor.Solicitud" %>
-
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Estudiantes.Master" CodeBehind="Solicitud.aspx.vb" Inherits="programahonor.Solicitud" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link href="Content/stylesheet.css" rel="stylesheet" />
@@ -187,6 +186,12 @@
                 <div class="col-md-11 col-md-offset-10">
                     <asp:Button ID="btnGuardarSolicitud" runat="server" Text="Guardar" CssClass="btn btn-primary" ToolTip="Guardar Información de Solicitud" />
                 </div>
+                <div class="col-md-11 col-md-offset-10">
+                    <asp:Button ID="btnActualizarSolicitud" runat="server" Text="Guardar" CssClass="btn btn-primary" ToolTip="Guardar Información de Solicitud" />
+                </div>
+              <%--  <div class="col-md-12">
+
+                </div>--%>
             </div>
         </form>
     </div>
