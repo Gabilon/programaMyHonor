@@ -17,17 +17,21 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="div_white" style="margin-top: 15px">
         <ul class="nav nav-tabs" role="tablist" id="myTab">
-            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-            <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Solicitudes</a></li>
+            <li role="presentation"><a href="#actividades" aria-controls="profile" role="tab" data-toggle="tab">Actividades</a></li>
+            <li role="presentation"><a href="#evaluaciones" aria-controls="messages" role="tab" data-toggle="tab">Evaluaciones</a></li>
+            <li role="presentation"><a href="#docentes" aria-controls="settings" role="tab" data-toggle="tab">Docentes Asesores</a></li>
+            <li role="presentation"><a href="#membrecia" aria-controls="membrecia" role="tab" data-toggle="tab">Membrecías</a></li>
+            <li role="presentation"><a href="#comites" aria-controls="comites" role="tab" data-toggle="tab">Comités</a></li>
         </ul>
 
         <div class="tab-content">
-            <div role="tabpanel" class="tab-pane active" id="home">...</div>
-            <div role="tabpanel" class="tab-pane" id="profile">...</div>
-            <div role="tabpanel" class="tab-pane" id="messages">...</div>
-            <div role="tabpanel" class="tab-pane" id="settings">...</div>
+            <div role="tabpanel" class="tab-pane fade in active" id="solicitudes">...</div>
+            <div role="tabpanel" class="tab-pane fade" id="actividades">...</div>
+            <div role="tabpanel" class="tab-pane fade" id="evaluaciones">...</div>
+            <div role="tabpanel" class="tab-pane fade" id="docentes">...</div>
+            <div role="tabpanel" class="tab-pane fade" id="membrecias">...</div>
+            <div role="tabpanel" class="tab-pane fade" id="comites">...</div>
         </div>
 
         <script>

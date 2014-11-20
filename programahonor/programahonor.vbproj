@@ -111,6 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Actividades.aspx" />
+    <Content Include="Actividades_Admin.aspx" />
     <Content Include="Actividades_Estu.aspx" />
     <Content Include="Actividades_Mem.aspx" />
     <Content Include="Aplicar.aspx" />
@@ -300,6 +301,13 @@
     </Compile>
     <Compile Include="Actividades.aspx.vb">
       <DependentUpon>Actividades.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Actividades_Admin.aspx.designer.vb">
+      <DependentUpon>Actividades_Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Actividades_Admin.aspx.vb">
+      <DependentUpon>Actividades_Admin.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Actividades_Estu.aspx.designer.vb">
