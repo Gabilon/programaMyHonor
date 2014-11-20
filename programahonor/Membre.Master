@@ -52,7 +52,7 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Servicios<span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="Servicios_Mem.aspx">Información</a></li>
-                    <li><a href="#">Internado</a></li>
+                    <li><a href="Solicitud.aspx">Internado</a></li>
                     <li><a href="#">Reservar Sala</a></li>
                   </ul>
                 </li> <!--Equipo, Grupo Acesoro, Membrecias tabs End of Dropdown-->
