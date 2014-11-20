@@ -5,17 +5,35 @@
 
     <script src="Scripts/jquery-2.1.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+    <script>
+
+        $('#').click(function (e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="div_white">
-        <h1 style="text-align: center; padding: 5px;">Administrador</h1>
-        <div class="container-fluid">
-            <div class="row">
-                <a class="btn btn-default" href="#" role="button">Link</a>
-                <button class="btn btn-default" type="submit">Button</button>
-                <input class="btn btn-default" type="button" value="Input">
-                <input class="btn btn-default" type="submit" value="Submit">
-            </div>
+    <div class="div_white" style="margin-top: 15px">
+        <ul class="nav nav-tabs" role="tablist" id="myTab">
+            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+            <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home">...</div>
+            <div role="tabpanel" class="tab-pane" id="profile">...</div>
+            <div role="tabpanel" class="tab-pane" id="messages">...</div>
+            <div role="tabpanel" class="tab-pane" id="settings">...</div>
         </div>
+
+        <script>
+            $(function () {
+                $('#myTab a:first').tab('show')
+            })
+        </script>
     </div>
 </asp:Content>

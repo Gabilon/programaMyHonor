@@ -6,6 +6,23 @@
 
     <script src="Scripts/jquery-2.1.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+    <script>
+        function myFunction() {
+            var value = document.getElementById('Usuario').value;
+            if (value == "1") {
+                window.location.href = '/Estudiantes.Master'
+            }
+            if (value == "2") {
+                window.location.href = '/Membre.Master'
+            }
+            if (value == "3") {
+                window.location.href = '/Admin.Master'
+            }
+            
+        }
+
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -27,6 +44,12 @@
                         </div>
                          <div class="col-md-1 col-md-offset-8">
                           <asp:Button ID="btn_Ingresar" runat="server" Text="Button" CssClass="btn btn-primary" />
+                         </div>
+                        <div class="col-md-1 col-md-offset-8">
+                          <asp:Button ID="Button1" onClientClick="javascript:window.location.href='/Default_Mem.aspx'" runat="server" Text="Button" CssClass="btn btn-primary" />
+                         </div>
+                        <div class="col-md-1 col-md-offset-8">
+                          <asp:Button ID="Button2" onClientClick="javascript:window.location.href='/Default_Admin.aspx'" runat="server" Text="Button" CssClass="btn btn-primary" />
                          </div>
                     </form>
                 </div>
