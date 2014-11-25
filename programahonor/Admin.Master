@@ -51,7 +51,7 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Nosotros<span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="#">Contáctenos</a></li>
-                    <li><a href="#">Docentes Asesoros</a></li>
+                    <li><a href="Docentes.aspx">Docentes Asesoros</a></li>
                     <li><a href="#">Membrecías</a></li>
                   </ul>
                 </li> <!--Equipo, Grupo Acesoro, Membrecias tabs End of Dropdown-->
