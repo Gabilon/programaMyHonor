@@ -26,6 +26,7 @@
                         <h4><strong>Contáctenos</strong></h4>
                     </div>
                 </div>
+                <!--Cominezan textboxes-->
                 <div class="col-md-12 col-md-push-4 col-md-pull-4 col-sm-12 col-sm-push-4 col-sm-pull-4 col-xs-12 col-xs-push-4 col-xs-pull-4">
                     <div class="form-group"> 
                         <label style="width: 160px; text-align: center">Nombre:</label>
@@ -33,33 +34,29 @@
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Contac_nombre" CssClass="label label-warning" ErrorMessage="Campo Requerido" />
                     </div>
                 </div>
-                <div class="col-md-12 col-md-push-4 col-md-pull-4">
+                <div class="col-md-12 col-md-push-4 col-md-pull-4 col-sm-12 col-sm-push-4 col-sm-pull-4 col-xs-12 col-xs-push-4 col-xs-pull-4">
                     <div class="form-group">
                         <label style="width: 160px; text-align: center">Email:</label>
                         <asp:TextBox ID="Contac_email" runat="server" Style="width: 600px;" CssClass="form-control"></asp:TextBox>
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Contac_email" CssClass="label label-warning" ErrorMessage="Campo Requerido" />
                     </div>
                 </div>
-                <div class="col-lg-4 col-lg-push-3 col-lg-pull-4 col-md-4 col-md-push-3 col-md-pull-4">
-                    <div class="form-group">
-                        <label style="width: 160px; text-align: center">Número de Contacto:</label>
-                        <asp:TextBox ID="Contac_numero" runat="server" Style="width: 600px;" CssClass="form-control"></asp:TextBox>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-lg-push-3 col-lg-pull-4 col-md-4 col-md-push-3 col-md-pull-4">
+                <div class="col-md-12 col-md-push-4 col-md-pull-4 col-sm-12 col-sm-push-4 col-sm-pull-4 col-xs-12 col-xs-push-4 col-xs-pull-4">
                     <div class="form-group">
                         <label style="width: 160px; text-align: center">Mensaje:</label>
                         <asp:TextBox ID="Contac_mensaje" runat="server" Style="width: 600px;" CssClass="form-control" TextMode="MultiLine"></asp:TextBox>
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Contac_mensaje" CssClass="label label-warning" ErrorMessage="Campo Requerido" />
                     </div>
                 </div>
-
+                <!--Widget de Captcha-->
+                <div class="col-md-12 col-md-push-4 col-md-pull-4 col-sm-12 col-sm-push-4 col-sm-pull-4 col-xs-12 col-xs-push-4 col-xs-pull-4">
                 <asp:Label Visible="true" ID="lblResult" runat="server" />
                 <recaptcha:RecaptchaControl ID="recaptcha" runat="server" Theme="red" PublicKey="6LcMevwSAAAAALGzxtjS26iBJnXgI-D-0M1cfWhl" PrivateKey="6LcMevwSAAAAACpYNRaOWVbcHhcYytLqeQURqRto" />
-                <div class="col-md-10 col-sm-6 col-xs-12">
+                </div>
+                <div class="col-md-12 col-md-push-8 col-md-pull-4 col-sm-12 col-sm-push-8 col-sm-pull-4 col-xs-12 col-xs-push-8 col-xs-pull-4">
                     <asp:Button ID="btnSometer" runat="server" Text="Someter" CssClass="btn btn-primary" ToolTip="Someter datos" />
                 </div>
-                <!--<asp:Button ID="btnSubmit" runat="server" Text="Someter" OnClick="btnSubmit_Click" />-->
+               
             </form>
         </div>
     </div>

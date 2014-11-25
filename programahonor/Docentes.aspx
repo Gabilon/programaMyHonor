@@ -13,7 +13,7 @@
     <!--<img src="http://www.uprb.edu/actividades/UPRB-portal-demo/IMAGES/HEADBANNER/HEADER-BANNER-FW_r2_c2.jpg" class="img-responsive" alt="Responsive image" id = "pic">-->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Include all compiled plugins (below), or include individual files as needed dfsdfsdfdf-->
     <script src="Scripts/bootstrap.min.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -22,24 +22,24 @@
             <form role="form" method="post" runat="server" Class="form-horizontal">
                 <div class="col-md-11">
                     <div class="col-md-4 col-md-push-5">
-                        <h4><strong>Información del Estudiante</strong></h4>
+                        <h4><strong>Información de Docentes</strong></h4>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="form-group">
                         <label style="width: 160px; text-align: left">Nombre:</label>
                         <asp:TextBox ID="Asedoc_nombre" runat="server" CssClass="form-control"></asp:TextBox>
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Asedoc_nombre" CssClass="label label-warning" ErrorMessage="campo requerido" />
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="form-group">
                         <label style="width: 160px; text-align: left">Título:</label>
                         <asp:TextBox ID="Asedoc_Titulo" runat="server" CssClass="form-control"></asp:TextBox>
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Asedoc_Titulo" CssClass="label label-warning" ErrorMessage="campo requerido" />
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="form-group">
                         <label style="width: 160px; text-align: left;">Departamento:</label>
                         <asp:DropDownList ID="Asedoc_Departamento" runat="server" DataSourceID="XmlDepartamentos" DataTextField="type" DataValueField="id" CssClass="form-control"></asp:DropDownList>
@@ -47,28 +47,30 @@
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Asedoc_Departamento" CssClass="label label-warning" ErrorMessage="campo requerido." />
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="form-group">
                         <label style="width: 160px; text-align: left">Email:</label>
                         <asp:TextBox ID="Asedoc_Email" runat="server" CssClass="form-control"></asp:TextBox>
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Asedoc_Email" CssClass="label label-warning" ErrorMessage="campo requerido" />
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-5 col-xs-12">
+                <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="form-group">
                         <label style="width: 160px; text-align: left">Descripción:</label>
                         <asp:TextBox ID="Asedoc_Descripcion" runat="server" CssClass="form-control"></asp:TextBox>
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Asedoc_Descripcion" CssClass="label label-warning" ErrorMessage="campo requerido" />
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-5 col-xs-12">
+                <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="form-group">
                         <label style="width: 160px; text-align: left">Status:</label>
                         <asp:TextBox ID="Asedoc_Status" runat="server" CssClass="form-control"></asp:TextBox>
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Asedoc_Status" CssClass="label label-warning" ErrorMessage="campo requerido" />
                     </div>
                 </div>
-
+             <div class="col-md-12 col-md-push-10 col-sm-12 col-sm-push-10 col-xs-12 col-xs-push-10">
+                <asp:Button ID="btnGuardar" runat="server" Text="Someter" CssClass="btn btn-primary" ToolTip="Someter datos" />
+             </div>
             </form>
         </div>
     </div>

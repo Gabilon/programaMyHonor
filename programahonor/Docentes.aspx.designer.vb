@@ -75,4 +75,13 @@ Partial Public Class Docentes
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Asedoc_Status As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''btnGuardar control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnGuardar As Global.System.Web.UI.WebControls.Button
 End Class

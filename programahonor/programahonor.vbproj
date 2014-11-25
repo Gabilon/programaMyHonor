@@ -63,6 +63,9 @@
     <Reference Include="Microsoft.WindowsAzure.Storage">
       <HintPath>..\packages\WindowsAzure.Storage.2.1.0.3\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
     </Reference>
+    <Reference Include="Recaptcha">
+      <HintPath>..\..\..\..\Desktop\Recaptcha.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Services.Client" />
@@ -119,6 +122,7 @@
     <Content Include="comitesEstu.aspx" />
     <Content Include="comitesEstu_Estu.aspx" />
     <Content Include="comitesEstu_Mem.aspx" />
+    <Content Include="Contacto.aspx" />
     <Content Include="Content\xml\XMLAñoGraduacion.xml" />
     <Content Include="Content\xml\XMLDisponibilidad.xml" />
     <Content Include="Content\xml\XMLIGS.xml" />
@@ -130,6 +134,7 @@
     <Content Include="Default_Admin.aspx" />
     <Content Include="Default_Estu.aspx" />
     <Content Include="Default_Mem.aspx" />
+    <Content Include="Docentes.aspx" />
     <Content Include="Images\BANNER_COMPLETE.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -370,6 +375,13 @@
       <DependentUpon>comitesEstu_Mem.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Contacto.aspx.designer.vb">
+      <DependentUpon>Contacto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contacto.aspx.vb">
+      <DependentUpon>Contacto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Default.aspx.designer.vb">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
@@ -397,6 +409,13 @@
     <Compile Include="Default_Mem.aspx.vb">
       <DependentUpon>Default_Mem.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Docentes.aspx.designer.vb">
+      <DependentUpon>Docentes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Docentes.aspx.vb">
+      <DependentUpon>Docentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Estudiantes.Master.designer.vb">
       <DependentUpon>Estudiantes.Master</DependentUpon>

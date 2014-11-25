@@ -32,15 +32,6 @@ Partial Public Class Contacto
     Protected WithEvents Contac_email As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Contac_numero control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Contac_numero As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
     '''Contac_mensaje control.
     '''</summary>
     '''<remarks>
@@ -75,13 +66,4 @@ Partial Public Class Contacto
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnSometer As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''btnSubmit control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnSubmit As Global.System.Web.UI.WebControls.Button
 End Class
