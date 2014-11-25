@@ -64,7 +64,7 @@
       <HintPath>..\packages\WindowsAzure.Storage.2.1.0.3\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
     </Reference>
     <Reference Include="Recaptcha">
-      <HintPath>..\..\..\..\Desktop\Recaptcha.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\recaptcha-dotnet-1.0.5.0-binary\Recaptcha.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -135,6 +135,8 @@
     <Content Include="Default_Estu.aspx" />
     <Content Include="Default_Mem.aspx" />
     <Content Include="Docentes.aspx" />
+    <Content Include="filesCaptcha\InstruccionesCaptcha.txt" />
+    <Content Include="filesCaptcha\Recaptcha.dll" />
     <Content Include="Images\BANNER_COMPLETE.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />

@@ -1,0 +1,11 @@
+Cuando quieran añadir la funcionalidad de captcha a sus Visual Studio:
+1. Con el proyecto abierto entre a PROJECT.
+2. Marque Add Reference...
+3. Marque Browse
+4. En Browse busque el archivo de GitHub en su computadora
+5. Entre al folder programaMyHonor
+6. Marque el folder que se llama programaHonor
+7. Abra el folder filesCaptcha
+8. Seleccione Recaptcha.dll
+9. Hagale checkmark en el Visual Studio
+10. Presione OK.
