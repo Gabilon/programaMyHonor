@@ -18,7 +18,7 @@ Public Class Solicitud
             Dim command As New SqlCommand() 'instanciamiento de la conexion a la BD
             command.Connection = cnDB 'Cocatenar cadena de conexion de la base de datos a la instancia
             command.CommandType = CommandType.StoredProcedure 'Inidcar al command que debera emplear un Store Procedure
-            command.CommandText = "SearchStudent" 'Asignacion del StoreProcedure a emplear
+            command.CommandText = "SolicitudStudent" 'Asignacion del StoreProcedure a emplear
             command.Parameters.AddWithValue("@StudentNumber", Username) 'parametro para verificar registro del usuario autenticado
 
             Try 'Lectura de datos de estudiante perteneciente al programa de honor
