@@ -10,32 +10,41 @@ Public Class LogIn
         Dim vuser As String = "a"
 
 
-        ' Try
-        Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
-        Dim cnDB As SqlConnection = New SqlConnection(cadena)
-        Dim command As New SqlCommand() 'instanciamiento de la conexion a la BD
-        command.Connection = cnDB 'Cocatenar cadena de conexion de la base de datos a la instancia
-        command.CommandType = CommandType.StoredProcedure 'Inidcar al command que debera emplear un Store Procedure
-        command.CommandText = "SearchStudent" 'Asignacion del StoreProcedure a emplear
-        command.Parameters.AddWithValue("@StudentNumber", Usuario.Text) 'parametro para verificar registro del usuario autenticado
+        Try
+            Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
+            Dim cnDB As SqlConnection = New SqlConnection(cadena)
+            Dim command As New SqlCommand() 'instanciamiento de la conexion a la BD
+            command.Connection = cnDB 'Cocatenar cadena de conexion de la base de datos a la instancia
+            command.CommandType = CommandType.StoredProcedure 'Inidcar al command que debera emplear un Store Procedure
+            command.CommandText = "ValidStudent" 'Asignacion del StoreProcedure a emplear
+            command.Parameters.AddWithValue("@StudentNumber", Usuario.Text) 'parametro para verificar registro del usuario autenticado
 
-        '  Try 'Lectura de datos de estudiante perteneciente al programa de honor
+            Try 'Lectura de datos de estudiante perteneciente al programa de honor
 
-        cnDB.Open()
-        Dim reader As SqlDataReader = command.ExecuteReader() 'Lectura del resultado entregado por la BD
-        While (reader.Read())
-            vuser = reader.GetString(1)
-        End While
-        cnDB.Close()
-        Session.Add("usuario", Usuario.Text)
-        Response.Redirect("Solicitud.aspx")
-        'Catch ex As Exception
-        '    Response.Write("<script>alert('Imposible Atender su solicitud, De persistir el problema comuniquese el Programa de Honor UPRB'); </script>")
-        'End Try
-        'Catch ex As Exception
+                cnDB.Open()
+                Dim reader As SqlDataReader = command.ExecuteReader() 'Lectura del resultado entregado por la BD
+                While (reader.Read())
+                    vuser = reader.GetString(0)
+                End While
+                cnDB.Close()
+                Session.Add("usuario", Usuario.Text)
+                If (Contrasena.Text = "1") Then
+                    Response.Redirect("Default_Estu.aspx")
+                End If
+                If (Contrasena.Text = "2") Then
+                    Response.Redirect("Default_Mem.aspx")
+                End If
+                If (Contrasena.Text = "3") Then
+                    Response.Redirect("Default_Admin.aspx")
+                End If
 
-        '    Response.Redirect("Aplicar.aspx")
-        'End Try
+            Catch ex As Exception
+                Response.Write("<script>alert('Usuario no miembro programa de honor UPRB'); </script>")
+            End Try
+        Catch ex As Exception
+
+            Response.Write("<script>alert('Imposible Atender su solicitud, De persistir el problema comuniquese el Programa de Honor UPRB'); </script>")
+        End Try
 
     End Sub
 

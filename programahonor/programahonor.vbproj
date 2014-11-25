@@ -115,6 +115,7 @@
     <Content Include="Actividades_Estu.aspx" />
     <Content Include="Actividades_Mem.aspx" />
     <Content Include="Aplicar.aspx" />
+    <Content Include="AplicarPrueba.aspx" />
     <Content Include="comitesEstu.aspx" />
     <Content Include="comitesEstu_Estu.aspx" />
     <Content Include="comitesEstu_Mem.aspx" />
@@ -336,6 +337,13 @@
     </Compile>
     <Compile Include="Aplicar.aspx.vb">
       <DependentUpon>Aplicar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AplicarPrueba.aspx.designer.vb">
+      <DependentUpon>AplicarPrueba.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AplicarPrueba.aspx.vb">
+      <DependentUpon>AplicarPrueba.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Authentication.vb" />

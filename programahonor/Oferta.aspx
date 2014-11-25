@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Estudiantes.Master" CodeBehind="Oferta.aspx.vb" Inherits="programahonor.Oferta" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Membre.Master" CodeBehind="Oferta.aspx.vb" Inherits="programahonor.Oferta" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link href="Content/stylesheet.css" rel="stylesheet" />

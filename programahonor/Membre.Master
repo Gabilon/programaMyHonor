@@ -54,6 +54,7 @@
                     <li><a href="Servicios_Mem.aspx">Información</a></li>
                     <li><a href="Solicitud.aspx">Internado</a></li>
                     <li><a href="#">Reservar Sala</a></li>
+                    <li><a href="Oferta.aspx">Ofertas</a></li>
                   </ul>
                 </li> <!--Equipo, Grupo Acesoro, Membrecias tabs End of Dropdown-->
                 <li><a href="Actividades_Mem.aspx">Actividades</a></li>
@@ -110,6 +111,16 @@
         $('ul.nav a').filter(function () {
             return this.href == url;
         }).parent().addClass('active');
+
+        $(function () {
+
+            $(".dropdown-menu").on('click', 'li a', function () {
+                $(".btn:first-child").text($(this).text());
+                $(".btn:first-child").val($(this).text());
+            });
+
+        });
+
     </script>
 </body>
 </html>

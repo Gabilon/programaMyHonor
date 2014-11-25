@@ -50,7 +50,7 @@
                 <li><a href="Default_Estu.aspx">Inicio</a></li>
                 <li><a href="Servicios_Estu.aspx">Servicios</a></li>
                 <li><a href="Actividades_Estu.aspx">Actividades</a></li>
-                <li><a href="Aplicar.aspx">Aplicar</a></li>
+                <li><a href="Aplicar.aspx">Solicitar</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Nosotros<span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
@@ -98,6 +98,7 @@
         $('ul.nav a').filter(function () {
             return this.href == url;
         }).parent().addClass('active');
+
     </script>
 </body>
 </html>
