@@ -28,7 +28,7 @@ Public Class Contacto
                 e_mail.To.Add(New MailAddress("caban@live.com"))
                 e_mail.Subject = "Mensaje de Contacto Programa de Honor UPRB"
                 e_mail.IsBodyHtml = False
-                e_mail.Body = Contac_mensaje.Text
+                e_mail.Body = Contac_nombre.Text, Contac_mensaje.Text
                 Smtp_Server.Send(e_mail)
 
                 Response.Write("<script>alert('Email Enviado Satisfactoriamente'); </script>")
