@@ -43,7 +43,7 @@
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="Contrasena" CssClass="label label-warning" ErrorMessage="campo requerido." />
                         </div>
                          <div class="col-md-1 col-md-offset-8">
-                          <asp:Button ID="btn_Ingresar" runat="server" Text="Button" CssClass="btn btn-primary" />
+                          <asp:Button ID="btn_Ingresar" runat="server" Text="Ingresar" CssClass="btn btn-primary" />
                          </div>
                        <%-- <div class="col-md-1 col-md-offset-8">
                           <asp:Button ID="Button1" onClientClick="javascript:window.location.href='/Default_Mem.aspx'" runat="server" Text="Button" CssClass="btn btn-primary" />
