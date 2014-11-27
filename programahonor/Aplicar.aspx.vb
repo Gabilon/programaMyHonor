@@ -11,44 +11,55 @@ Public Class Aplicar
 
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        lbl_Status.Visible = False 'label deshabilitado del status
-        Stu_Status.Visible = False 'textbox deshabilitado del status
+        lbl_Status.Visible = False ''label deshabilitado del status
+        Stu_Status.Visible = False ''textbox deshabilitado del status
+        lblStu_Ensayo.Visible = False ''label que desplega el nombre del file de ensayo guardado
         btnActualizarEstudiante.Visible = False
 
-        Dim Username As String = Session("usuario").ToString()
 
-        Try 'Verificacion de usuario autenticado para saber si pertenece al progrma
+        ''Verificacion de usuario autenticado para saber si pertenece al progrma
+        Try
+            Dim Username As String = Session("usuario").ToString()
 
             Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
             Dim cnDB As SqlConnection = New SqlConnection(cadena)
             Dim command As New SqlCommand() 'instanciamiento de la conexion a la BD
             command.Connection = cnDB 'Cocatenar cadena de conexion de la base de datos a la instancia
             command.CommandType = CommandType.StoredProcedure 'Inidcar al command que debera emplear un Store Procedure
-            command.CommandText = "SearchStudent" 'Asignacion del StoreProcedure a emplear
+            command.CommandText = "LeerInfoRegStu" 'Asignacion del StoreProcedure a emplear
             command.Parameters.AddWithValue("@StudentNumber", Username) 'parametro para verificar registro del usuario autenticado
 
-            Try 'Lectura de datos de estudiante perteneciente al programa de honor
+            ''Lectura de datos de estudiante perteneciente al programa de honor
 
+            Try
                 cnDB.Open()
                 Dim reader As SqlDataReader = command.ExecuteReader() 'Lectura del resultado entregado por la BD
                 While (reader.Read())
-
+                    'Dim iNroRegistos As Integer = command.Parameters.Count
+                    'If iNroRegistos = 0 Then
+                    '    MessageBox.Show("No se grabó el registro en la tabla!!!!")
+                    'Else
+                    '    MessageBox.Show("Registro grabado en la tabla!!!")
+                    'End If
                     StudentName.Text = reader.GetString(0)
                     StudentNumber.ReadOnly = True
                     StudentNumber.Text = reader.GetString(1)
-                    Stu_Gender.Text = reader.GetString(2)
-                    Dim fecha As String = reader.GetString(2)
+                    Stu_Gender.Text = reader.GetString(3)
+                    Dim fecha As String = reader.GetString(4)
                     Stu_Birthday.Text = fecha
-                    Stu_Email.Text = reader.GetString(4)
-                    Stu_Phone.Text = reader.GetString(5)
-                    Stu_Direccion.Text = reader.GetString(6)
-                    Stu_Postal.Text = reader.GetString(7)
-                    Stu_Department.Text = reader.GetString(8)
-                    Stu_Year.Text = reader.GetString(9)
-                    Stu_Igs.Text = reader.GetString(10)
-                    ' Stu_Certificate.FileName = reader.GetString(11)
-                    Stu_Authorization.Text = reader.GetString(12)
-                    Stu_Ensayo.Text = reader.GetString(13)
+                    Stu_Email.Text = reader.GetString(5)
+                    Stu_Phone.Text = reader.GetString(6)
+                    Stu_Direccion.Text = reader.GetString(7)
+                    Stu_Postal.Text = reader.GetString(8)
+                    Stu_Department.Text = reader.GetString(9)
+                    Stu_Year.Text = reader.GetString(10)
+                    Stu_Igs.Text = reader.GetString(11)
+                    Dim certificado As String = String.Concat((Server.MapPath("~/Certificados/" + reader.GetString(12))))
+                    lblStu_Ensayo.Text = certificado
+                    Stu_Authorization.Text = reader.GetString(13)
+                    lblStu_Ensayo.Visible = True
+                    Dim ensayo As String = String.Concat((Server.MapPath("~/Ensayos/" + reader.GetString(14))))
+                    lblStu_Ensayo.Text = ensayo
                     lbl_Status.Visible = True
                     Stu_Status.Visible = True
                     Stu_Status.ReadOnly = True
@@ -86,13 +97,12 @@ Public Class Aplicar
 
                 End While
                 cnDB.Close()
-
             Catch ex As Exception
-                Response.Write("<script>alert('Imposible Atender su solicitud, De persistir el problema comuniquese el Programa de Honor UPRB'); </script>")
+                ' Response.Write("<script>alert('Aun no Ha solicitado membresia en el Programa de Honor UPRB'); </script>")
             End Try
         Catch ex As Exception
-
             Response.Redirect("Aplicar.aspx")
+
         End Try
 
     End Sub
@@ -133,11 +143,16 @@ Public Class Aplicar
         command.Parameters.Add("@Stu_Year", SqlDbType.VarChar).Value = Stu_Year.Text
         command.Parameters.Add("@Stu_Igs", SqlDbType.VarChar).Value = Stu_Igs.Text
         command.Parameters.Add("@Stu_Certificate", SqlDbType.VarChar).Value = Stu_Certificate.FileName
+        If (Stu_Certificate.HasFile) Then
+            Dim path As String = String.Concat((Server.MapPath("~/Certificados/" + Stu_Certificate.FileName))) 'Almacenamiento del file seleccionado en la ruta especificada
+            Stu_Certificate.PostedFile.SaveAs(path)
+        End If
         command.Parameters.Add("@Stu_Authorization", SqlDbType.VarChar).Value = Stu_Authorization.Text
         command.Parameters.Add("@Stu_AplicationDAte", SqlDbType.Date).Value = Date.Today().ToString("D")
         command.Parameters.Add("@Stu_Status", SqlDbType.VarChar).Value = "solicitando"
         command.Parameters.Add("@fecha_creacion", SqlDbType.Date).Value = Date.Today().ToString("D")
         command.Parameters.Add("@usuario_creacion", SqlDbType.VarChar).Value = Session("usuario").ToString()
+
 
         Try
             cnDB.Open()
@@ -152,6 +167,13 @@ Public Class Aplicar
 
         End Try
 
+        'hace un chequeo por todos los textbox del formulario
+        'For Each oControl As Control In ofrm.Controls
+        '    If TypeOf oCobtrol Is TextBox Then
+        '        oControl.Text = ""
+        '    End If
+        'Next
+
         ' Response.Redirect("~/")
 
     End Sub
@@ -165,7 +187,11 @@ Public Class Aplicar
 
 
         command.Parameters.Add("@StudentNumber", SqlDbType.VarChar).Value = StudentNumber.Text
-        command.Parameters.Add("@Stu_Ensayo", SqlDbType.VarChar).Value = Stu_Ensayo.Text
+        command.Parameters.Add("@Stu_Ensayo", SqlDbType.VarChar).Value = Stu_Ensayo.FileName
+        If (Stu_Ensayo.HasFile) Then
+            Dim path As String = String.Concat((Server.MapPath("~/Ensayos/" + Stu_Ensayo.FileName)))
+            Stu_Ensayo.PostedFile.SaveAs(path)
+        End If
         command.Parameters.Add("@Stu_Status", SqlDbType.VarChar).Value = "guardado"
 
         Try
@@ -182,47 +208,116 @@ Public Class Aplicar
     End Sub
     Protected Sub btnEvalaudores_Click(sender As Object, e As EventArgs) Handles btnEvalaudores.Click
 
-
-        Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
-        Dim cnDB As SqlConnection = New SqlConnection(cadena)
-        Dim command As New SqlCommand("AddEvaluadores", cnDB)
-        command.CommandType = CommandType.StoredProcedure
-
-        command.Parameters.Add("@StudentNumber", SqlDbType.VarChar).Value = StudentNumber.Text
-
-        command.Parameters.Add("@eval_Nombre1", SqlDbType.VarChar).Value = eval_Nombre1.Text
-        command.Parameters.Add("@eval_Ocupacion1", SqlDbType.VarChar).Value = eval_Ocupacion1.Text
-        command.Parameters.Add("@eval_Trabajo1", SqlDbType.VarChar).Value = eval_Trabajo1.Text
-        command.Parameters.Add("@eval_Telpersonal1", SqlDbType.VarChar).Value = eval_Telpersonal1.Text
-        command.Parameters.Add("@eval_Teltrabajo1", SqlDbType.VarChar).Value = eval_Teltrabajo1.Text
-        command.Parameters.Add("@eval_Email1", SqlDbType.VarChar).Value = eval_Email1.Text
-
-        command.Parameters.Add("@eval_Nombre2", SqlDbType.VarChar).Value = eval_Nombre2.Text
-        command.Parameters.Add("@eval_Ocupacion2", SqlDbType.VarChar).Value = eval_Ocupacion2.Text
-        command.Parameters.Add("@eval_Trabajo2", SqlDbType.VarChar).Value = eval_Trabajo2.Text
-        command.Parameters.Add("@eval_Telpersonal2", SqlDbType.VarChar).Value = eval_Telpersonal2.Text
-        command.Parameters.Add("@eval_Teltrabajo2", SqlDbType.VarChar).Value = eval_Teltrabajo2.Text
-        command.Parameters.Add("@eval_Email2", SqlDbType.VarChar).Value = eval_Email1.Text
-
-        command.Parameters.Add("@eval_Nombre3", SqlDbType.VarChar).Value = eval_Nombre3.Text
-        command.Parameters.Add("@eval_Ocupacion3", SqlDbType.VarChar).Value = eval_Ocupacion3.Text
-        command.Parameters.Add("@eval_Trabajo3", SqlDbType.VarChar).Value = eval_Trabajo3.Text
-        command.Parameters.Add("@eval_Telpersonal3", SqlDbType.VarChar).Value = eval_Telpersonal3.Text
-        command.Parameters.Add("@eval_Teltrabajo3", SqlDbType.VarChar).Value = eval_Teltrabajo3.Text
-        command.Parameters.Add("@eval_Email3", SqlDbType.VarChar).Value = eval_Email3.Text
-
-        command.Parameters.Add("@eval_Status", SqlDbType.VarChar).Value = "ok"
-
         Try
+            Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
+            Dim cnDB As SqlConnection = New SqlConnection(cadena)
+            Dim command As New SqlCommand("AddEvaluadores", cnDB)
+            command.CommandType = CommandType.StoredProcedure
+
+            command.Parameters.Add("@StudentNumber", SqlDbType.VarChar).Value = StudentNumber.Text
+            command.Parameters.Add("@eval_Nombre", SqlDbType.VarChar).Value = eval_Nombre1.Text
+            command.Parameters.Add("@eval_Ocupacion", SqlDbType.VarChar).Value = eval_Ocupacion1.Text
+            command.Parameters.Add("@eval_Trabajo", SqlDbType.VarChar).Value = eval_Trabajo1.Text
+            command.Parameters.Add("@eval_Telpersonal", SqlDbType.VarChar).Value = eval_Telpersonal1.Text
+            command.Parameters.Add("@eval_Teltrabajo", SqlDbType.VarChar).Value = eval_Teltrabajo1.Text
+            command.Parameters.Add("@eval_Email", SqlDbType.VarChar).Value = eval_Email1.Text
+            command.Parameters.Add("@eval_Status", SqlDbType.VarChar).Value = "completado"
+            command.Parameters.Add("@fecha_creacion", SqlDbType.Date).Value = Date.Today().ToString("D")
+            command.Parameters.Add("@usuario_creacion", SqlDbType.VarChar).Value = Session("usuario").ToString()
+
             cnDB.Open()
             command.ExecuteNonQuery()
             cnDB.Close()
-
-            Response.Write("<script>alert('Información Guardada'); </script>")
-
         Catch ex As Exception
             Response.Write("<script>alert('Información No Guardada'); </script>")
         End Try
+        Try
+            Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
+            Dim cnDB As SqlConnection = New SqlConnection(cadena)
+            Dim command As New SqlCommand("AddEvaluadores", cnDB)
+            command.CommandType = CommandType.StoredProcedure
+            Command.Parameters.Add("@StudentNumber", SqlDbType.VarChar).Value = StudentNumber.Text
+            Command.Parameters.Add("@eval_Nombre", SqlDbType.VarChar).Value = eval_Nombre2.Text
+            Command.Parameters.Add("@eval_Ocupacion", SqlDbType.VarChar).Value = eval_Ocupacion2.Text
+            Command.Parameters.Add("@eval_Trabajo", SqlDbType.VarChar).Value = eval_Trabajo2.Text
+            Command.Parameters.Add("@eval_Telpersonal", SqlDbType.VarChar).Value = eval_Telpersonal2.Text
+            Command.Parameters.Add("@eval_Teltrabajo", SqlDbType.VarChar).Value = eval_Teltrabajo2.Text
+            Command.Parameters.Add("@eval_Email", SqlDbType.VarChar).Value = eval_Email2.Text
+            Command.Parameters.Add("@eval_Status", SqlDbType.VarChar).Value = "completado"
+            Command.Parameters.Add("@fecha_creacion", SqlDbType.Date).Value = Date.Today().ToString("D")
+            Command.Parameters.Add("@usuario_creacion", SqlDbType.VarChar).Value = Session("usuario").ToString()
+
+            cnDB.Open()
+            Command.ExecuteNonQuery()
+            cnDB.Close()
+        Catch ex As Exception
+            Response.Write("<script>alert('Información No Guardada'); </script>")
+        End Try
+
+        Try
+            Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
+            Dim cnDB As SqlConnection = New SqlConnection(cadena)
+            Dim command As New SqlCommand("AddEvaluadores", cnDB)
+            command.CommandType = CommandType.StoredProcedure
+        
+        Command.Parameters.Add("@StudentNumber", SqlDbType.VarChar).Value = StudentNumber.Text
+        Command.Parameters.Add("@eval_Nombre", SqlDbType.VarChar).Value = eval_Nombre3.Text
+        Command.Parameters.Add("@eval_Ocupacion", SqlDbType.VarChar).Value = eval_Ocupacion3.Text
+        Command.Parameters.Add("@eval_Trabajo", SqlDbType.VarChar).Value = eval_Trabajo3.Text
+        Command.Parameters.Add("@eval_Telpersonal", SqlDbType.VarChar).Value = eval_Telpersonal3.Text
+        Command.Parameters.Add("@eval_Teltrabajo", SqlDbType.VarChar).Value = eval_Teltrabajo3.Text
+        Command.Parameters.Add("@eval_Email", SqlDbType.VarChar).Value = eval_Email3.Text
+        Command.Parameters.Add("@eval_Status", SqlDbType.VarChar).Value = "completado"
+        Command.Parameters.Add("@fecha_creacion", SqlDbType.Date).Value = Date.Today().ToString("D")
+        Command.Parameters.Add("@usuario_creacion", SqlDbType.VarChar).Value = Session("usuario").ToString()
+
+        cnDB.Open()
+        Command.ExecuteNonQuery()
+            cnDB.Close()
+        Catch ex As Exception
+            Response.Write("<script>alert('Información No Guardada'); </script>")
+        End Try
+
+        'command.Parameters.Add("@StudentNumber1", SqlDbType.VarChar).Value = StudentNumber.Text
+        'command.Parameters.Add("@eval_Nombre1", SqlDbType.VarChar).Value = eval_Nombre1.Text
+        'command.Parameters.Add("@eval_Ocupacion1", SqlDbType.VarChar).Value = eval_Ocupacion1.Text
+        'command.Parameters.Add("@eval_Trabajo1", SqlDbType.VarChar).Value = eval_Trabajo1.Text
+        'command.Parameters.Add("@eval_Telpersonal1", SqlDbType.VarChar).Value = eval_Telpersonal1.Text
+        'command.Parameters.Add("@eval_Teltrabajo1", SqlDbType.VarChar).Value = eval_Teltrabajo1.Text
+        'command.Parameters.Add("@eval_Email1", SqlDbType.VarChar).Value = eval_Email1.Text
+        'command.Parameters.Add("@eval_Status", SqlDbType.VarChar).Value = "completado"
+        'command.Parameters.Add("@fecha_creacion", SqlDbType.Date).Value = Date.Today().ToString("D")
+        'command.Parameters.Add("@usuario_creacion", SqlDbType.VarChar).Value = Session("usuario").ToString()
+
+        'command.Parameters.Add("@StudentNumber", SqlDbType.VarChar).Value = StudentNumber.Text
+        'command.Parameters.Add("@eval_Nombre2", SqlDbType.VarChar).Value = eval_Nombre2.Text
+        'command.Parameters.Add("@eval_Ocupacion2", SqlDbType.VarChar).Value = eval_Ocupacion2.Text
+        'command.Parameters.Add("@eval_Trabajo2", SqlDbType.VarChar).Value = eval_Trabajo2.Text
+        'command.Parameters.Add("@eval_Telpersonal2", SqlDbType.VarChar).Value = eval_Telpersonal2.Text
+        'command.Parameters.Add("@eval_Teltrabajo2", SqlDbType.VarChar).Value = eval_Teltrabajo2.Text
+        'command.Parameters.Add("@eval_Email2", SqlDbType.VarChar).Value = eval_Email2.Text
+        'command.Parameters.Add("@eval_Status", SqlDbType.VarChar).Value = "completado"
+        'command.Parameters.Add("@fecha_creacion", SqlDbType.Date).Value = Date.Today().ToString("D")
+        'command.Parameters.Add("@usuario_creacion", SqlDbType.VarChar).Value = Session("usuario").ToString()
+
+        'command.Parameters.Add("@StudentNumber", SqlDbType.VarChar).Value = StudentNumber.Text
+        'command.Parameters.Add("@eval_Nombre", SqlDbType.VarChar).Value = eval_Nombre3.Text
+        'command.Parameters.Add("@eval_Ocupacion", SqlDbType.VarChar).Value = eval_Ocupacion3.Text
+        'command.Parameters.Add("@eval_Trabajo", SqlDbType.VarChar).Value = eval_Trabajo3.Text
+        'command.Parameters.Add("@eval_Telpersonal", SqlDbType.VarChar).Value = eval_Telpersonal3.Text
+        'command.Parameters.Add("@eval_Teltrabajo", SqlDbType.VarChar).Value = eval_Teltrabajo3.Text
+        'command.Parameters.Add("@eval_Email", SqlDbType.VarChar).Value = eval_Email3.Text
+        'command.Parameters.Add("@eval_Status", SqlDbType.VarChar).Value = "completado"
+        'command.Parameters.Add("@fecha_creacion", SqlDbType.Date).Value = Date.Today().ToString("D")
+        'command.Parameters.Add("@usuario_creacion", SqlDbType.VarChar).Value = Session("usuario").ToString()
+
+        'cnDB.Open()
+        'command.ExecuteNonQuery()
+        'cnDB.Close()
+        'Response.Write("<script>alert('Información Guardada'); </script>")
+        'Catch ex As Exception
+        '    Response.Write("<script>alert('Información No Guardada'); </script>")
+        'End Try
 
     End Sub
     Protected Sub btnGuardarInfoAdicional_Click(sender As Object, e As EventArgs) Handles btnGuardarInfoAdicional.Click
@@ -243,7 +338,7 @@ Public Class Aplicar
         command.Parameters.Add("@infad_actividad", SqlDbType.VarChar).Value = infad_actividad.Text
         command.Parameters.Add("@infad_actividadesde", SqlDbType.VarChar).Value = infad_actividadesde.Text
         command.Parameters.Add("@infad_otro", SqlDbType.VarChar).Value = infad_otro.Text
-        command.Parameters.Add("@infad_Status", SqlDbType.VarChar).Value = "ok"
+        command.Parameters.Add("@infad_Status", SqlDbType.VarChar).Value = "completado"
         command.Parameters.Add("@fecha_creacion", SqlDbType.Date).Value = Date.Today().ToString("D")
         command.Parameters.Add("@usuario_creacion", SqlDbType.VarChar).Value = Session("usuario").ToString()
 
@@ -281,9 +376,6 @@ Public Class Aplicar
                     stumail = readmail.GetString(0)
                 End While
                 cnDB.Close()
-
-                'Response.Write("<script>alert(''); </script>")
-
             Catch ex As Exception
                 Response.Write("<script>alert('Problemas con el Email provisto.'); </script>")
             End Try
@@ -294,8 +386,9 @@ Public Class Aplicar
             e_mail.Subject = "Confirmacion Registro Solicitud Programa de Honor UPRB"
             e_mail.IsBodyHtml = False
             e_mail.Body = "Usted se ha registrado correctamente , Favor no responder a este mensaje, es generado automaticamente" +
-                          " por el sistemas cualquier duda o inquietud escribir a programahonor@upr.edu o dirigirse a nuestars instalaciones en la UPRB" +
+                          " por el sistema, cualquier duda o inquietud escribir a programahonor@upr.edu o dirigirse a nuestaras instalaciones en la UPRB" +
                           " Siguenos por Facebook."
+
             Smtp_Server.Send(e_mail)
 
             Response.Write("<script>alert('Email Enviado Satisfactoriamente'); </script>")

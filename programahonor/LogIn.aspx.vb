@@ -6,6 +6,11 @@ Public Class LogIn
 
     End Sub
 
+    'Public ReadOnly Property CurrentUser() As String
+    '    Get
+    '        Return Usuario.Text
+    '    End Get
+    'End Property
     Protected Sub btn_Ingresar_Click(sender As Object, e As EventArgs) Handles btn_Ingresar.Click
         Dim vuser As String = "a"
 
@@ -28,9 +33,6 @@ Public Class LogIn
                 End While
                 cnDB.Close()
                 Session.Add("usuario", Usuario.Text)
-                If (Contrasena.Text = "1") Then
-                    Response.Redirect("Default_Estu.aspx")
-                End If
                 If (Contrasena.Text = "2") Then
                     Response.Redirect("Default_Mem.aspx")
                 End If
@@ -40,6 +42,8 @@ Public Class LogIn
 
             Catch ex As Exception
                 Response.Write("<script>alert('Usuario no miembro programa de honor UPRB'); </script>")
+                Session.Add("usuario", Usuario.Text)
+                Response.Redirect("Default_Estu.aspx")
             End Try
         Catch ex As Exception
 

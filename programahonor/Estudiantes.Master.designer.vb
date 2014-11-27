@@ -30,4 +30,5 @@ Partial Public Class Estudiantes
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ContentPlaceHolder1 As Global.System.Web.UI.WebControls.ContentPlaceHolder
+
 End Class

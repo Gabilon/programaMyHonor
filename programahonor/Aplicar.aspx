@@ -168,7 +168,9 @@
                                 </div>
                                 <div class="col-md-9 col-sm-5 col-xs-12">
                                     <div>
-                                         <asp:TextBox ID="Stu_Ensayo" runat="server" CssClass="list-group-item" MaxLength="500" TextMode="MultiLine"></asp:TextBox><br />
+                                        <asp:FileUpload ID="Stu_Ensayo" runat="server" CssClass="list-group-item" />
+                                         <%--<asp:TextBox ID="Stu_Ensayo" runat="server" CssClass="list-group-item" MaxLength="500" TextMode="MultiLine"></asp:TextBox><br />--%>
+                                        <asp:Label ID="lblStu_Ensayo" runat="server"></asp:Label>
                                     </div>
                                 </div>
                                 <div class="col-md-11 col-md-offset-10">

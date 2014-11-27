@@ -254,7 +254,16 @@ Partial Public Class Aplicar
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Stu_Ensayo As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Stu_Ensayo As Global.System.Web.UI.WebControls.FileUpload
+
+    '''<summary>
+    '''lblStu_Ensayo control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblStu_Ensayo As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''btnGuardarEnsayo control.
