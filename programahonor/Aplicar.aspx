@@ -68,9 +68,13 @@
                                     </div>
                                     <div class="col-md-2 col-sm-3 col-xs-12">
                                         <div class="form-group">
+                                            <ajaxToolkit:ToolkitScriptManager ID="scriptmanager1" runat="server"></ajaxToolkit:ToolkitScriptManager>
                                             <label style="width: 160px; text-align: left">Fecha de Nacimiento:</label>
                                             <asp:TextBox ID="Stu_Birthday" runat="server" CssClass="form-control"></asp:TextBox>
                                             <asp:RequiredFieldValidator runat="server" ControlToValidate="Stu_Birthday" CssClass="label label-warning" ErrorMessage="campo requerido" />
+                                
+                                            <ajaxToolkit:MaskedEditExtender ID="mkeFechaNac" runat="server" Enabled="True" Mask="99/99/9999" MaskType="Date" 
+                                            TargetControlID="Stu_Birthday" UserDateFormat="MonthDayYear"></ajaxToolkit:MaskedEditExtender>
                                         </div>
                                     </div>
                                     <div class="col-md-3 col-sm-4 col-xs-12">

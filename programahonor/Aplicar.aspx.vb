@@ -3,9 +3,6 @@ Imports System.Configuration
 Imports System.Net
 Imports System.Net.Mail
 
-
-
-
 Public Class Aplicar
     Inherits System.Web.UI.Page
 
@@ -16,94 +13,88 @@ Public Class Aplicar
         lblStu_Ensayo.Visible = False ''label que desplega el nombre del file de ensayo guardado
         btnActualizarEstudiante.Visible = False
 
-
-        ''Verificacion de usuario autenticado para saber si pertenece al progrma
-        Try
-            Dim Username As String = Session("usuario").ToString()
-
-            Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
-            Dim cnDB As SqlConnection = New SqlConnection(cadena)
-            Dim command As New SqlCommand() 'instanciamiento de la conexion a la BD
-            command.Connection = cnDB 'Cocatenar cadena de conexion de la base de datos a la instancia
-            command.CommandType = CommandType.StoredProcedure 'Inidcar al command que debera emplear un Store Procedure
-            command.CommandText = "LeerInfoRegStu" 'Asignacion del StoreProcedure a emplear
-            command.Parameters.AddWithValue("@StudentNumber", Username) 'parametro para verificar registro del usuario autenticado
-
-            ''Lectura de datos de estudiante perteneciente al programa de honor
-
+        If (Not IsPostBack) Then
+            ''Verificacion de usuario autenticado para saber si pertenece al progrma
             Try
-                cnDB.Open()
-                Dim reader As SqlDataReader = command.ExecuteReader() 'Lectura del resultado entregado por la BD
-                While (reader.Read())
-                    'Dim iNroRegistos As Integer = command.Parameters.Count
-                    'If iNroRegistos = 0 Then
-                    '    MessageBox.Show("No se grabó el registro en la tabla!!!!")
-                    'Else
-                    '    MessageBox.Show("Registro grabado en la tabla!!!")
-                    'End If
-                    StudentName.Text = reader.GetString(0)
-                    StudentNumber.ReadOnly = True
-                    StudentNumber.Text = reader.GetString(1)
-                    Stu_Gender.Text = reader.GetString(3)
-                    Dim fecha As String = reader.GetString(4)
-                    Stu_Birthday.Text = fecha
-                    Stu_Email.Text = reader.GetString(5)
-                    Stu_Phone.Text = reader.GetString(6)
-                    Stu_Direccion.Text = reader.GetString(7)
-                    Stu_Postal.Text = reader.GetString(8)
-                    Stu_Department.Text = reader.GetString(9)
-                    Stu_Year.Text = reader.GetString(10)
-                    Stu_Igs.Text = reader.GetString(11)
-                    Dim certificado As String = String.Concat((Server.MapPath("~/Certificados/" + reader.GetString(12))))
-                    lblStu_Ensayo.Text = certificado
-                    Stu_Authorization.Text = reader.GetString(13)
-                    lblStu_Ensayo.Visible = True
-                    Dim ensayo As String = String.Concat((Server.MapPath("~/Ensayos/" + reader.GetString(14))))
-                    lblStu_Ensayo.Text = ensayo
-                    lbl_Status.Visible = True
-                    Stu_Status.Visible = True
-                    Stu_Status.ReadOnly = True
-                    Stu_Status.Text = reader.GetString(16)
+                Dim Username As String = Session("usuario").ToString()
 
-                    eval_Nombre1.Text = reader.GetString(19)
-                    eval_Ocupacion1.Text = reader.GetString(20)
-                    eval_Trabajo1.Text = reader.GetString(21)
-                    eval_Telpersonal1.Text = reader.GetString(22)
-                    eval_Teltrabajo1.Text = reader.GetString(23)
-                    eval_Email1.Text = reader.GetString(24)
-                    eval_Nombre2.Text = reader.GetString(25)
-                    eval_Ocupacion2.Text = reader.GetString(26)
-                    eval_Trabajo2.Text = reader.GetString(27)
-                    eval_Telpersonal2.Text = reader.GetString(28)
-                    eval_Teltrabajo2.Text = reader.GetString(29)
-                    eval_Email2.Text = reader.GetString(30)
-                    eval_Nombre3.Text = reader.GetString(31)
-                    eval_Ocupacion3.Text = reader.GetString(32)
-                    eval_Telpersonal3.Text = reader.GetString(33)
-                    eval_Teltrabajo3.Text = reader.GetString(34)
-                    eval_Email3.Text = reader.GetString(35)
+                Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
+                Dim cnDB As SqlConnection = New SqlConnection(cadena)
+                Dim command As New SqlCommand() 'instanciamiento de la conexion a la BD
+                command.Connection = cnDB 'Cocatenar cadena de conexion de la base de datos a la instancia
+                command.CommandType = CommandType.StoredProcedure 'Inidcar al command que debera emplear un Store Procedure
+                command.CommandText = "LeerInfoRegEstu" 'Asignacion del StoreProcedure a emplear
+                command.Parameters.AddWithValue("@StudentNumber", Username) 'parametro para verificar registro del usuario autenticado
 
-                    infad_Excursiones_edu.Text = reader.GetString(44)
-                    infad_Talleres.Text = reader.GetString(45)
-                    infad_Talleresde.Text = reader.GetString(46)
-                    infad_Conferencias.Text = reader.GetString(47)
-                    infad_Conferenciasde.Text = reader.GetString(48)
-                    infad_Convenciones.Text = reader.GetString(49)
-                    infad_Convencionesde.Text = reader.GetString(50)
-                    infad_otro.Text = reader.GetString(51)
+                ''Lectura de datos de estudiante perteneciente al programa de honor
 
-                    btnActualizarEstudiante.Visible = True
-                    btnGuardarEstudiante.Visible = False
+                Try
+                    cnDB.Open()
+                    Dim reader As SqlDataReader = command.ExecuteReader() 'Lectura del resultado entregado por la BD
+                    While (reader.Read())
+                        StudentName.Text = reader.GetString(0)
+                        StudentNumber.ReadOnly = True
+                        StudentNumber.Text = reader.GetString(1)
+                        Stu_Gender.Text = reader.GetString(2)
+                        Stu_Birthday.Text = reader.GetDateTime(3).Date.ToString("MM/dd/yyyy")
+                        Stu_Email.Text = reader.GetString(4)
+                        Stu_Phone.Text = reader.GetString(5)
+                        Stu_Direccion.Text = reader.GetString(6)
+                        Stu_Postal.Text = reader.GetString(7)
+                        Stu_Department.Text = reader.GetString(8)
+                        Stu_Year.Text = reader.GetString(9)
+                        Stu_Igs.Text = reader.GetString(10)
+                        Dim certificado As String = String.Concat((Server.MapPath("~/Certificados/" + reader.GetString(11))))
+                        lblStu_Ensayo.Text = certificado
+                        Stu_Authorization.Text = reader.GetString(12)
+                        lblStu_Ensayo.Visible = True
+                        Dim ensayo As String = String.Concat((Server.MapPath("~/Ensayos/" + reader.GetString(13))))
+                        lblStu_Ensayo.Text = ensayo
+                        lbl_Status.Visible = True
+                        Stu_Status.Visible = True
+                        Stu_Status.ReadOnly = True
+                        Stu_Status.Text = reader.GetString(14)
 
-                End While
-                cnDB.Close()
+                        eval_Nombre1.Text = reader.GetString(15)
+                        eval_Ocupacion1.Text = reader.GetString(16)
+                        eval_Trabajo1.Text = reader.GetString(17)
+                        eval_Telpersonal1.Text = reader.GetString(18)
+                        eval_Teltrabajo1.Text = reader.GetString(19)
+                        eval_Email1.Text = reader.GetString(20)
+                        eval_Nombre2.Text = reader.GetString(21)
+                        eval_Ocupacion2.Text = reader.GetString(22)
+                        eval_Trabajo2.Text = reader.GetString(23)
+                        eval_Telpersonal2.Text = reader.GetString(24)
+                        eval_Teltrabajo2.Text = reader.GetString(25)
+                        eval_Email2.Text = reader.GetString(26)
+                        eval_Nombre3.Text = reader.GetString(27)
+                        eval_Ocupacion3.Text = reader.GetString(28)
+                        eval_Telpersonal3.Text = reader.GetString(29)
+                        eval_Teltrabajo3.Text = reader.GetString(30)
+                        eval_Email3.Text = reader.GetString(31)
+
+                        infad_Excursiones_edu.Text = reader.GetString(32)
+                        infad_Talleres.Text = reader.GetString(33)
+                        infad_Talleresde.Text = reader.GetString(34)
+                        infad_Conferencias.Text = reader.GetString(35)
+                        infad_Conferenciasde.Text = reader.GetString(36)
+                        infad_Convenciones.Text = reader.GetString(37)
+                        infad_Convencionesde.Text = reader.GetString(38)
+                        infad_otro.Text = reader.GetString(39)
+
+                        btnActualizarEstudiante.Visible = True
+                        btnGuardarEstudiante.Visible = False
+
+                    End While
+                    cnDB.Close()
+                Catch ex As Exception
+                    ' Response.Write("<script>alert('Aun no Ha solicitado membresia en el Programa de Honor UPRB'); </script>")
+                End Try
             Catch ex As Exception
-                ' Response.Write("<script>alert('Aun no Ha solicitado membresia en el Programa de Honor UPRB'); </script>")
-            End Try
-        Catch ex As Exception
-            Response.Redirect("Aplicar.aspx")
+                Response.Redirect("Aplicar.aspx")
 
-        End Try
+            End Try
+        End If
 
     End Sub
 
@@ -134,7 +125,7 @@ Public Class Aplicar
         command.Parameters.Add("@StudentName", SqlDbType.VarChar).Value = StudentName.Text
         command.Parameters.Add("@StudentNumber", SqlDbType.VarChar).Value = StudentNumber.Text
         command.Parameters.Add("@Stu_Gender", SqlDbType.VarChar).Value = Stu_Gender.Text
-        command.Parameters.Add("@Stu_Birthday", SqlDbType.Date).Value = Date.ParseExact(Stu_Birthday.Text.ToString(), "dd/MM/yyyy", System.Globalization.DateTimeFormatInfo.InvariantInfo)
+        command.Parameters.Add("@Stu_Birthday", SqlDbType.Date).Value = Date.ParseExact(Stu_Birthday.Text.ToString(), "MM/dd/yyyy", System.Globalization.DateTimeFormatInfo.InvariantInfo)
         command.Parameters.Add("@Stu_Email", SqlDbType.VarChar).Value = Stu_Email.Text
         command.Parameters.Add("@Stu_Phone", SqlDbType.VarChar).Value = Stu_Phone.Text
         command.Parameters.Add("@Stu_Direccion", SqlDbType.VarChar).Value = Stu_Direccion.Text
@@ -149,7 +140,7 @@ Public Class Aplicar
         End If
         command.Parameters.Add("@Stu_Authorization", SqlDbType.VarChar).Value = Stu_Authorization.Text
         command.Parameters.Add("@Stu_AplicationDAte", SqlDbType.Date).Value = Date.Today().ToString("D")
-        command.Parameters.Add("@Stu_Status", SqlDbType.VarChar).Value = "solicitando"
+        command.Parameters.Add("@Stu_Status", SqlDbType.VarChar).Value = "completado"
         command.Parameters.Add("@fecha_creacion", SqlDbType.Date).Value = Date.Today().ToString("D")
         command.Parameters.Add("@usuario_creacion", SqlDbType.VarChar).Value = Session("usuario").ToString()
 
@@ -192,7 +183,7 @@ Public Class Aplicar
             Dim path As String = String.Concat((Server.MapPath("~/Ensayos/" + Stu_Ensayo.FileName)))
             Stu_Ensayo.PostedFile.SaveAs(path)
         End If
-        command.Parameters.Add("@Stu_Status", SqlDbType.VarChar).Value = "guardado"
+        command.Parameters.Add("@Stu_Status_Ensayo", SqlDbType.VarChar).Value = "completado"
 
         Try
             cnDB.Open()
@@ -274,51 +265,12 @@ Public Class Aplicar
         cnDB.Open()
         Command.ExecuteNonQuery()
             cnDB.Close()
+            Response.Write("<script>alert('Información Guardada'); </script>")
         Catch ex As Exception
             Response.Write("<script>alert('Información No Guardada'); </script>")
         End Try
 
-        'command.Parameters.Add("@StudentNumber1", SqlDbType.VarChar).Value = StudentNumber.Text
-        'command.Parameters.Add("@eval_Nombre1", SqlDbType.VarChar).Value = eval_Nombre1.Text
-        'command.Parameters.Add("@eval_Ocupacion1", SqlDbType.VarChar).Value = eval_Ocupacion1.Text
-        'command.Parameters.Add("@eval_Trabajo1", SqlDbType.VarChar).Value = eval_Trabajo1.Text
-        'command.Parameters.Add("@eval_Telpersonal1", SqlDbType.VarChar).Value = eval_Telpersonal1.Text
-        'command.Parameters.Add("@eval_Teltrabajo1", SqlDbType.VarChar).Value = eval_Teltrabajo1.Text
-        'command.Parameters.Add("@eval_Email1", SqlDbType.VarChar).Value = eval_Email1.Text
-        'command.Parameters.Add("@eval_Status", SqlDbType.VarChar).Value = "completado"
-        'command.Parameters.Add("@fecha_creacion", SqlDbType.Date).Value = Date.Today().ToString("D")
-        'command.Parameters.Add("@usuario_creacion", SqlDbType.VarChar).Value = Session("usuario").ToString()
-
-        'command.Parameters.Add("@StudentNumber", SqlDbType.VarChar).Value = StudentNumber.Text
-        'command.Parameters.Add("@eval_Nombre2", SqlDbType.VarChar).Value = eval_Nombre2.Text
-        'command.Parameters.Add("@eval_Ocupacion2", SqlDbType.VarChar).Value = eval_Ocupacion2.Text
-        'command.Parameters.Add("@eval_Trabajo2", SqlDbType.VarChar).Value = eval_Trabajo2.Text
-        'command.Parameters.Add("@eval_Telpersonal2", SqlDbType.VarChar).Value = eval_Telpersonal2.Text
-        'command.Parameters.Add("@eval_Teltrabajo2", SqlDbType.VarChar).Value = eval_Teltrabajo2.Text
-        'command.Parameters.Add("@eval_Email2", SqlDbType.VarChar).Value = eval_Email2.Text
-        'command.Parameters.Add("@eval_Status", SqlDbType.VarChar).Value = "completado"
-        'command.Parameters.Add("@fecha_creacion", SqlDbType.Date).Value = Date.Today().ToString("D")
-        'command.Parameters.Add("@usuario_creacion", SqlDbType.VarChar).Value = Session("usuario").ToString()
-
-        'command.Parameters.Add("@StudentNumber", SqlDbType.VarChar).Value = StudentNumber.Text
-        'command.Parameters.Add("@eval_Nombre", SqlDbType.VarChar).Value = eval_Nombre3.Text
-        'command.Parameters.Add("@eval_Ocupacion", SqlDbType.VarChar).Value = eval_Ocupacion3.Text
-        'command.Parameters.Add("@eval_Trabajo", SqlDbType.VarChar).Value = eval_Trabajo3.Text
-        'command.Parameters.Add("@eval_Telpersonal", SqlDbType.VarChar).Value = eval_Telpersonal3.Text
-        'command.Parameters.Add("@eval_Teltrabajo", SqlDbType.VarChar).Value = eval_Teltrabajo3.Text
-        'command.Parameters.Add("@eval_Email", SqlDbType.VarChar).Value = eval_Email3.Text
-        'command.Parameters.Add("@eval_Status", SqlDbType.VarChar).Value = "completado"
-        'command.Parameters.Add("@fecha_creacion", SqlDbType.Date).Value = Date.Today().ToString("D")
-        'command.Parameters.Add("@usuario_creacion", SqlDbType.VarChar).Value = Session("usuario").ToString()
-
-        'cnDB.Open()
-        'command.ExecuteNonQuery()
-        'cnDB.Close()
-        'Response.Write("<script>alert('Información Guardada'); </script>")
-        'Catch ex As Exception
-        '    Response.Write("<script>alert('Información No Guardada'); </script>")
-        'End Try
-
+     
     End Sub
     Protected Sub btnGuardarInfoAdicional_Click(sender As Object, e As EventArgs) Handles btnGuardarInfoAdicional.Click
 
@@ -358,44 +310,69 @@ Public Class Aplicar
     Protected Sub btnSometer_Click(sender As Object, e As EventArgs) Handles btnSometer.Click
 
         Dim stumail As String = " "
+        Dim status_info As String = " "
+        Dim status_ensayo As String = " "
+        Dim status_eval As String = " "
+        Dim status_infoadic As String = " "
 
+
+        Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString 'Validacion del estado de los formularios de la aplicacion
+        Dim cnDB As SqlConnection = New SqlConnection(cadena)
+        Dim command As New SqlCommand("ValidarParaSometer", cnDB)
+        command.CommandType = CommandType.StoredProcedure
+        command.Parameters.Add("@StudentNumber", SqlDbType.VarChar).Value = StudentNumber.Text
         Try
-            Dim Smtp_Server As New SmtpClient
-            Dim e_mail As New MailMessage()
-
-            e_mail = New MailMessage()
-
-            Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
-            Dim cnDB As SqlConnection = New SqlConnection(cadena)
-            Dim command As New SqlCommand("select Stu_Email from Students where StudentNumber = '" + StudentNumber.Text + "'", cnDB)
-
-            Try
-                cnDB.Open()
-                Dim readmail As SqlDataReader = command.ExecuteReader()
-                While (readmail.Read())
-                    stumail = readmail.GetString(0)
-                End While
-                cnDB.Close()
-            Catch ex As Exception
-                Response.Write("<script>alert('Problemas con el Email provisto.'); </script>")
-            End Try
+            cnDB.Open()
+            Dim status As SqlDataReader = command.ExecuteReader()
+            While (status.Read())
+                status_info = status.GetString(0)
+                status_ensayo = status.GetString(1)
+                status_eval = status.GetString(2)
+                status_infoadic = status.GetString(3)
+                stumail = status.GetString(4)
+            End While
+            cnDB.Close()
 
 
-            e_mail.From = New MailAddress("grupogerenciaccg@gmail.com")
-            e_mail.To.Add(stumail)
-            e_mail.Subject = "Confirmacion Registro Solicitud Programa de Honor UPRB"
-            e_mail.IsBodyHtml = False
-            e_mail.Body = "Usted se ha registrado correctamente , Favor no responder a este mensaje, es generado automaticamente" +
-                          " por el sistema, cualquier duda o inquietud escribir a programahonor@upr.edu o dirigirse a nuestaras instalaciones en la UPRB" +
-                          " Siguenos por Facebook."
+            If (status_info <> "" And status_ensayo = "completado" And status_eval = "completado" And status_infoadic = "completado") Then
 
-            Smtp_Server.Send(e_mail)
+                Dim cadena1 As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
+                Dim cnDB1 As SqlConnection = New SqlConnection(cadena1)
+                Dim command1 As New SqlCommand("ActEstadoEstu", cnDB1)
+                command1.CommandType = CommandType.StoredProcedure
+                command1.Parameters.Add("@Stu_Status", SqlDbType.VarChar).Value = "solicitando" 'actualiza el estado del estudiante de completado del formulario a solicitando
 
-            Response.Write("<script>alert('Email Enviado Satisfactoriamente'); </script>")
+                Try ''Envio de email de notificacio de registro de la solicitud al programa de honor
+                    Dim Smtp_Server As New SmtpClient
+                    Dim e_mail As New MailMessage()
+
+                    e_mail = New MailMessage()
+                    e_mail.From = New MailAddress("grupogerenciaccg@gmail.com")
+                    e_mail.To.Add(stumail)
+                    e_mail.Subject = "Confirmacion Registro Solicitud Programa de Honor UPRB"
+                    e_mail.IsBodyHtml = False
+                    e_mail.Body = "Usted se ha registrado correctamente , Favor no responder a este mensaje, es generado automaticamente" +
+                                  " por el sistema, cualquier duda o inquietud escribir a programahonor@upr.edu o dirigirse a nuestaras instalaciones en la UPRB" +
+                                  " Siguenos por Facebook."
+
+                    Smtp_Server.Send(e_mail)
+
+                    Response.Write("<script>alert('Email Enviado Satisfactoriamente'); </script>")
+
+                Catch ex As Exception
+                    Response.Write("<script>alert('Email no Enviado'); </script>")
+                End Try
+            Else
+                Response.Write("<script>alert('La solictud no ha sido completada, no se pude someter, verifiquela he intente nuevamente.'); </script>")
+            End If
+
 
         Catch ex As Exception
-            Response.Write("<script>alert('Email no Enviado'); </script>")
+            Response.Write("<script>alert('No ha completado la solicitud para solicitar admision al Programa de Honor .'); </script>")
         End Try
+
+
+       
 
         'este boton debe cambiar el estatus del estudiante a "sometida o pendiente por aprobacion"
         ' enviar email de notificacion que la solicitud fue sometida al estudiante 
@@ -410,8 +387,6 @@ Public Class Aplicar
         Dim cnDB As SqlConnection = New SqlConnection(cadena)
         Dim command As New SqlCommand("EditStudents", cnDB)
         command.CommandType = CommandType.StoredProcedure
-
-
         command.Parameters.Add("@StudentName", SqlDbType.VarChar).Value = StudentName.Text
         command.Parameters.Add("@StudentNumber", SqlDbType.VarChar).Value = StudentNumber.Text
         command.Parameters.Add("@Stu_Gender", SqlDbType.VarChar).Value = Stu_Gender.Text

@@ -77,6 +77,15 @@ Partial Public Class Aplicar
     Protected WithEvents XmlGenero As Global.System.Web.UI.WebControls.XmlDataSource
 
     '''<summary>
+    '''scriptmanager10 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents scriptmanager10 As Global.System.Web.UI.ScriptManager
+
+    '''<summary>
     '''Stu_Birthday control.
     '''</summary>
     '''<remarks>
@@ -84,6 +93,15 @@ Partial Public Class Aplicar
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Stu_Birthday As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''mkeFechaNac control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents mkeFechaNac As Global.AjaxControlToolkit.MaskedEditExtender
 
     '''<summary>
     '''Stu_Email control.

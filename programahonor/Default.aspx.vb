@@ -5,7 +5,4 @@
 
     End Sub
 
-    'Protected Sub btnRegistrarse_Click(sender As Object, e As EventArgs) Handles btnRegistrarse.Click
-    '    Response.Write("<script>window.open('Registro.aspx','_blank');</script>")
-    'End Sub
 End Class
