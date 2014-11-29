@@ -123,8 +123,14 @@
     <Content Include="comitesEstu_Estu.aspx" />
     <Content Include="comitesEstu_Mem.aspx" />
     <Content Include="Contacto.aspx" />
+    <Content Include="Content\xml\asociacionEstudiante.xml" />
+    <Content Include="Content\xml\relacion_est.xml" />
     <Content Include="Content\xml\XMLAñoGraduacion.xml" />
+    <Content Include="Content\xml\XMLCalificacion.xml" />
+    <Content Include="Content\xml\xmlConoceBien.xml" />
+    <Content Include="Content\xml\XmlConoceTiempo.xml" />
     <Content Include="Content\xml\XMLDisponibilidad.xml" />
+    <Content Include="Content\xml\xmlEstado.xml" />
     <Content Include="Content\xml\XMLIGS.xml" />
     <Content Include="Content\xml\XMLIngles.xml" />
     <Content Include="Content\xml\XMLInteres.xml" />

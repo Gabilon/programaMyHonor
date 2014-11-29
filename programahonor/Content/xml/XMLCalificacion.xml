@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <items>
-  <item id="Excelente" type="Excelente" />
-  <item id="Bueno" type="Bueno" />
-  <item id="Regular" type="Regular" />
-  <item id="Deficiente" type="Deficiente" />
-  <item id="No tengo criterio para juzgar" type="No tengo criterio para juzgar" />
+  <item id="4" type="Excelente" />
+  <item id="3" type="Bueno" />
+  <item id="2" type="Regular" />
+  <item id="1" type="Deficiente" />
+  <item id="0" type="No tengo criterio para juzgar" />
  
 </items>
