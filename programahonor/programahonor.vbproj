@@ -144,6 +144,10 @@
     <Content Include="Default_Estu.aspx" />
     <Content Include="Default_Mem.aspx" />
     <Content Include="Docentes.aspx" />
+    <Content Include="Doc_Mem.aspx" />
+    <Content Include="Doc_Mem_Admin.aspx" />
+    <Content Include="Doc_Mem_Estu.aspx" />
+    <Content Include="Doc_Mem_Mem.aspx" />
     <Content Include="filesCaptcha\InstruccionesCaptcha.txt" />
     <Content Include="filesCaptcha\Recaptcha.dll" />
     <Content Include="FormularioActividades.aspx" />
@@ -449,6 +453,34 @@
     </Compile>
     <Compile Include="Docentes.aspx.vb">
       <DependentUpon>Docentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Doc_Mem.aspx.designer.vb">
+      <DependentUpon>Doc_Mem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Doc_Mem.aspx.vb">
+      <DependentUpon>Doc_Mem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Doc_Mem_Admin.aspx.designer.vb">
+      <DependentUpon>Doc_Mem_Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Doc_Mem_Admin.aspx.vb">
+      <DependentUpon>Doc_Mem_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Doc_Mem_Estu.aspx.designer.vb">
+      <DependentUpon>Doc_Mem_Estu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Doc_Mem_Estu.aspx.vb">
+      <DependentUpon>Doc_Mem_Estu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Doc_Mem_Mem.aspx.designer.vb">
+      <DependentUpon>Doc_Mem_Mem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Doc_Mem_Mem.aspx.vb">
+      <DependentUpon>Doc_Mem_Mem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Emails.vb" />
