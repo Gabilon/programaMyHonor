@@ -131,7 +131,6 @@
     <Content Include="Content\xml\XmlConoceTiempo.xml" />
     <Content Include="Content\xml\XMLDisponibilidad.xml" />
     <Content Include="Content\xml\xmlEstado.xml" />
-    <Content Include="Content\xml\XMLEstadoDocente.xml" />
     <Content Include="Content\xml\XMLIGS.xml" />
     <Content Include="Content\xml\XMLIngles.xml" />
     <Content Include="Content\xml\XMLInteres.xml" />
@@ -142,10 +141,6 @@
     <Content Include="Default_Estu.aspx" />
     <Content Include="Default_Mem.aspx" />
     <Content Include="Docentes.aspx" />
-    <Content Include="Doc_Mem.aspx" />
-    <Content Include="Doc_Mem_Admin.aspx" />
-    <Content Include="Doc_Mem_Estu.aspx" />
-    <Content Include="Doc_Mem_Mem.aspx" />
     <Content Include="filesCaptcha\InstruccionesCaptcha.txt" />
     <Content Include="filesCaptcha\Recaptcha.dll" />
     <Content Include="FormularioActividades.aspx" />
@@ -432,34 +427,7 @@
       <DependentUpon>Docentes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Doc_Mem.aspx.designer.vb">
-      <DependentUpon>Doc_Mem.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Doc_Mem.aspx.vb">
-      <DependentUpon>Doc_Mem.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Doc_Mem_Admin.aspx.designer.vb">
-      <DependentUpon>Doc_Mem_Admin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Doc_Mem_Admin.aspx.vb">
-      <DependentUpon>Doc_Mem_Admin.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Doc_Mem_Estu.aspx.designer.vb">
-      <DependentUpon>Doc_Mem_Estu.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Doc_Mem_Estu.aspx.vb">
-      <DependentUpon>Doc_Mem_Estu.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Doc_Mem_Mem.aspx.designer.vb">
-      <DependentUpon>Doc_Mem_Mem.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Doc_Mem_Mem.aspx.vb">
-      <DependentUpon>Doc_Mem_Mem.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
+    <Compile Include="Emails.vb" />
     <Compile Include="Estudiantes.Master.designer.vb">
       <DependentUpon>Estudiantes.Master</DependentUpon>
     </Compile>
@@ -514,7 +482,7 @@
     </Compile>
     <Compile Include="LogIn.aspx.vb">
       <DependentUpon>LogIn.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Membre.Master.designer.vb">
       <DependentUpon>Membre.Master</DependentUpon>
