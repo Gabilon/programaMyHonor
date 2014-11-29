@@ -36,7 +36,7 @@ Public Class Evaluacion
         command.Parameters.Add("@Eval_AjustaNormas", SqlDbType.Int).Value = Eval_AjustaNormas.Text
         command.Parameters.Add("@Eval_CalidadTrbajos", SqlDbType.Int).Value = Eval_CalidadTrbajo.Text
         command.Parameters.Add("@Eval_DelegaResponsabilidad", SqlDbType.Int).Value = Eval_DeleganResponsabilidad.Text
-        command.Parameters.Add("Eval_Habilidad_Analisis_Resolver", SqlDbType.Int).Value = Eval_Habilidad_Analisis_Resolver.Text()
+        command.Parameters.Add("@Eval_Habilidad_Analisis_Resolver", SqlDbType.Int).Value = Eval_Habilidad_Analisis_Resolver.Text()
         command.Parameters.Add("@Eval_EnfrentarRetos", SqlDbType.Int).Value = Eval_EnfrentarRetos.Text()
         command.Parameters.Add("@Eval_DominioPropio", SqlDbType.Int).Value = Eval_DominioPropio.Text
         command.Parameters.Add("@Eval_Rectitud", SqlDbType.Int).Value = Eval_Rectitud.Text
