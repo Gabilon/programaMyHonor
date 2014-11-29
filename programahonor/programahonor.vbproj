@@ -427,7 +427,8 @@
       <DependentUpon>Docentes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Emails.vb" />
+    <Compile Include="Modules\Emails.vb" />
+    <Compile Include="Modules\Encryption.vb" />
     <Compile Include="Estudiantes.Master.designer.vb">
       <DependentUpon>Estudiantes.Master</DependentUpon>
     </Compile>
