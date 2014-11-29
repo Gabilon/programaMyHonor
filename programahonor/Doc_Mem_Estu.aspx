@@ -1,12 +1,10 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Doc_Mem.aspx.vb" Inherits="programahonor.Doc_Mem" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Estudiantes.Master" CodeBehind="Doc_Mem_Estu.aspx.vb" Inherits="programahonor.Doc_Mem_Estu" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link href="Content/stylesheet.css" rel="stylesheet"/>
 
     <script src="Scripts/jquery-2.1.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="div_white">
