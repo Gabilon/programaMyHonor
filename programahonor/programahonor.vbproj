@@ -141,6 +141,7 @@
     <Content Include="Default_Estu.aspx" />
     <Content Include="Default_Mem.aspx" />
     <Content Include="Docentes.aspx" />
+    <Content Include="Doc_Mem.aspx" />
     <Content Include="filesCaptcha\InstruccionesCaptcha.txt" />
     <Content Include="filesCaptcha\Recaptcha.dll" />
     <Content Include="FormularioActividades.aspx" />
@@ -426,6 +427,13 @@
     <Compile Include="Docentes.aspx.vb">
       <DependentUpon>Docentes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Doc_Mem.aspx.designer.vb">
+      <DependentUpon>Doc_Mem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Doc_Mem.aspx.vb">
+      <DependentUpon>Doc_Mem.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Estudiantes.Master.designer.vb">
       <DependentUpon>Estudiantes.Master</DependentUpon>
