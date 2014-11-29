@@ -131,6 +131,7 @@
     <Content Include="Content\xml\XmlConoceTiempo.xml" />
     <Content Include="Content\xml\XMLDisponibilidad.xml" />
     <Content Include="Content\xml\xmlEstado.xml" />
+    <Content Include="Content\xml\XMLEstadoDocente.xml" />
     <Content Include="Content\xml\XMLIGS.xml" />
     <Content Include="Content\xml\XMLIngles.xml" />
     <Content Include="Content\xml\XMLInteres.xml" />
