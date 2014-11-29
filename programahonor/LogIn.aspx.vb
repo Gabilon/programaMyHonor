@@ -7,7 +7,7 @@ Public Class LogIn
     End Sub
     Protected Sub btn_Ingresar_Click(sender As Object, e As EventArgs) Handles btn_Ingresar.Click
         Dim vuser As String = "a"
-
+        Dim status As String = "a"
 
         Try
             Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
@@ -18,12 +18,15 @@ Public Class LogIn
             command.CommandText = "ValidStudent" 'Asignacion del StoreProcedure a emplear
             command.Parameters.AddWithValue("@StudentNumber", Usuario.Text) 'parametro para verificar registro del usuario autenticado
 
+
+
             Try 'Lectura de datos de estudiante perteneciente al programa de honor
 
                 cnDB.Open()
                 Dim reader As SqlDataReader = command.ExecuteReader() 'Lectura del resultado entregado por la BD
                 While (reader.Read())
                     vuser = reader.GetString(0)
+                    status = reader.GetString(1)
                 End While
                 cnDB.Close()
                 Session.Add("usuario", Usuario.Text)
