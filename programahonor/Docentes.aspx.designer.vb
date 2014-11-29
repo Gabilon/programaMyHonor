@@ -74,7 +74,16 @@ Partial Public Class Docentes
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Asedoc_Status As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Asedoc_Status As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''XmlDataSource1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents XmlDataSource1 As Global.System.Web.UI.WebControls.XmlDataSource
 
     '''<summary>
     '''btnGuardar control.
@@ -84,4 +93,22 @@ Partial Public Class Docentes
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnGuardar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''GridView1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
+    '''SqlDataSourceDocentes control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents SqlDataSourceDocentes As Global.System.Web.UI.WebControls.SqlDataSource
 End Class
