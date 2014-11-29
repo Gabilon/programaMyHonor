@@ -33,6 +33,9 @@ Public Class LogIn
                 If (Contrasena.Text = "3") Then
                     Response.Redirect("Default_Admin.aspx")
                 End If
+                If (Contrasena.Text = "5") Then
+                    Response.Redirect("Solicitud.aspx")
+                End If
 
             Catch ex As Exception
                 'Response.Write("<script>alert('Usuario no miembro programa de honor UPRB'); </script>")
