@@ -23,6 +23,24 @@ Partial Public Class Evaluacion
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
+    '''Eval_NombreEstudiante control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Eval_NombreEstudiante As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Eval_NumeroEstudiante control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Eval_NumeroEstudiante As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''Eval_AsociacionEst control.
     '''</summary>
     '''<remarks>
@@ -41,13 +59,13 @@ Partial Public Class Evaluacion
     Protected WithEvents Eval_AsociacionData As Global.System.Web.UI.WebControls.XmlDataSource
 
     '''<summary>
-    '''Eval_ConoceEs control.
+    '''Eval_ConoceEst control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Eval_ConoceEs As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents Eval_ConoceEst As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Eval_ConoceData control.
@@ -437,22 +455,76 @@ Partial Public Class Evaluacion
     Protected WithEvents Eval_SentidoData As Global.System.Web.UI.WebControls.XmlDataSource
 
     '''<summary>
-    '''Eval_TrabajoEquipo control.
+    '''eval_buenJuicio control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Eval_TrabajoEquipo As Global.System.Web.UI.WebControls.RadioButtonList
+    Protected WithEvents eval_buenJuicio As Global.System.Web.UI.WebControls.RadioButtonList
 
     '''<summary>
-    '''Eval_EquipoData control.
+    '''eval_buenJuicioData control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Eval_EquipoData As Global.System.Web.UI.WebControls.XmlDataSource
+    Protected WithEvents eval_buenJuicioData As Global.System.Web.UI.WebControls.XmlDataSource
+
+    '''<summary>
+    '''Eval_TrabajoComunicacion control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Eval_TrabajoComunicacion As Global.System.Web.UI.WebControls.RadioButtonList
+
+    '''<summary>
+    '''Eval_TrabajoComunicacionData control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Eval_TrabajoComunicacionData As Global.System.Web.UI.WebControls.XmlDataSource
+
+    '''<summary>
+    '''Eval_habilidadCooperacion control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Eval_habilidadCooperacion As Global.System.Web.UI.WebControls.RadioButtonList
+
+    '''<summary>
+    '''Eval_habilidadCooperacionData control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Eval_habilidadCooperacionData As Global.System.Web.UI.WebControls.XmlDataSource
+
+    '''<summary>
+    '''Eval_habilidadEquipo control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Eval_habilidadEquipo As Global.System.Web.UI.WebControls.RadioButtonList
+
+    '''<summary>
+    '''Eval_habilidadEquipoData control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Eval_habilidadEquipoData As Global.System.Web.UI.WebControls.XmlDataSource
 
     '''<summary>
     '''Eval_FacilitaDialogo control.
@@ -597,6 +669,33 @@ Partial Public Class Evaluacion
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Eval_OralData As Global.System.Web.UI.WebControls.XmlDataSource
+
+    '''<summary>
+    '''Eval_finalRecomienda control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Eval_finalRecomienda As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''XmlDataSource1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents XmlDataSource1 As Global.System.Web.UI.WebControls.XmlDataSource
+
+    '''<summary>
+    '''Eval_finalRecomiendatxt control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Eval_finalRecomiendatxt As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Eval_button control.

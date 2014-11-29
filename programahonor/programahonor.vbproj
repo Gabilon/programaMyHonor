@@ -137,6 +137,7 @@
     <Content Include="Docentes.aspx" />
     <Content Include="filesCaptcha\InstruccionesCaptcha.txt" />
     <Content Include="filesCaptcha\Recaptcha.dll" />
+    <Content Include="FormularioActividades.aspx" />
     <Content Include="Images\BANNER_COMPLETE.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -207,6 +208,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="prueba.aspx" />
+    <Content Include="ResultadoEvaluaciones.aspx" />
     <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
@@ -433,6 +435,13 @@
       <DependentUpon>Evaluacion.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="FormularioActividades.aspx.designer.vb">
+      <DependentUpon>FormularioActividades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioActividades.aspx.vb">
+      <DependentUpon>FormularioActividades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="InfoGeneral.aspx.designer.vb">
       <DependentUpon>InfoGeneral.aspx</DependentUpon>
     </Compile>
@@ -514,6 +523,13 @@
     <Compile Include="prueba.aspx.vb">
       <DependentUpon>prueba.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ResultadoEvaluaciones.aspx.designer.vb">
+      <DependentUpon>ResultadoEvaluaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResultadoEvaluaciones.aspx.vb">
+      <DependentUpon>ResultadoEvaluaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Servicios.aspx.designer.vb">
       <DependentUpon>Servicios.aspx</DependentUpon>
