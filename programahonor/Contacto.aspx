@@ -19,7 +19,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="div_white">
-        <div class="panel-body">
+        <div class="panel-body" style="margin-top:20px;">
             <form role="form" method="post" runat="server" class="form-horizontal">
                 <div class="col-md-11">
                     <div class="col-md-4 col-md-push-5">
