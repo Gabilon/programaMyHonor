@@ -553,6 +553,8 @@
       <DependentUpon>miCuenta_Mem.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Modules\Emails.vb" />
+    <Compile Include="Modules\Encryption.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
