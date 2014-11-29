@@ -16,7 +16,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="div_white">
+    <div class="div_white" style="height:100%">
         <form id="form1" method="post" runat="server" Class="form-horizontal">
              <h1 style= "text-align: center; padding: 5px;">Evaluacion </h1>
             <br></br> 
