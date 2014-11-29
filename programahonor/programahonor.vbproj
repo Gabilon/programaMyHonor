@@ -483,7 +483,6 @@
       <DependentUpon>Doc_Mem_Mem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Emails.vb" />
     <Compile Include="Estudiantes.Master.designer.vb">
       <DependentUpon>Estudiantes.Master</DependentUpon>
     </Compile>
