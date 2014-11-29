@@ -35,7 +35,7 @@ Public Class Aplicar
                     While (reader.Read())
                         For number = 0 To 2
 
-                            If (number > 2) Then
+                            If (number > 2) Then ''prueba de commit
                                 Exit For
                             End If
 
