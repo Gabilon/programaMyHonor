@@ -55,7 +55,8 @@ Module Emails
 
                 eval_Email = reader.GetString(0)
                 hashLink = SimpleHash.ComputeHash(Username, "SHA1", Nothing)
-                Dim link As String = "<a href=""http://localhost:57474/Evaluacion.aspx?" & hashLink & """>Link</a>"
+                Dim link As String = "<a href=" & ConfigurationManager.AppSettings("accesoevaluacion").ToString & "" & hashLink & """>Link</a>"
+                'Dim link As String = "<a href=""http://localhost:57474/Evaluacion.aspx?" & hashLink & """>Link</a>"
 
                 Dim cadena1 As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
                 Dim cnDB1 As SqlConnection = New SqlConnection(cadena1)
