@@ -365,26 +365,27 @@ Public Class Aplicar
                 command1.CommandType = CommandType.StoredProcedure
                 command1.Parameters.Add("@Stu_Status", SqlDbType.VarChar).Value = "solicitando" 'actualiza el estado del estudiante de completado del formulario a solicitando
 
-                Try ''Envio de email de notificacio de registro de la solicitud al programa de honor
-                    Dim Smtp_Server As New SmtpClient
-                    Dim e_mail As New MailMessage()
-
-                    e_mail = New MailMessage()
-                    e_mail.From = New MailAddress("grupogerenciaccg@gmail.com")
-                    e_mail.To.Add(stumail)
-                    e_mail.Subject = "Confirmacion Registro Solicitud Programa de Honor UPRB"
-                    e_mail.IsBodyHtml = False
-                    e_mail.Body = "Usted se ha registrado correctamente , Favor no responder a este mensaje, es generado automaticamente" +
-                                  " por el sistema, cualquier duda o inquietud escribir a programahonor@upr.edu o dirigirse a nuestaras instalaciones en la UPRB" +
-                                  " Siguenos por Facebook."
-
-                    Smtp_Server.Send(e_mail)
-
-                    Response.Write("<script>alert('Email Enviado Satisfactoriamente'); </script>")
-
-                Catch ex As Exception
+                'Envio de notificación al estudiante sobre su confirmación de registro de solicitud
+                If emailNotiAplicacionEstudiante(stumail) = True Then
+                    Response.Write("<script>alert('Email Enviado Satisfactoriamente() '); </script>")
+                Else
                     Response.Write("<script>alert('Email no Enviado'); </script>")
-                End Try
+                End If
+
+                'Envio de email a los evaluadores con el link a la evaluación de los estudiantes
+                If emailNotiAplicacionEvaluador(StudentNumber.Text) = True Then
+                    Response.Write("<script>alert('Email Enviado Satisfactoriamente() '); </script>")
+                Else
+                    Response.Write("<script>alert('Email no Enviado'); </script>")
+                End If
+
+                'Envio de email de notificación al programa de honor sobre la confirmacion de registro de solicitud de un estudiante
+                If emailNotiAplicacionProgHonor(stumail, StudentName.Text, StudentNumber.Text) = True Then
+                    Response.Write("<script>alert('Email Enviado Satisfactoriamente() '); </script>")
+                Else
+                    Response.Write("<script>alert('Email no Enviado'); </script>")
+                End If
+
             Else
                 Response.Write("<script>alert('La solictud no ha sido completada, no se pude someter, verifiquela he intente nuevamente.'); </script>")
             End If
@@ -395,7 +396,7 @@ Public Class Aplicar
         End Try
 
 
-       
+
 
         'este boton debe cambiar el estatus del estudiante a "sometida o pendiente por aprobacion"
         ' enviar email de notificacion que la solicitud fue sometida al estudiante 

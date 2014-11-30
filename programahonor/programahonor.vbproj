@@ -310,7 +310,6 @@
     <Content Include="Scripts\jquery-ui-1.11.1.js" />
     <Content Include="Scripts\jquery-ui.min-1.11.1.js" />
     <Content Include="Servicios.aspx" />
-    <Content Include="servicios.html" />
     <Content Include="Servicios_Estu.aspx" />
     <Content Include="Servicios_Mem.aspx" />
     <Content Include="Solicitud.aspx" />
