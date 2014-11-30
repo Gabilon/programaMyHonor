@@ -72,25 +72,21 @@ Public Class Evaluacion
 
             Response.Write("<script>alert('Información Guardada'); </script>")
 
-            Try 'Envio de email de notificacion al estudiante sobre su evaluación
-                Dim Smtp_Server As New SmtpClient
-                Dim e_mail As New MailMessage()
-
-                e_mail = New MailMessage()
-                e_mail.From = New MailAddress("grupogerenciaccg@gmail.com")
-                e_mail.To.Add("emanuel.correa216@gmail.com") 'Aqui va el email del estudiante
-                e_mail.To.Add("emanuel.correa@upr.edu") 'Aqui va el email del programa de honor
-                e_mail.Subject = "Confirmacion Registro Solicitud Programa de Honor UPRB"
-                e_mail.IsBodyHtml = False
-                e_mail.Body = "Una evaluación ha sido sometida."
-
-                Smtp_Server.Send(e_mail)
-
-                Response.Write("<script>alert('Email Enviado Satisfactoriamente'); </script>")
-
-            Catch ex As Exception
+            'Envio de notificación al estudiante sobre su confirmación de registro de solicitud
+            If emailEvalEstudiante("emanuel.correa216@gmail.com") = True Then 'Aqui va stumail
+                Response.Write("<script>alert('Email Enviado Satisfactoriamente() '); </script>")
+            Else
                 Response.Write("<script>alert('Email no Enviado'); </script>")
-            End Try
+            End If
+
+            'Envio de email a los evaluadores con el link a la evaluación de los estudiantes
+            If emailEvalProgHonor() = True Then
+                Response.Write("<script>alert('Email Enviado Satisfactoriamente() '); </script>")
+            Else
+                Response.Write("<script>alert('Email no Enviado'); </script>")
+            End If
+
+
 
         Catch ex As Exception
 

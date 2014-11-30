@@ -42,7 +42,7 @@ Public Class LogIn
                 End If
             Catch ex As Exception
                 'Response.Write("<script>alert('Usuario no miembro programa de honor UPRB'); </script>")
-                Response.Redirect("Default_Mem.aspx")
+                Response.Redirect("Default_Estu.aspx")
             End Try
         Catch ex As Exception
 
