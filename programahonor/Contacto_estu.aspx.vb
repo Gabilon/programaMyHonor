@@ -1,7 +1,6 @@
-﻿Imports System.Net
-Imports System.Net.Mail
+﻿Imports System.Net.Mail
 
-Public Class Contacto
+Public Class Contacto_estu
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -9,7 +8,6 @@ Public Class Contacto
     End Sub
 
     Protected Sub btnSometer_Click(sender As Object, e As EventArgs) Handles btnSometer.Click
-
         If Page.IsValid Then
             lblResult.Text = "Correcto."
             lblResult.ForeColor = Drawing.Color.Green
@@ -42,7 +40,5 @@ Public Class Contacto
             lblResult.ForeColor = Drawing.Color.Red
             '<!--Hay que hacer que vuelva a entrar a la pregunta-->
         End If
-
     End Sub
-
 End Class
