@@ -37,7 +37,7 @@ Public Class Evaluacion
         command.Parameters.Add("@Eval_CalidadTrbajos", SqlDbType.Int).Value = Eval_CalidadTrbajo.Text
         command.Parameters.Add("@Eval_DelegaResponsabilidad", SqlDbType.Int).Value = Eval_DeleganResponsabilidad.Text
         command.Parameters.Add("@Eval_Habilidad_Analisis_Resolver", SqlDbType.Int).Value = Eval_Habilidad_Analisis_Resolver.Text()
-        command.Parameters.Add("@Eval_TrabajaPresion", SqlDbType.Int).Value = Eval_Habilidad_Presion.Text
+        command.Parameters.Add("Eval_TrabajaPresion", SqlDbType.Int).Value = Eval_Presion.Text
         command.Parameters.Add("@Eval_EnfrentarRetos", SqlDbType.Int).Value = Eval_EnfrentarRetos.Text()
         command.Parameters.Add("@Eval_DominioPropio", SqlDbType.Int).Value = Eval_DominioPropio.Text
         command.Parameters.Add("@Eval_Rectitud", SqlDbType.Int).Value = Eval_Rectitud.Text
@@ -60,10 +60,11 @@ Public Class Evaluacion
         command.Parameters.Add("@Eval_FortaDebilidades", SqlDbType.Int).Value = Eval_FortaDebilidades.Text
         command.Parameters.Add("@Eval_PerseveranciaLogros", SqlDbType.Int).Value = Eval_PerservanciaLogros.Text
         command.Parameters.Add("@Eval_ExprOralEscrita", SqlDbType.Int).Value = Eval_OralEscrita.Text
-        command.Parameters.Add("@Eval_Recomienda", SqlDbType.Int).Value = Eval_finalRecomienda.Text
-        command.Parameters.Add("@Eval_Recomiendatxt", SqlDbType.Int).Value = Eval_finalRecomiendatxt.Text
-
+        command.Parameters.Add("@Eval_Recomienda", SqlDbType.VarChar).Value = Eval_finalRecomienda.Text
+        command.Parameters.Add("@Eval_Recomiendatxt", SqlDbType.Text).Value = Eval_finalRecomiendatxt.Text
+        command.Parameters.Add("@fecha_creacion", SqlDbType.Date).Value = Date.Today().ToString("D")
         command.Parameters.Add("@usuario_creacion", SqlDbType.VarChar).Value = evalID
+
 
         Try
             cnDB.Open()

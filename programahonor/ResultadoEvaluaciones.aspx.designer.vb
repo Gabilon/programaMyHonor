@@ -23,15 +23,6 @@ Partial Public Class ResultadoEvaluaciones
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Result_NombreEstudiante control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Result_NombreEstudiante As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
     '''Result_NumeroEstudiante control.
     '''</summary>
     '''<remarks>
@@ -39,33 +30,6 @@ Partial Public Class ResultadoEvaluaciones
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Result_NumeroEstudiante As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Evaluador1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Evaluador1 As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Evaluador2 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Evaluador2 As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Evaluador3 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Evaluador3 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Resul_AsociacionEst1 control.
@@ -473,31 +437,31 @@ Partial Public Class ResultadoEvaluaciones
     Protected WithEvents Eval_DeleganResponsabilidad3 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Eval_Habilidad_Presion1 control.
+    '''Eval_Presion1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Eval_Habilidad_Presion1 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Eval_Presion1 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Eval_Habilidad_Presion2 control.
+    '''Eval_Presion2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Eval_Habilidad_Presion2 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Eval_Presion2 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Eval_Habilidad_Presion3 control.
+    '''Eval_Presion3 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Eval_Habilidad_Presion3 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Eval_Presion3 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Eval_Habilidad_Analisis_Resolver1 control.

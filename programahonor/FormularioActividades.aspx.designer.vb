@@ -84,4 +84,22 @@ Partial Public Class FormularioActividades
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Button As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''GridView1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
+    '''SqlDataActividades control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents SqlDataActividades As Global.System.Web.UI.WebControls.SqlDataSource
 End Class
