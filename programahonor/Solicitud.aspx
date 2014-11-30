@@ -158,6 +158,11 @@
                         <div class="form-group">
                             <label style="width: 160px; text-align: left;">Resumé:</label>
                             <asp:FileUpload ID="Sol_Resume" runat="server" CssClass="form-control" />
+                           <%--  <label style="width: 160px; text-align: left;">Resumé:</label>
+                            <asp:FileUpload ID="Sol_Resume" runat="server" CssClass="form-control" />
+                             <asp:Button ID="btnUpload" runat="server" Text="Upload" 
+                                OnClientClick = "return ValidateFile()"  OnClick="btnUpload_Click"  />
+                             <asp:Label ID="Label1" runat="server" Text="" /> --%>
                         </div>
                     </div>
                     <div class="col-md-12 col-sm-3 col-xs-12">

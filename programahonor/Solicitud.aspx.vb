@@ -18,7 +18,7 @@ Public Class Solicitud
             Dim command As New SqlCommand() 'instanciamiento de la conexion a la BD
             command.Connection = cnDB 'Cocatenar cadena de conexion de la base de datos a la instancia
             command.CommandType = CommandType.StoredProcedure 'Inidcar al command que debera emplear un Store Procedure
-            command.CommandText = "SolicitudStudent" 'Asignacion del StoreProcedure a emplear
+            command.CommandText = "LeerSolicitud" 'Asignacion del StoreProcedure a emplear
             command.Parameters.AddWithValue("@StudentNumber", Username) 'parametro para verificar registro del usuario autenticado
 
             Try 'Lectura de datos de estudiante perteneciente al programa de honor
@@ -33,22 +33,22 @@ Public Class Solicitud
                     StudentNumber.Text = reader.GetString(1)
                     Stu_Gender.Text = reader.GetString(2)
                     Stu_Email.ReadOnly = True
-                    Stu_Email.Text = reader.GetString(4)
+                    Stu_Email.Text = reader.GetString(3)
                     Stu_Phone.ReadOnly = True
-                    Stu_Phone.Text = reader.GetString(5)
+                    Stu_Phone.Text = reader.GetString(4)
                     Stu_Direccion.ReadOnly = True
-                    Stu_Direccion.Text = reader.GetString(6)
+                    Stu_Direccion.Text = reader.GetString(5)
                     Stu_Postal.ReadOnly = True
-                    Stu_Postal.Text = reader.GetString(7)
-                    Stu_Department.Text = reader.GetString(8)
-                    Stu_Year.Text = reader.GetString(9)
-                    Stu_Igs.Text = reader.GetString(10)
+                    Stu_Postal.Text = reader.GetString(6)
+                    Stu_Department.Text = reader.GetString(7)
+                    Stu_Year.Text = reader.GetString(8)
+                    Stu_Igs.Text = reader.GetString(9)
 
                 End While
                 cnDB.Close()
 
             Catch ex As Exception
-                Response.Write("<script>alert('Imposible Atender su solicitud, De persistir el problema comuniquese el Programa de Honor UPRB'); </script>")
+                Response.Write("<script>alert('Imposible Atender su solicitud de internado, De persistir el problema comuniquese el Programa de Honor UPRB'); </script>")
             End Try
         Catch ex As Exception
 
@@ -60,10 +60,19 @@ Public Class Solicitud
     Protected Sub btnGuardarSolicitud_Click(sender As Object, e As EventArgs) Handles btnGuardarSolicitud.Click
         Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
         Dim cnDB As SqlConnection = New SqlConnection(cadena)
-        Dim command As New SqlCommand("AddSolcitud", cnDB)
+        Dim command As New SqlCommand("AddSolicitud", cnDB)
+        Dim solicitud_id As String
+        solicitud_id = System.Guid.NewGuid().ToString()
+
+
+        'Para validar el fileUpload
+        'Dim validFileTypes As String() = {"pdf", "doc"}
+        'Dim ext As String = System.IO.Path.GetExtension(Sol_Resume.PostedFile.FileName)
+        'Dim isValidFile As Boolean = False
+
         command.CommandType = CommandType.StoredProcedure
 
-        command.Parameters.Add("@solicitud_id", SqlDbType.UniqueIdentifier).Value = ""
+        command.Parameters.Add("@solicitud_id", SqlDbType.VarChar).Value = solicitud_id
 
         command.Parameters.Add("@Sol_Specialty", SqlDbType.VarChar).Value = Sol_Specialty.Text
         command.Parameters.Add("@Sol_GraduationDate", SqlDbType.VarChar).Value = Sol_GraduationDate.Text
@@ -73,10 +82,25 @@ Public Class Solicitud
         command.Parameters.Add("@Sol_Interest", SqlDbType.VarChar).Value = Sol_Interest.Text
         command.Parameters.Add("@Sol_Availability", SqlDbType.VarChar).Value = Sol_Availability.Text
 
+        'Para validar el fileUpload
+        'For i As Integer = 0 To validFileTypes.Length - 1
+        '    If ext = "." & validFileTypes(i) Then
+        '        isValidFile = True
+        '        Exit For
+        '    End If
+        'Next
+        'If Not isValidFile Then
+        '    Label1.ForeColor = System.Drawing.Color.Red
+        '    Label1.Text = "Invalid File. Please upload a File with extension " & _
+        '                  String.Join(",", validFileTypes)
+        'Else
+        '    Label1.ForeColor = System.Drawing.Color.Green
+        '    Label1.Text = "File uploaded successfully."
+        'End If
         command.Parameters.Add("@Sol_Resume", SqlDbType.VarChar).Value = Sol_Resume.FileName
 
         command.Parameters.Add("@fecha_creacion", SqlDbType.Date).Value = Date.Today().ToString("D")
-        'command.Parameters.Add("@usuario_creacion", SqlDbType.VarChar).Value = Session("usuario").ToString()
+        command.Parameters.Add("@usuario_creacion", SqlDbType.VarChar).Value = Session("usuario").ToString()
         'command.Parameters.Add("@fecha_actualizo", SqlDbType.Date).Value = fecha_actualizo.Date
         'command.Parameters.Add("@usuario_actualizo", SqlDbType.VarChar).Value = usuario_actualizo.Text
 
