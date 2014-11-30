@@ -27,22 +27,26 @@ Public Class LogIn
                 While (reader.Read())
                     vuser = reader.GetString(0)
                     status = reader.GetString(1)
+
                 End While
                 cnDB.Close()
 
-                If (Usuario.Text = vuser And Contrasena.Text = "2" And status = "completado") Then
+                If (Usuario.Text = vuser And Contrasena.Text = "2") Then
                     Session.Add("usuario", Usuario.Text)
-                    Response.Redirect("Default_Estu.aspx")
+                    'Response.Redirect("Default_Estu.aspx")
+                    Server.Transfer("Default_Mem.aspx", True)
                 ElseIf (Usuario.Text = vuser And Contrasena.Text = "3") Then
                     Session.Add("usuario", Usuario.Text)
-                    Response.Redirect("Default_Admin.aspx")
+                    'Response.Redirect("Default_Admin.aspx")
+                    Server.Transfer("Default_Admin.aspx", True)
                 Else
                     Session.Add("usuario", Usuario.Text)
-                    Response.Redirect("Default_Estu.aspx")
+                    'Response.Redirect("Default_Estu.aspx")
+                    Server.Transfer("Default_Estu.aspx", True)
                 End If
             Catch ex As Exception
                 'Response.Write("<script>alert('Usuario no miembro programa de honor UPRB'); </script>")
-                Response.Redirect("Default_Mem.aspx")
+                Response.Redirect("Default.aspx")
             End Try
         Catch ex As Exception
 
