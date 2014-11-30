@@ -18,7 +18,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div class="div_white">
-         <div class="panel-body">
+         <div class="panel-body" style="margin-top:20px;">
              <div class="panel-heading">
                   <div class="col-md-11">
                                         <div class="col-md-8 col-md-push-3 ">
