@@ -41,6 +41,7 @@ Module Emails
 
         Dim eval_Email As String = " "
         Dim hashLink As String = " "
+        Dim evaluador As String = " "
 
         'Lectura de datos de estudiante perteneciente al programa de honor
         Try
@@ -55,6 +56,23 @@ Module Emails
                 eval_Email = reader.GetString(0)
                 hashLink = SimpleHash.ComputeHash(Username, "SHA1", Nothing)
                 Dim link As String = "<a href=""http://localhost:57474/Evaluacion.aspx?" & hashLink & """>Link</a>"
+
+                Dim cadena1 As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
+                Dim cnDB1 As SqlConnection = New SqlConnection(cadena1)
+                Dim command1 As New SqlCommand() 'instanciamiento de la conexion a la BD
+                command1.Connection = cnDB1 'Cocatenar cadena de conexion de la base de datos a la instancia
+                command1.CommandType = CommandType.StoredProcedure 'Inidcar al command que debera emplear un Store Procedure
+                command1.CommandText = "SelectEmailEvaluador" 'Asignacion del StoreProcedure a emplear
+                command1.Parameters.AddWithValue("@StudentNumber", Username) 'parametro para verificar registro del usuario autenticado
+                command1.Parameters.AddWithValue("@EvaluadorId", reader.GetString(1))
+                command1.Parameters.AddWithValue("@validador", hashLink)
+
+                Try
+                    cnDB.Open()
+                    command.ExecuteNonQuery()
+                    cnDB.Close()
+                Catch ex As Exception
+                End Try
 
                 enviarEmailsDocentes(Username, eval_Email, link)
 
