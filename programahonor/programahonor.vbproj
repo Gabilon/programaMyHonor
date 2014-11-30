@@ -117,12 +117,17 @@
     <Content Include="Actividades_Admin.aspx" />
     <Content Include="Actividades_Estu.aspx" />
     <Content Include="Actividades_Mem.aspx" />
+    <Content Include="ajustesCuenta_Admin.aspx" />
+    <Content Include="ajustesCuenta_Mem.aspx" />
     <Content Include="Aplicar.aspx" />
     <Content Include="AplicarPrueba.aspx" />
     <Content Include="comitesEstu.aspx" />
     <Content Include="comitesEstu_Estu.aspx" />
     <Content Include="comitesEstu_Mem.aspx" />
     <Content Include="Contacto.aspx" />
+    <Content Include="Contacto_admin.aspx" />
+    <Content Include="Contacto_estu.aspx" />
+    <Content Include="Contacto_men.aspx" />
     <Content Include="Content\xml\asociacionEstudiante.xml" />
     <Content Include="Content\xml\relacion_est.xml" />
     <Content Include="Content\xml\XMLAñoGraduacion.xml" />
@@ -141,6 +146,10 @@
     <Content Include="Default_Estu.aspx" />
     <Content Include="Default_Mem.aspx" />
     <Content Include="Docentes.aspx" />
+    <Content Include="Doc_Mem.aspx" />
+    <Content Include="Doc_Mem_Admin.aspx" />
+    <Content Include="Doc_Mem_Estu.aspx" />
+    <Content Include="Doc_Mem_Mem.aspx" />
     <Content Include="filesCaptcha\InstruccionesCaptcha.txt" />
     <Content Include="filesCaptcha\Recaptcha.dll" />
     <Content Include="FormularioActividades.aspx" />
@@ -301,7 +310,6 @@
     <Content Include="Scripts\jquery-ui-1.11.1.js" />
     <Content Include="Scripts\jquery-ui.min-1.11.1.js" />
     <Content Include="Servicios.aspx" />
-    <Content Include="servicios.html" />
     <Content Include="Servicios_Estu.aspx" />
     <Content Include="Servicios_Mem.aspx" />
     <Content Include="Solicitud.aspx" />
@@ -346,6 +354,20 @@
     <Compile Include="Admin.Master.vb">
       <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajustesCuenta_Admin.aspx.designer.vb">
+      <DependentUpon>ajustesCuenta_Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajustesCuenta_Admin.aspx.vb">
+      <DependentUpon>ajustesCuenta_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ajustesCuenta_Mem.aspx.designer.vb">
+      <DependentUpon>ajustesCuenta_Mem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajustesCuenta_Mem.aspx.vb">
+      <DependentUpon>ajustesCuenta_Mem.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Aplicar.aspx.designer.vb">
       <DependentUpon>Aplicar.aspx</DependentUpon>
@@ -392,6 +414,27 @@
       <DependentUpon>Contacto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Contacto_admin.aspx.designer.vb">
+      <DependentUpon>Contacto_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contacto_admin.aspx.vb">
+      <DependentUpon>Contacto_admin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Contacto_estu.aspx.designer.vb">
+      <DependentUpon>Contacto_estu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contacto_estu.aspx.vb">
+      <DependentUpon>Contacto_estu.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Contacto_men.aspx.designer.vb">
+      <DependentUpon>Contacto_men.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contacto_men.aspx.vb">
+      <DependentUpon>Contacto_men.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Default.aspx.designer.vb">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
@@ -427,7 +470,34 @@
       <DependentUpon>Docentes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Emails.vb" />
+    <Compile Include="Doc_Mem.aspx.designer.vb">
+      <DependentUpon>Doc_Mem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Doc_Mem.aspx.vb">
+      <DependentUpon>Doc_Mem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Doc_Mem_Admin.aspx.designer.vb">
+      <DependentUpon>Doc_Mem_Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Doc_Mem_Admin.aspx.vb">
+      <DependentUpon>Doc_Mem_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Doc_Mem_Estu.aspx.designer.vb">
+      <DependentUpon>Doc_Mem_Estu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Doc_Mem_Estu.aspx.vb">
+      <DependentUpon>Doc_Mem_Estu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Doc_Mem_Mem.aspx.designer.vb">
+      <DependentUpon>Doc_Mem_Mem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Doc_Mem_Mem.aspx.vb">
+      <DependentUpon>Doc_Mem_Mem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Estudiantes.Master.designer.vb">
       <DependentUpon>Estudiantes.Master</DependentUpon>
     </Compile>
@@ -498,6 +568,8 @@
       <DependentUpon>miCuenta_Mem.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Modules\Emails.vb" />
+    <Compile Include="Modules\Encryption.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

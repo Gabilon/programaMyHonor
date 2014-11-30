@@ -179,6 +179,6 @@ Public Class SimpleHash
         ' the plain text value must be correct.
         VerifyHash = (hashValue = expectedHashString)
     End Function
-End Class
+    End Class
 
 End Module

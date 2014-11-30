@@ -33,16 +33,16 @@ Public Class LogIn
 
                 If (Usuario.Text = vuser And Contrasena.Text = "2") Then
                     Session.Add("usuario", Usuario.Text)
-                    'Response.Redirect("Default_Estu.aspx")
-                    Server.Transfer("Default_Mem.aspx", True)
+                    Response.Redirect("Default_Estu.aspx")
+
                 ElseIf (Usuario.Text = vuser And Contrasena.Text = "3") Then
                     Session.Add("usuario", Usuario.Text)
-                    'Response.Redirect("Default_Admin.aspx")
-                    Server.Transfer("Default_Admin.aspx", True)
+                    Response.Redirect("Default_Admin.aspx")
+
                 Else
                     Session.Add("usuario", Usuario.Text)
-                    'Response.Redirect("Default_Estu.aspx")
-                    Server.Transfer("Default_Estu.aspx", True)
+                    Response.Redirect("Default_Estu.aspx")
+
                 End If
             Catch ex As Exception
                 'Response.Write("<script>alert('Usuario no miembro programa de honor UPRB'); </script>")

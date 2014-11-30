@@ -19,7 +19,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="div_white">
-        <div class="panel-body">
+        <div class="panel-body" style="margin-top: 20px;">
             <div class="panel-heading">
                  <div class="col-md-11">
                         <div class="col-md-8 col-md-push-3 ">
@@ -158,6 +158,11 @@
                         <div class="form-group">
                             <label style="width: 160px; text-align: left;">Resumé:</label>
                             <asp:FileUpload ID="Sol_Resume" runat="server" CssClass="form-control" />
+                           <%--  <label style="width: 160px; text-align: left;">Resumé:</label>
+                            <asp:FileUpload ID="Sol_Resume" runat="server" CssClass="form-control" />
+                             <asp:Button ID="btnUpload" runat="server" Text="Upload" 
+                                OnClientClick = "return ValidateFile()"  OnClick="btnUpload_Click"  />
+                             <asp:Label ID="Label1" runat="server" Text="" /> --%>
                         </div>
                     </div>
                     <div class="col-md-12 col-sm-3 col-xs-12">

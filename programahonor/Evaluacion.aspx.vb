@@ -37,7 +37,7 @@ Public Class Evaluacion
         command.Parameters.Add("@Eval_CalidadTrbajos", SqlDbType.Int).Value = Eval_CalidadTrbajo.Text
         command.Parameters.Add("@Eval_DelegaResponsabilidad", SqlDbType.Int).Value = Eval_DeleganResponsabilidad.Text
         command.Parameters.Add("@Eval_Habilidad_Analisis_Resolver", SqlDbType.Int).Value = Eval_Habilidad_Analisis_Resolver.Text()
-        command.Parameters.Add("@Eval_TrabajaPresion", SqlDbType.Int).Value = Eval_Habilidad_Presion.Text
+        command.Parameters.Add("Eval_TrabajaPresion", SqlDbType.Int).Value = Eval_Presion.Text
         command.Parameters.Add("@Eval_EnfrentarRetos", SqlDbType.Int).Value = Eval_EnfrentarRetos.Text()
         command.Parameters.Add("@Eval_DominioPropio", SqlDbType.Int).Value = Eval_DominioPropio.Text
         command.Parameters.Add("@Eval_Rectitud", SqlDbType.Int).Value = Eval_Rectitud.Text
@@ -60,10 +60,11 @@ Public Class Evaluacion
         command.Parameters.Add("@Eval_FortaDebilidades", SqlDbType.Int).Value = Eval_FortaDebilidades.Text
         command.Parameters.Add("@Eval_PerseveranciaLogros", SqlDbType.Int).Value = Eval_PerservanciaLogros.Text
         command.Parameters.Add("@Eval_ExprOralEscrita", SqlDbType.Int).Value = Eval_OralEscrita.Text
-        command.Parameters.Add("@Eval_Recomienda", SqlDbType.Int).Value = Eval_finalRecomienda.Text
-        command.Parameters.Add("@Eval_Recomiendatxt", SqlDbType.Int).Value = Eval_finalRecomiendatxt.Text
-
+        command.Parameters.Add("@Eval_Recomienda", SqlDbType.VarChar).Value = Eval_finalRecomienda.Text
+        command.Parameters.Add("@Eval_Recomiendatxt", SqlDbType.Text).Value = Eval_finalRecomiendatxt.Text
+        command.Parameters.Add("@fecha_creacion", SqlDbType.Date).Value = Date.Today().ToString("D")
         command.Parameters.Add("@usuario_creacion", SqlDbType.VarChar).Value = evalID
+
 
         Try
             cnDB.Open()
@@ -72,25 +73,21 @@ Public Class Evaluacion
 
             Response.Write("<script>alert('Información Guardada'); </script>")
 
-            Try 'Envio de email de notificacion al estudiante sobre su evaluación
-                Dim Smtp_Server As New SmtpClient
-                Dim e_mail As New MailMessage()
-
-                e_mail = New MailMessage()
-                e_mail.From = New MailAddress("grupogerenciaccg@gmail.com")
-                e_mail.To.Add("emanuel.correa216@gmail.com") 'Aqui va el email del estudiante
-                e_mail.To.Add("emanuel.correa@upr.edu") 'Aqui va el email del programa de honor
-                e_mail.Subject = "Confirmacion Registro Solicitud Programa de Honor UPRB"
-                e_mail.IsBodyHtml = False
-                e_mail.Body = "Una evaluación ha sido sometida."
-
-                Smtp_Server.Send(e_mail)
-
-                Response.Write("<script>alert('Email Enviado Satisfactoriamente'); </script>")
-
-            Catch ex As Exception
+            'Envio de notificación al estudiante sobre su confirmación de registro de solicitud
+            If emailEvalEstudiante("emanuel.correa216@gmail.com") = True Then 'Aqui va stumail
+                Response.Write("<script>alert('Email Enviado Satisfactoriamente() '); </script>")
+            Else
                 Response.Write("<script>alert('Email no Enviado'); </script>")
-            End Try
+            End If
+
+            'Envio de email a los evaluadores con el link a la evaluación de los estudiantes
+            If emailEvalProgHonor() = True Then
+                Response.Write("<script>alert('Email Enviado Satisfactoriamente() '); </script>")
+            Else
+                Response.Write("<script>alert('Email no Enviado'); </script>")
+            End If
+
+
 
         Catch ex As Exception
 

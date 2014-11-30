@@ -293,13 +293,13 @@ Partial Public Class Evaluacion
     Protected WithEvents Eval_ResponsabilidadData As Global.System.Web.UI.WebControls.XmlDataSource
 
     '''<summary>
-    '''Eval_Habilidad_Presion control.
+    '''Eval_Presion control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Eval_Habilidad_Presion As Global.System.Web.UI.WebControls.RadioButtonList
+    Protected WithEvents Eval_Presion As Global.System.Web.UI.WebControls.RadioButtonList
 
     '''<summary>
     '''Eval_PresionData control.
