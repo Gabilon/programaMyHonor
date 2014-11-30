@@ -192,4 +192,13 @@ Partial Public Class Oferta
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnGuardarOferta As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''btnActualizarOferta control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnActualizarOferta As Global.System.Web.UI.WebControls.Button
 End Class

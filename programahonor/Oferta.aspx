@@ -18,7 +18,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div class="div_white">
-         <div class="panel-body" style="margin-top:20px;">
+         <div class="panel-body">
              <div class="panel-heading">
                   <div class="col-md-11">
                                         <div class="col-md-8 col-md-push-3 ">
@@ -171,6 +171,9 @@
                                     </div>
                                     <div class="col-md-11 col-md-offset-10">  
                                         <asp:Button ID="btnGuardarOferta" runat="server" Text="Guardar" CssClass="btn btn-primary" ToolTip="Guardar Información de Registro de Ofertas" />
+                                    </div>
+                                    <div class="col-md-11 col-md-offset-10">
+                                        <asp:Button ID="btnActualizarOferta" runat="server" Text="Update" CssClass="btn btn-primary" ToolTip="Actualizar Información de de Registro de Ofertas" />
                                     </div>
                                 </div>
                 </form>

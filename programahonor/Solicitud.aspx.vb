@@ -7,7 +7,7 @@ Public Class Solicitud
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
-        btnActualizarSolicitud.Visible = True
+        btnActualizarSolicitud.Visible = False
 
         Dim Username As String = Session("usuario").ToString()
 
@@ -98,11 +98,13 @@ Public Class Solicitud
         '    Label1.Text = "File uploaded successfully."
         'End If
         command.Parameters.Add("@Sol_Resume", SqlDbType.VarChar).Value = Sol_Resume.FileName
+        If (Sol_Resume.HasFile) Then
+            Dim path As String = String.Concat((Server.MapPath("~/Resumes/" + Sol_Resume.FileName))) 'Almacenamiento del file seleccionado en la ruta especificada
+            Sol_Resume.PostedFile.SaveAs(path)
+        End If
 
         command.Parameters.Add("@fecha_creacion", SqlDbType.Date).Value = Date.Today().ToString("D")
         command.Parameters.Add("@usuario_creacion", SqlDbType.VarChar).Value = Session("usuario").ToString()
-        'command.Parameters.Add("@fecha_actualizo", SqlDbType.Date).Value = fecha_actualizo.Date
-        'command.Parameters.Add("@usuario_actualizo", SqlDbType.VarChar).Value = usuario_actualizo.Text
 
         Try
             cnDB.Open()
@@ -121,6 +123,38 @@ Public Class Solicitud
 
     End Sub
 
-     
-    
+
+
+    Protected Sub btnActualizarSolicitud_Click(sender As Object, e As EventArgs) Handles btnActualizarSolicitud.Click
+
+        Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
+        Dim cnDB As SqlConnection = New SqlConnection(cadena)
+        Dim command As New SqlCommand("UpdateSolicitud", cnDB)
+        command.CommandType = CommandType.StoredProcedure
+        command.Parameters.Add("@Sol_Specialty", SqlDbType.VarChar).Value = Sol_Specialty.Text
+        command.Parameters.Add("@Sol_GraduationDate", SqlDbType.VarChar).Value = Sol_GraduationDate.Text
+        command.Parameters.Add("@Sol_Transportation", SqlDbType.VarChar).Value = Sol_Transportation.Text
+        command.Parameters.Add("@Sol_License", SqlDbType.VarChar).Value = Sol_License.Text
+        command.Parameters.Add("@Sol_English", SqlDbType.VarChar).Value = Sol_English.Text
+        command.Parameters.Add("@Sol_Interest", SqlDbType.VarChar).Value = Sol_Interest.Text
+        command.Parameters.Add("@Sol_Availability", SqlDbType.VarChar).Value = Sol_Availability.Text
+        command.Parameters.Add("@Sol_Resume", SqlDbType.VarChar).Value = Sol_Resume.FileName
+        'command.Parameters.Add("@Sol_AplicationDAte", SqlDbType.Date).Value = Date.Today().ToString("D")
+        'command.Parameters.Add("@Sol_Status", SqlDbType.VarChar).Value = "solicitando"
+        command.Parameters.Add("@fecha_actualizo", SqlDbType.Date).Value = Date.Today().ToString("D")
+        command.Parameters.Add("@usuario_actualizo", SqlDbType.VarChar).Value = Session("usuario").ToString()
+
+        Try
+            cnDB.Open()
+            command.ExecuteNonQuery()
+            cnDB.Close()
+
+            Response.Write("<script>alert('Información actualizada'); </script>")
+
+        Catch ex As Exception
+
+            Response.Write("<script>alert('Información No Actualizada'); </script>")
+
+        End Try
+    End Sub
 End Class
