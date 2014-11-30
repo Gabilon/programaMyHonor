@@ -1,10 +1,10 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Admin.Master" CodeBehind="ResultadoEvaluaciones.aspx.vb" Inherits="programahonor.ResultadoEvaluaciones" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
-      <link href="Content/bootstrap.min.css" rel="stylesheet" />
-        	<!-- Optional theme -->
-    <link href="Content/stylesheet.css" rel="stylesheet" />
-        <script src="Scripts/jquery-2.1.1.min.js"></script>
-        <script src="Scripts/bootstrap.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="Content/stylesheet.css" rel="stylesheet"/>
+
+    <script src="Scripts/jquery-2.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="div_white">
