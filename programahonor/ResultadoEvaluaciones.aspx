@@ -13,17 +13,17 @@
           <h1 style= "text-align: center; padding: 5px;"> Resultado de Evaluacion </h1>
             <br></br> 
             <div class=" col-md-12">
-                <div class="col-md-6 ">
+                <%--<div class="col-md-6 ">
                     <label>Nombre del estudiante </label>
                     <asp:TextBox ID="Result_NombreEstudiante" runat="server"></asp:TextBox>
-                </div>
+                </div>--%>
 
                 <div class="col-md-6">
                     <label># de estudiante </label>
                     <asp:TextBox ID="Result_NumeroEstudiante" runat="server"></asp:TextBox>
                 </div>
             </div>
-         <div class=" col-md-12">
+       <%--  <div class=" col-md-12">
               <div class="col-md-6 ">
                     <label>Nombre de los evaluadores</label>
                   </div>
@@ -32,7 +32,7 @@
                      <asp:TextBox ID="Evaluador2" runat="server"></asp:TextBox>
                   <asp:TextBox ID="Evaluador3" runat="server"></asp:TextBox>
                 </div>
-             </div>
+             </div>--%>
          <div class=" col-md-12">
               <div class="col-md-6 ">
                     <label> 1) Indique la naturaleza de su asociacion con el solicitante </label>
@@ -235,9 +235,9 @@
                 </div>
 
                 <div class="col-md-6">
-                      <asp:TextBox ID="Eval_Habilidad_Presion1" runat="server"></asp:TextBox>
-                    <asp:TextBox ID="Eval_Habilidad_Presion2" runat="server"></asp:TextBox>
-                     <asp:TextBox ID="Eval_Habilidad_Presion3" runat="server"></asp:TextBox>
+                      <asp:TextBox ID="Eval_Presion1" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="Eval_Presion2" runat="server"></asp:TextBox>
+                     <asp:TextBox ID="Eval_Presion3" runat="server"></asp:TextBox>
                     
                 </div>
             </div>

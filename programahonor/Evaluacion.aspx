@@ -201,7 +201,7 @@
                     <label>j. Sabe trabajar bajo presión.</label>
                 </div>
                 <div class="col-md-6">
-                    <asp:RadioButtonList ID="Eval_Habilidad_Presion" runat="server" RepeatDirection="Horizontal" DataSourceID="Eval_PresionData" DataTextField="type" DataValueField="id"></asp:RadioButtonList>
+                    <asp:RadioButtonList ID="Eval_Presion" runat="server" RepeatDirection="Horizontal" DataSourceID="Eval_PresionData" DataTextField="type" DataValueField="id"></asp:RadioButtonList>
                     <asp:XmlDataSource ID="Eval_PresionData" runat="server" DataFile="~/Content/xml/XMLCalificacion.xml"></asp:XmlDataSource>
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="Eval_Habilidad_Presion" CssClass="label label warning" ErrorMessage="campo requerido" />
                 </div>
