@@ -16,7 +16,7 @@ Public Class Docentes
         Dim command As New SqlCommand("AddAsesoresDocentes", cnDB)
         command.CommandType = CommandType.StoredProcedure
 
-        command.Parameters.Add("@AsesorDocente_id", SqlDbType.VarChar).Value = ""
+        'ommand.Parameters.Add("@AsesorDocente_id", SqlDbType.VarChar).Value = ""
         command.Parameters.Add("@Asedoc_nombre", SqlDbType.VarChar).Value = Asedoc_nombre.Text
         command.Parameters.Add("@Asedoc_Titulo", SqlDbType.VarChar).Value = Asedoc_Titulo.Text
         command.Parameters.Add("@Asedoc_Departamento", SqlDbType.VarChar).Value = Asedoc_Departamento.Text

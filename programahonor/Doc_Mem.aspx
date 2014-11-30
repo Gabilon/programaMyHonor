@@ -1,8 +1,10 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Doc_Mem.aspx.vb" Inherits="programahonor.Doc_Mem" %>
+
+<%@ Register Assembly="System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Namespace="System.Web.UI.WebControls" TagPrefix="asp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-    <link href="Content/stylesheet.css" rel="stylesheet"/>
+    <link href="Content/stylesheet.css" rel="stylesheet" />
 
     <script src="Scripts/jquery-2.1.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -11,7 +13,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="div_white">
         <h1 style="text-align: center; padding: 5px;">Nuestros Docentes y Estudiantes</h1>
-        
+
         <div class="container-fluid" style="margin-top: 20px;">
             <h3>Profesores</h3>
             <div class="table-responsive">
@@ -19,29 +21,49 @@
                     <thead>
                         <tr>
                             <th>Nombre</th>
-                            <th>Contácto</th>
+                            <th>Título</th>
                             <th>Facultad</th>
+                            <th>Contáco</th>
                         </tr>
                     </thead>
 
                     <tbody>
                         <tr>
-                            <td>Omar Díaz</td>
-                            <td>omar.diaz4@upr.edu</td>
-                            <td>Ciencias de Computadoras</td>
+                            <td>
+                                <asp:Label ID="Asedoc_nombre" runat="server"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Asedoc_Titulo" runat="server"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Asedoc_Departamento" runat="server" Text="Label"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Asedoc_email" runat="server" Text="Label"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Asedoc_Descripcion" runat="server" Text="Label"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Asedoc_Status" runat="server" Text="Label"></asp:Label></td>
+
                         </tr>
 
-                        <tr>
-                            <td>Nelliud Torres</td>
-                            <td>nelliud.torres@upr.edu</td>
-                            <td>Ciencias de Computadoras</td>
-                        </tr>
+                       <%-- <tr>
+                            <td>
+                                <asp:Label ID="Asedoc_nombre" runat="server"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Asedoc_Titulo" runat="server"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Asedoc_departamento" runat="server" Text="Label"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Asedoc_email" runat="server" Text="Label"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Asedoc_Descripcion" runat="server" Text="Label"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Asedoc_Status" runat="server" Text="Label"></asp:Label></td>
+                        </tr>--%>
 
-                        <tr>
+                      <%--  <tr>
                             <td>Antonio Huertas</td>
                             <td>antonio.huertas@upr.edu</td>
                             <td>Ciencias de Computadoras</td>
-                        </tr>
+                        </tr>--%>
                     </tbody>
                 </table>
             </div>
