@@ -19,7 +19,7 @@
     <div class="div_white" style="height:100%">
         <form id="form1" method="post" runat="server" Class="form-horizontal">
              <h1 style= "text-align: center; padding: 5px;">Evaluacion </h1>
-            <br></br> 
+            <br></br> <a href="Evaluacion.aspx">Evaluacion.aspx</a>
             <div class=" col-md-12">
                 <div class="col-md-6 ">
                     <label>Nombre del estudiante </label>
