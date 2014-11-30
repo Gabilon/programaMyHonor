@@ -6,8 +6,10 @@ Public Class LogIn
 
     End Sub
     Protected Sub btn_Ingresar_Click(sender As Object, e As EventArgs) Handles btn_Ingresar.Click
-        Dim vuser As String = "a"
+        Dim vuser As Integer
         Dim status As String = "a"
+        Dim pasa As Integer = 1
+        Dim nopasa As Integer = 0
 
         Try
             Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
@@ -20,38 +22,53 @@ Public Class LogIn
 
 
 
-            Try 'Lectura de datos de estudiante perteneciente al programa de honor
+            'Try 'Lectura de datos de estudiante perteneciente al programa de honor
 
-                cnDB.Open()
-                Dim reader As SqlDataReader = command.ExecuteReader() 'Lectura del resultado entregado por la BD
-                While (reader.Read())
-                    vuser = reader.GetString(0)
-                    status = reader.GetString(1)
+            cnDB.Open()
+            Dim reader As SqlDataReader = command.ExecuteReader() 'Lectura del resultado entregado por la BD
+            While (reader.Read())
+                vuser = reader.GetInt32(0)
+                'status = reader.GetString(1)
 
-                End While
-                cnDB.Close()
-
-                If (Usuario.Text = vuser And Contrasena.Text = "2") Then
-                    Session.Add("usuario", Usuario.Text)
-                    Response.Redirect("Default_Estu.aspx")
-
-                ElseIf (Usuario.Text = vuser And Contrasena.Text = "3") Then
-                    Session.Add("usuario", Usuario.Text)
-                    Response.Redirect("Default_Admin.aspx")
-
-                Else
-                    Session.Add("usuario", Usuario.Text)
-                    Response.Redirect("Default_Estu.aspx")
-
-                End If
-            Catch ex As Exception
-                'Response.Write("<script>alert('Usuario no miembro programa de honor UPRB'); </script>")
-                Response.Redirect("Default.aspx")
-            End Try
+            End While
+            cnDB.Close()
         Catch ex As Exception
-
             Response.Write("<script>alert('Imposible Atender su solicitud, De persistir el problema comuniquese el Programa de Honor UPRB'); </script>")
         End Try
+
+        If (pasa = vuser) Then
+            Session.Add("usuario", Usuario.Text)
+            Response.Redirect("Default_Mem.aspx")
+
+        Else
+            'If ("0" = vuser) Then
+            '    Session.Add("usuario", Usuario.Text)
+            '    Response.Redirect("Default_Admin.aspx")
+
+            'Else
+            Session.Add("usuario", Usuario.Text)
+            Response.Redirect("Default_Estu.aspx")
+
+        End If
+
+        'If (Usuario.Text = vuser And Contrasena.Text = "2") Then
+        '    Session.Add("usuario", Usuario.Text)
+        '    Response.Redirect("Default_Estu.aspx")
+
+        'ElseIf (Usuario.Text = vuser And Contrasena.Text = "3") Then
+        '    Session.Add("usuario", Usuario.Text)
+        '    Response.Redirect("Default_Admin.aspx")
+
+        'Else
+        '    Session.Add("usuario", Usuario.Text)
+        '    Response.Redirect("Default_Estu.aspx")
+
+        'End If
+        'Catch ex As Exception
+        '    'Response.Write("<script>alert('Usuario no miembro programa de honor UPRB'); </script>")
+
+        'End Try
+
 
     End Sub
 
