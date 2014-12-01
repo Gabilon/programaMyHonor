@@ -8,14 +8,33 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="div_white">
-        <h1 style="text-align: center; padding: 5px;">Bienvenidos al Programa de Honor UPRB</h1>
-        <div class="container-fluid">
+        <div class="container-fluid" style="margin-top: 20px;">
+            <h3>Ofertas Corrientes</h3>
             <div class="table-responsive">
-                <div class="table">
-                    <form id="form1" runat="server">
-                        <asp:PlaceHolder ID="PlaceHolder1" runat="server" />
-                    </form>
-                </div>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Compañía</th>
+                            <th>Salario</th>
+                            <th>Página</th>
+                        </tr>
+                    </thead>
+                        <tr>
+                            <td>
+                                <asp:Label ID="For_CompanyName" runat="server" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="For_Salary" runat="server" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="For_CompanyWebPage" runat="server" Text="Label"></asp:Label>
+                            </td>
+                        </tr>
+                </table>
+                <span class="pull-right" style="padding-right: 15px; margin-right: 20px;padding-top: 10px;padding-left: 25px; margin-bottom:20px;">
+                        <a href="LogIn.aspx" class="btn btn-primary" role="button" >Ver más</a>
+                    </span>
+                
             </div>
         </div>
     </div>

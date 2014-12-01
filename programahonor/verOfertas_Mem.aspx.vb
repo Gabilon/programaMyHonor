@@ -2,7 +2,7 @@
 Imports System.Data
 Imports System.Text
 Imports System.Data.SqlClient
-Public Class verOfertas
+Public Class verOfertas_Mem
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -25,6 +25,17 @@ Public Class verOfertas
 
                     For_CompanyName.Text = reader.GetString(0)
                     For_Salary.Text = reader.GetString(1)
+                    For_OtherBenefits.Text = reader.GetString(2)
+
+                    For_ContactName.Text = reader.GetString(3)
+                    For_ContactOtherPhone.Text = reader.GetString(4)
+                    For_contactFax.Text = reader.GetString(5)
+                    For_CompanyPhysicalAddress.Text = reader.GetString(6)
+                    For_CompanyPostalAddress.Text = reader.GetString(7)
+
+                    For_Comments.Text = reader.GetString(8)
+
+                    For_CompanyEmail.Text = reader.GetString(9)
                     For_CompanyWebPage.Text = reader.GetString(10)
 
 
