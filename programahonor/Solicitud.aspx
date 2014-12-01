@@ -193,10 +193,10 @@
                                             <asp:TextBox ID="Stu_Status" runat="server" ReadOnly="True" CssClass="form-control"></asp:TextBox>
                                         </div>
                                     </div>--%>
-                    <div class="col-md-11 col-md-offset-10">
+                    <div class="col-md-1 col-md-offset-11">
                         <asp:Button ID="btnGuardarSolicitud" runat="server" Text="Guardar" CssClass="btn btn-primary" ToolTip="Guardar Información de Internado" />
                     </div>
-                    <div class="col-md-11 col-md-offset-10">
+                    <div class="col-md-1 col-md-offset-11">
                         <asp:Button ID="btnActualizarSolicitud" runat="server" Text="Update" CssClass="btn btn-primary" ToolTip="Actualizar Información de Internado" />
                     </div>
                     <%--  <div class="col-md-12">

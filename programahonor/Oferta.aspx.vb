@@ -7,6 +7,8 @@ Public Class Oferta
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
+        btnActualizarOferta.Visible = False
+
     End Sub
 
     Protected Sub btnGuardarOferta_Click(sender As Object, e As EventArgs) Handles btnGuardarOferta.Click
@@ -44,6 +46,21 @@ Public Class Oferta
 
         command.Parameters.Add("@fecha_creacion", SqlDbType.Date).Value = Date.Today().ToString("D")
         command.Parameters.Add("@usuario_creacion", SqlDbType.VarChar).Value = Session("usuario").ToString()
+
+        Try
+            cnDB.Open()
+            command.ExecuteNonQuery()
+            cnDB.Close()
+
+            Response.Write("<script>alert('Información Guardada'); </script>")
+
+        Catch ex As Exception
+
+            Response.Write("<script>alert('Información No Guardada'); </script>")
+
+        End Try
+
+        ' Response.Redirect("~/")
 
     End Sub
 
