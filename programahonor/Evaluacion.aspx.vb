@@ -5,8 +5,25 @@ Imports System.Net.Mail
 Public Class Evaluacion
     Inherits System.Web.UI.Page
 
+    Public Function selecEstuEvaluacion(token As String)
+        'Devuelve dos datos
+        'Estos dos datos se van a carga en dos campos, uno visible y otro no visible
+        'Estos dos datos son el nombre del estudiante y el nombre del evaluador
+
+    End Function
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        'Coger el link
+        Dim url As String = HttpContext.Current.Request.Url.AbsoluteUri
+
+        'Quitarle el hash
+        Dim token As String
+        Dim sign As String = "?"
+        Dim signIndex As Integer = url.IndexOf(sign)
+        token = url.Substring(signIndex + 1)
+        'MsgBox(token) 'Quitar
+
+        'Validar el hash en la base de datos
 
     End Sub
 
