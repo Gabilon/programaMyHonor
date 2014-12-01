@@ -117,6 +117,7 @@
     <Content Include="Actividades_Admin.aspx" />
     <Content Include="Actividades_Estu.aspx" />
     <Content Include="Actividades_Mem.aspx" />
+    <Content Include="AdminAplicar.aspx" />
     <Content Include="ajustesCuenta_Admin.aspx" />
     <Content Include="ajustesCuenta_Mem.aspx" />
     <Content Include="Aplicar.aspx" />
@@ -354,6 +355,13 @@
     <Compile Include="Admin.Master.vb">
       <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminAplicar.aspx.designer.vb">
+      <DependentUpon>AdminAplicar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAplicar.aspx.vb">
+      <DependentUpon>AdminAplicar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="ajustesCuenta_Admin.aspx.designer.vb">
       <DependentUpon>ajustesCuenta_Admin.aspx</DependentUpon>
