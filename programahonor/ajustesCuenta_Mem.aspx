@@ -53,8 +53,7 @@
                         </tbody>
                     </table>
                     <span class="pull-right" style="padding-right: 15px; margin-right: 20px;padding-top: 10px;padding-left: 25px;">
-                        <asp:Button ID="Editar_Btn" runat="server" Text="Editar" />
-                        <asp:Button ID="Guardar_Btn" runat="server" Text="Guardar" />
+                        <a href="#" class="btn btn-primary" role="button">Editar</a>
                     </span>
                     </div>
                 </div>
