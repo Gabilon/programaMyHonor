@@ -41,13 +41,13 @@ Partial Public Class Doc_Mem
     Protected WithEvents Asedoc_Departamento As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Asedoc_email control.
+    '''Asedoc_Email control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Asedoc_email As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents Asedoc_Email As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Asedoc_Descripcion control.
@@ -66,4 +66,112 @@ Partial Public Class Doc_Mem
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Asedoc_Status As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Asedoc_nombre1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Asedoc_nombre1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Asedoc_Titulo1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Asedoc_Titulo1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Asedoc_Departamento1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Asedoc_Departamento1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Asedoc_Email1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Asedoc_Email1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Asedoc_Descripcion1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Asedoc_Descripcion1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Asedoc_Status1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Asedoc_Status1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Asedoc_nombre2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Asedoc_nombre2 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Asedoc_Titulo2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Asedoc_Titulo2 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Asedoc_Departamento2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Asedoc_Departamento2 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Asedoc_Email2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Asedoc_Email2 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Asedoc_Descripcion2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Asedoc_Descripcion2 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Asedoc_Status2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Asedoc_Status2 As Global.System.Web.UI.WebControls.Label
 End Class

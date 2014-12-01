@@ -22,7 +22,7 @@
                          </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Contraseña</label>
-                            <asp:TextBox ID="Contrasena" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="Contrasena" TextMode="password" runat="server" CssClass="form-control"></asp:TextBox>
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="Contrasena" CssClass="label label-warning" ErrorMessage="campo requerido." />
                         </div>
                          <div class="col-md-1 col-md-offset-8">
