@@ -43,16 +43,16 @@ Module Emails
         Dim hashLink As String = " "
         Dim evaluador As String = " "
 
-        'Lectura de datos de estudiante perteneciente al programa de honor
+        'envio de email con token de acceso a la evaluacion del estudiante a cada docente
         Try
             cnDB.Open()
-            Dim reader As SqlDataReader = command.ExecuteReader() 'Lectura del resultado entregado por la BD
+            Dim reader As SqlDataReader = command.ExecuteReader() 'Lectura del resultado entregado por la BD del email e identificador del evaluador
             Dim contar As Integer = command.Parameters.Count
             While (reader.Read())
                 eval_Email = reader.GetString(0)
                 hashLink = SimpleHash.ComputeHash(Username, "SHA1", Nothing)
-               
-                Dim link As String = guardarHash(eval_Email, Username, hashLink, reader)
+
+                Dim link As String = guardarHash(eval_Email, Username, hashLink, reader) 'invoca funcion que almacenta el token de seguridad
                 enviarEmailsDocentes(Username, eval_Email, link)
 
             End While
