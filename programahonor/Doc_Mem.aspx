@@ -78,7 +78,7 @@
             </div>
             <h3>Comités de Estudiantes</h3>
             <div class="table-responsive">
-                <table class="table table-hover">
+                <table class="table table-hover" id="tableComites">
                     <thead>
                         <tr>
                             <th>Nombre del Comité</th>
@@ -145,6 +145,9 @@
                         </tr>
                     </tbody>
                 </table>
+                <span class="pull-right" style="padding-right: 15px; margin-right: 20px;padding-top: 10px;padding-left: 25px; margin-bottom:20px;">
+                    
+                    </span>
             </div>
         </div>
     </div>

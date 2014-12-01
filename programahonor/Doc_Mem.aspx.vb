@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.IO
 
 Public Class Doc_Mem
     Inherits System.Web.UI.Page
@@ -19,7 +20,7 @@ Public Class Doc_Mem
                 cnDB.Open()
                 Dim reader As SqlDataReader = command.ExecuteReader() 'Lectura del resultado entregado por la BD (Docentes)
                 Dim reader2 As SqlDataReader = command.ExecuteReader() 'Lectura del resultado entregado por la BD (Comités)
-                
+
                 While reader.Read()
 
                     Asedoc_nombre.Text = reader.GetString(0)
@@ -78,7 +79,7 @@ Public Class Doc_Mem
                     Tesorero_nombre3.Text = reader2.GetString(2)
                     Tesorero_nombre4.Text = reader2.GetString(3)
                     Tesorero_nombre5.Text = reader2.GetString(4)
-                   
+
                 End While
 
                 reader.Close()
@@ -92,5 +93,7 @@ Public Class Doc_Mem
 
         End Try
     End Sub
+
+
 
 End Class
