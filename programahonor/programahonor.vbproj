@@ -316,6 +316,8 @@
     <Content Include="Solicitud.aspx" />
     <Content Include="testPage.aspx" />
     <Content Include="verAplicacion.aspx" />
+    <Content Include="verOfertas.aspx" />
+    <Content Include="verOfertas_Mem.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -661,6 +663,20 @@
     </Compile>
     <Compile Include="verAplicacion.aspx.vb">
       <DependentUpon>verAplicacion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="verOfertas.aspx.designer.vb">
+      <DependentUpon>verOfertas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="verOfertas.aspx.vb">
+      <DependentUpon>verOfertas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="verOfertas_Mem.aspx.designer.vb">
+      <DependentUpon>verOfertas_Mem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="verOfertas_Mem.aspx.vb">
+      <DependentUpon>verOfertas_Mem.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
