@@ -174,4 +174,184 @@ Partial Public Class Doc_Mem_Estu
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Asedoc_Status2 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Comite_nombre1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Comite_nombre1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Presidente_nombre1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Presidente_nombre1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Secretario_nombre1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Secretario_nombre1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Tesorero_nombre1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Tesorero_nombre1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Comite_nombre2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Comite_nombre2 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Presidente_nombre2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Presidente_nombre2 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Secretario_nombre2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Secretario_nombre2 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Tesorero_nombre2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Tesorero_nombre2 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Comite_nombre3 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Comite_nombre3 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Presidente_nombre3 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Presidente_nombre3 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Secretario_nombre3 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Secretario_nombre3 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Tesorero_nombre3 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Tesorero_nombre3 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Comite_nombre4 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Comite_nombre4 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Presidente_nombre4 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Presidente_nombre4 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Secretario_nombre4 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Secretario_nombre4 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Tesorero_nombre4 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Tesorero_nombre4 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Comite_nombre5 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Comite_nombre5 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Presidente_nombre5 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Presidente_nombre5 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Secretario_nombre5 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Secretario_nombre5 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Tesorero_nombre5 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Tesorero_nombre5 As Global.System.Web.UI.WebControls.Label
 End Class
