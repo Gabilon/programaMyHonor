@@ -25,13 +25,12 @@
                         <tbody>
                             <tr>
                                 <td>Departamento:</td>
-                                <td>Ciencias en Computadoras</td>
-                                <td></td>
+                                <td>Ciencias de Computo</td>
                             </tr>
 
                             <tr>
                                 <td>Fecha de Ingresión:</td>
-                                <td>11/29/2014</td>
+                                <td>12/1/2014</td>
                             </tr>
 
                             <tr>
@@ -40,7 +39,7 @@
                             </tr>
                             <tr>
                                 <td>Pueblo:</td>
-                                <td>San Juan, PR 00936</td>
+                                <td>San Juan 00936</td>
                             </tr>
                             <tr>
                                 <td>Email:</td>
@@ -48,14 +47,14 @@
                             </tr>
                             <tr>
                                 <td>Número de Telefono:</td>
-                                <td>7872442507</td>
+                                <td>7874687112</td>
                             </tr>
                            
                         </tbody>
                     </table>
                     <span class="pull-right" style="padding-right: 15px; margin-right: 20px;padding-top: 10px;padding-left: 25px;">
-                        <a href="#" class="btn btn-primary">Editar</a>
-                        <a href="#" class="btn btn-primary">Guardar</a>
+                        <asp:Button ID="Editar_Btn" runat="server" Text="Editar" />
+                        <asp:Button ID="Guardar_Btn" runat="server" Text="Guardar" />
                     </span>
                     </div>
                 </div>
