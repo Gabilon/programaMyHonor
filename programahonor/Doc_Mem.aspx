@@ -90,38 +90,58 @@
 
                     <tbody>
                         <tr>
-                            <td>Servicio</td>
-                            <td>José Alvarez</td>
-                            <td>Ricardo Nuñez</td>
-                            <td>Emanuel Correa</td>
+                            <td>
+                                <asp:Label ID="Comite_nombre1" runat="server" Text="Label"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Presidente_nombre1" runat="server" Text="Label"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Secretario_nombre1" runat="server" Text="Label"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Tesorero_nombre1" runat="server" Text="Label"></asp:Label></td>
                         </tr>
 
                         <tr>
-                            <td>Actividades Académicas</td>
-                            <td>Carlos Vázquez</td>
-                            <td>Luis Valcourt</td>
-                            <td>José Padilla</td>
+                            <td>
+                                <asp:Label ID="Comite_nombre2" runat="server" Text="Label"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Presidente_nombre2" runat="server" Text="Label"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Secretario_nombre2" runat="server" Text="Label"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Tesorero_nombre2" runat="server" Text="Label"></asp:Label></td>
                         </tr>
 
                         <tr>
-                            <td>Actividades Pro Fondos</td>
-                            <td>Gabriel Monsalve</td>
-                            <td>Luis Flores</td>
-                            <td>Paola Pagán</td>
+                            <td>
+                                <asp:Label ID="Comite_nombre3" runat="server" Text="Label"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Presidente_nombre3" runat="server" Text="Label"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Secretario_nombre3" runat="server" Text="Label"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Tesorero_nombre3" runat="server" Text="Label"></asp:Label></td>
                         </tr>
 
                         <tr>
-                            <td>Relaciones Públicas</td>
-                            <td>Carlos Cabán</td>
-                            <td>Omar Díaz</td>
-                            <td>Gabriel Bermúdez</td>
+                            <td>
+                                <asp:Label ID="Comite_nombre4" runat="server" Text="Label"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Presidente_nombre4" runat="server" Text="Label"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Secretario_nombre4" runat="server" Text="Label"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Tesorero_nombre4" runat="server" Text="Label"></asp:Label></td>
                         </tr>
 
                         <tr>
-                            <td>Pro Imagen</td>
-                            <td>Stephanie López</td>
-                            <td>Victor Marcial</td>
-                            <td>Emmanuel Luciano</td>
+                            <td>
+                                <asp:Label ID="Comite_nombre5" runat="server" Text="Label"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Presidente_nombre5" runat="server" Text="Label"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Secretario_nombre5" runat="server" Text="Label"></asp:Label></td>
+                            <td>
+                                <asp:Label ID="Tesorero_nombre5" runat="server" Text="Label"></asp:Label></td>
                         </tr>
                     </tbody>
                 </table>
