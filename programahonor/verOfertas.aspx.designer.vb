@@ -14,20 +14,29 @@ Option Explicit On
 Partial Public Class verOfertas
 
     '''<summary>
-    '''form1 control.
+    '''For_CompanyName control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents For_CompanyName As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''PlaceHolder1 control.
+    '''For_Salary control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents PlaceHolder1 As Global.System.Web.UI.WebControls.PlaceHolder
+    Protected WithEvents For_Salary As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''For_CompanyWebPage control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents For_CompanyWebPage As Global.System.Web.UI.WebControls.Label
 End Class

@@ -30,7 +30,9 @@
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade in active" id="solicitudes">...</div>
             <div role="tabpanel" class="tab-pane fade" id="actividades">...</div>
-            <div role="tabpanel" class="tab-pane fade" id="evaluaciones">...</div>
+            <div role="tabpanel" class="tab-pane fade" id="evaluaciones">
+
+            </div>
             <div role="tabpanel" class="tab-pane fade" id="docentes">
 
 
