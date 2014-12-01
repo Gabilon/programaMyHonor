@@ -27,83 +27,70 @@ Public Class Aplicar
                 command.Parameters.AddWithValue("@StudentNumber", Username) 'parametro para verificar registro del usuario autenticado
 
                 ''Lectura de datos de estudiante perteneciente al programa de honor
-                Dim number As Integer
+
                 Try
                     cnDB.Open()
                     Dim reader As SqlDataReader = command.ExecuteReader() 'Lectura del resultado entregado por la BD
                     Dim contar As Integer = command.Parameters.Count
                     While (reader.Read())
-                        For number = 0 To 2
-
-                            If (number > 2) Then ''prueba de commit
-                                Exit For
-                            End If
-
-                            StudentName.Text = reader.GetString(0)
-                            StudentNumber.ReadOnly = True
-                            StudentNumber.Text = reader.GetString(1)
-                            Stu_Gender.Text = reader.GetString(2)
-                            Stu_Birthday.Text = reader.GetDateTime(3).Date.ToString("MM/dd/yyyy")
-                            Stu_Email.Text = reader.GetString(4)
-                            Stu_Phone.Text = reader.GetString(5)
-                            Stu_Direccion.Text = reader.GetString(6)
-                            Stu_Postal.Text = reader.GetString(7)
-                            Stu_Department.Text = reader.GetString(8)
-                            Stu_Year.Text = reader.GetString(9)
-                            Stu_Igs.Text = reader.GetString(10)
-                            Dim certificado As String = String.Concat((Server.MapPath("~/Certificados/" + reader.GetString(11))))
-                            lblStu_Ensayo.Text = certificado
-                            Stu_Authorization.Text = reader.GetString(12)
-                            lblStu_Ensayo.Visible = True
-                            Dim ensayo As String = String.Concat((Server.MapPath("~/Ensayos/" + reader.GetString(13))))
-                            lblStu_Ensayo.Text = ensayo
-                            lbl_Status.Visible = True
-                            Stu_Status.Visible = True
-                            Stu_Status.ReadOnly = True
-                            Stu_Status.Text = reader.GetString(14)
-
-                            If (number = "0") Then
-                                eval_Nombre1.Text = reader.GetString(15)
-                                eval_Ocupacion1.Text = reader.GetString(16)
-                                eval_Trabajo1.Text = reader.GetString(17)
-                                eval_Telpersonal1.Text = reader.GetString(18)
-                                eval_Teltrabajo1.Text = reader.GetString(19)
-                                eval_Email1.Text = reader.GetString(20)
-                            End If
 
 
-                            If (number = "1") Then
-                                eval_Nombre2.Text = reader.GetString(15)
-                                eval_Ocupacion2.Text = reader.GetString(16)
-                                eval_Trabajo2.Text = reader.GetString(17)
-                                eval_Telpersonal2.Text = reader.GetString(18)
-                                eval_Teltrabajo2.Text = reader.GetString(19)
-                                eval_Email2.Text = reader.GetString(20)
-                            End If
+                        StudentName.Text = reader.GetString(0)
+                        StudentNumber.ReadOnly = True
+                        StudentNumber.Text = reader.GetString(1)
+                        Stu_Gender.Text = reader.GetString(2)
+                        Stu_Birthday.Text = reader.GetDateTime(3).Date.ToString("MM/dd/yyyy")
+                        Stu_Email.Text = reader.GetString(4)
+                        Stu_Phone.Text = reader.GetString(5)
+                        Stu_Direccion.Text = reader.GetString(6)
+                        Stu_Postal.Text = reader.GetString(7)
+                        Stu_Department.Text = reader.GetString(8)
+                        Stu_Year.Text = reader.GetString(9)
+                        Stu_Igs.Text = reader.GetString(10)
+                        Dim certificado As String = String.Concat((Server.MapPath("~/Certificados/" + reader.GetString(11))))
+                        lblStu_Ensayo.Text = certificado
+                        Stu_Authorization.Text = reader.GetString(12)
+                        lblStu_Ensayo.Visible = True
+                        Dim ensayo As String = String.Concat((Server.MapPath("~/Ensayos/" + reader.GetString(13))))
+                        lblStu_Ensayo.Text = ensayo
+                        lbl_Status.Visible = True
+                        Stu_Status.Visible = True
+                        Stu_Status.ReadOnly = True
+                        Stu_Status.Text = reader.GetString(14)
+                        eval_Nombre1.Text = reader.GetString(15)
+                        eval_Ocupacion1.Text = reader.GetString(16)
+                        eval_Trabajo1.Text = reader.GetString(17)
+                        eval_Telpersonal1.Text = reader.GetString(18)
+                        eval_Teltrabajo1.Text = reader.GetString(19)
+                        eval_Email1.Text = reader.GetString(20)
+                        infad_Excursiones_edu.Text = reader.GetString(21)
+                        infad_Talleres.Text = reader.GetString(22)
+                        infad_Talleresde.Text = reader.GetString(23)
+                        infad_Conferencias.Text = reader.GetString(24)
+                        infad_Conferenciasde.Text = reader.GetString(25)
+                        infad_Convenciones.Text = reader.GetString(26)
+                        infad_Convencionesde.Text = reader.GetString(27)
+                        infad_actividad.Text = reader.GetString(28)
+                        infad_actividadesde.Text = reader.GetString(29)
+                        infad_otro.Text = reader.GetString(30)
 
-                            If (number = "2") Then
-                                eval_Nombre3.Text = reader.GetString(15)
-                                eval_Ocupacion3.Text = reader.GetString(16)
-                                eval_Trabajo3.Text = reader.GetString(17)
-                                eval_Telpersonal3.Text = reader.GetString(18)
-                                eval_Teltrabajo3.Text = reader.GetString(19)
-                                eval_Email3.Text = reader.GetString(20)
-                            End If
+                        reader.Read()
+                        eval_Nombre2.Text = reader.GetString(15)
+                        eval_Ocupacion2.Text = reader.GetString(16)
+                        eval_Trabajo2.Text = reader.GetString(17)
+                        eval_Telpersonal2.Text = reader.GetString(18)
+                        eval_Teltrabajo2.Text = reader.GetString(19)
+                        eval_Email2.Text = reader.GetString(20)
+
+                        reader.Read()
+                        eval_Nombre3.Text = reader.GetString(15)
+                        eval_Ocupacion3.Text = reader.GetString(16)
+                        eval_Trabajo3.Text = reader.GetString(17)
+                        eval_Telpersonal3.Text = reader.GetString(18)
+                        eval_Teltrabajo3.Text = reader.GetString(19)
+                        eval_Email3.Text = reader.GetString(20)
 
 
-                            infad_Excursiones_edu.Text = reader.GetString(21)
-                            infad_Talleres.Text = reader.GetString(22)
-                            infad_Talleresde.Text = reader.GetString(23)
-                            infad_Conferencias.Text = reader.GetString(24)
-                            infad_Conferenciasde.Text = reader.GetString(25)
-                            infad_Convenciones.Text = reader.GetString(26)
-                            infad_Convencionesde.Text = reader.GetString(27)
-                            infad_actividad.Text = reader.GetString(28)
-                            infad_actividadesde.Text = reader.GetString(29)
-                            infad_otro.Text = reader.GetString(30)
-
-
-                        Next number
 
                         btnActualizarEstudiante.Visible = True
                         btnGuardarEstudiante.Visible = False

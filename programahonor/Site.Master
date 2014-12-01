@@ -57,7 +57,6 @@
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="Contacto.aspx">Contáctenos</a></li>
                     <li><a href="Docentes.aspx">Docentes y Comités</a></li>
-                    <li><a href="Doc_Mem.aspx">Test</a></li>
                   </ul>
                 </li> <!--Equipo, Grupo Acesoro, Membrecias tabs End of Dropdown-->
 
