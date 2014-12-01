@@ -77,13 +77,13 @@ Partial Public Class Aplicar
     Protected WithEvents XmlGenero As Global.System.Web.UI.WebControls.XmlDataSource
 
     '''<summary>
-    '''scriptmanager10 control.
+    '''scriptmanager1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents scriptmanager10 As Global.System.Web.UI.ScriptManager
+    Protected WithEvents scriptmanager1 As Global.AjaxControlToolkit.ToolkitScriptManager
 
     '''<summary>
     '''Stu_Birthday control.

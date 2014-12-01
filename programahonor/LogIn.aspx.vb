@@ -6,10 +6,7 @@ Public Class LogIn
 
     End Sub
     Protected Sub btn_Ingresar_Click(sender As Object, e As EventArgs) Handles btn_Ingresar.Click
-        Dim vuser As Integer
-        Dim status As String = "a"
-        Dim pasa As Integer = 1
-        Dim nopasa As Integer = 0
+        Dim nivel As Integer
 
         Try
             Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
@@ -27,27 +24,24 @@ Public Class LogIn
             cnDB.Open()
             Dim reader As SqlDataReader = command.ExecuteReader() 'Lectura del resultado entregado por la BD
             While (reader.Read())
-                vuser = reader.GetInt32(0)
-                'status = reader.GetString(1)
-
+                nivel = reader.GetString(0)
             End While
             cnDB.Close()
         Catch ex As Exception
             Response.Write("<script>alert('Imposible Atender su solicitud, De persistir el problema comuniquese el Programa de Honor UPRB'); </script>")
         End Try
 
-        If (pasa = vuser) Then
-            Session.Add("usuario", Usuario.Text)
-            Response.Redirect("Default_Mem.aspx")
-
-        Else
-            'If ("0" = vuser) Then
-            '    Session.Add("usuario", Usuario.Text)
-            '    Response.Redirect("Default_Admin.aspx")
-
-            'Else
+        If ("1" = nivel) Then
             Session.Add("usuario", Usuario.Text)
             Response.Redirect("Default_Estu.aspx")
+        ElseIf ("2" = nivel) Then
+            Session.Add("usuario", Usuario.Text)
+            Response.Redirect("Default_Mem.aspx")
+        ElseIf ("3" = nivel) Then
+            Session.Add("usuario", Usuario.Text)
+            Response.Redirect("Default_Admin.aspx")
+        Else
+            Response.Redirect("Default.aspx")
 
         End If
 
