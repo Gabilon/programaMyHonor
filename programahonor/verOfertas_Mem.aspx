@@ -16,6 +16,7 @@
                         <tr>
                             <th>Compañía</th>
                             <th>Salario</th>
+                            <th>Otros Beneficios</th>
                             <th>Contacto</th>
                             <th>Teléfono</th>
                             <th>Fax</th>
