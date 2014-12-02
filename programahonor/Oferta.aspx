@@ -188,7 +188,7 @@
                                 <FooterStyle BackColor="#F5F5F5" ForeColor="Black" />
                                 <HeaderStyle BackColor="#F5F5F5" Font-Bold="True" ForeColor="Black" />
                                 <ItemStyle BackColor="White" ForeColor="Blue" />--%>
-                <%--<div>
+                <div>
                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="oferta_id" DataSourceID="OfertaSqlDataSource" HorizontalAlign="Justify" AllowPaging="True">
                         <Columns>
                             <asp:BoundField DataField="ofr_Tasks" HeaderText="oferta_id" ReadOnly="True" SortExpression="oferta_id" Visible="False" />
@@ -215,76 +215,7 @@
                             </asp:CommandField>
                             <asp:CommandField ShowDeleteButton="True">
                                 <HeaderStyle BorderStyle="None" />
-                                <ItemStyle BackColor="#F5F5F5" />
-                                =======
-                    cssClass="col-md-11 form-control"  --%>--%>
-                <div class="container-fluid">
-                    <asp:GridView ID="dgvOferta" runat="server" DataSourceID="OfertaSqlDataSource" AutoGenerateColumns="False" DataKeyNames="oferta_id" AllowPaging="True" HorizontalAlign="Justify" BackColor="White" ForeColor="Black">
-                        <Columns>
-                            <asp:BoundField DataField="oferta_id" HeaderText="ID" ReadOnly="True" SortExpression="oferta_id" Visible="False">
-                                <ControlStyle BackColor="#F5F5F5" ForeColor="Black" />
-                                <FooterStyle BackColor="#F5F5F5" ForeColor="Black" />
-                                <HeaderStyle BackColor="#F5F5F5" Font-Bold="True" ForeColor="Black" CssClass="table table-hover table-bordered" />
-                                <ItemStyle BackColor="White" ForeColor="Blue" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_CompanyName" HeaderText="Nombre Compañía" SortExpression="ofr_CompanyName">
-                                <ControlStyle CssClass="&lt;HeaderStyle CssClass=&quot;table table-hover table-bordered&quot; /&gt; form-control" />
-                                <HeaderStyle CssClass="table table-hover table-bordered" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_Salary" HeaderText="Salario" SortExpression="ofr_Salary">
-                                <HeaderStyle CssClass="table table-hover table-bordered" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_Extracurricular" HeaderText="Extracurricular" SortExpression="ofr_Extracurricular">
-                                <HeaderStyle CssClass="table table-hover table-bordered" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_OtherBenefits" HeaderText="Otros Beneficios" SortExpression="ofr_OtherBenefits" Visible="False">
-                                <HeaderStyle CssClass="table table-hover table-bordered" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_Schedule" HeaderText="Horario" SortExpression="ofr_Schedule">
-                                <HeaderStyle CssClass="table table-hover table-bordered" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_Requirements" HeaderText="Requisitos" SortExpression="ofr_Requirements">
-                                <HeaderStyle CssClass="table table-hover table-bordered" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_Tasks" HeaderText="Tareas" SortExpression="ofr_Tasks">
-                                <HeaderStyle CssClass="table table-hover table-bordered" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_ContactName" HeaderText="Contacto" SortExpression="ofr_ContactName">
-                                <HeaderStyle CssClass="table table-hover table-bordered" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_ContactPosition" HeaderText="Posición" SortExpression="ofr_ContactPosition">
-                                <HeaderStyle CssClass="table table-hover table-bordered" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_ContactOtherPhone" HeaderText="Teléfono" SortExpression="ofr_ContactOtherPhone">
-                                <HeaderStyle CssClass="table table-hover table-bordered" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_ContactExt" HeaderText="Ext." SortExpression="ofr_ContactExt" Visible="False">
-                                <HeaderStyle CssClass="table table-hover table-bordered" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_ContactFax" HeaderText="Fax" SortExpression="ofr_ContactFax" Visible="False">
-                                <HeaderStyle CssClass="table table-hover table-bordered" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_CompanyPhysicalAddress" HeaderText="Dirección Física" SortExpression="ofr_CompanyPhysicalAddress">
-                                <HeaderStyle CssClass="table table-hover table-bordered" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_CompanyPostalAddress" HeaderText="Dirección Postal" SortExpression="ofr_CompanyPostalAddress">
-                                <HeaderStyle CssClass="table table-hover table-bordered" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_Comments" HeaderText="Comentarios" SortExpression="ofr_Comments">
-                                <HeaderStyle CssClass="table table-hover table-bordered" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_CompanyEmail" HeaderText="Email" SortExpression="ofr_CompanyEmail">
-                                <HeaderStyle CssClass="table table-hover table-bordered" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_CompanyWebPage" HeaderText="Pagina Internet" SortExpression="ofr_CompanyWebPage" Visible="False">
-                                <HeaderStyle CssClass="table table-hover table-bordered" />
-                            </asp:BoundField>
-                            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ButtonType="Button" CancelText="Cancelar" DeleteText="Borrar" EditText="Editar" HeaderText="Opciones">
-                                <ControlStyle BackColor="#F5F5F5" ForeColor="Black" />
-                                <FooterStyle BackColor="#F5F5F5" />
-                                <HeaderStyle BackColor="#F5F5F5" Font-Bold="True" HorizontalAlign="Center" VerticalAlign="Middle" />
-                                <ItemStyle BackColor="WhiteSmoke" ForeColor="Blue" HorizontalAlign="Center" VerticalAlign="Middle" />
-                               <%-- >>>>>>> origin/master--%>
+                                <ItemStyle BackColor="#F5F5F5" />             
                             </asp:CommandField>
                         </Columns>
                         <HeaderStyle BackColor="#F5F5F5" Font-Size="Larger" HorizontalAlign="Center" />
