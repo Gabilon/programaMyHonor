@@ -169,7 +169,7 @@ Module Emails
         Try
             e_mail1.From = New MailAddress("grupogerenciaccg@gmail.com")
             e_mail1.To.Add(eval_Email)
-            e_mail1.Subject = "Evaluacion de Estudiante de Progrma de Honor"
+            e_mail1.Subject = "Evaluacion de Estudiante de Programa de Honor"
             e_mail1.IsBodyHtml = True
             e_mail1.Body = "Test: " + link
 
