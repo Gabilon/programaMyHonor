@@ -60,7 +60,7 @@ Public Class Evaluacion
         command.Parameters.Add("@Eval_TomadeDecisiones", SqlDbType.Int).Value = Eval_TomadeDecisiones.Text
         command.Parameters.Add("@Eval_Sinceridad", SqlDbType.Int).Value = Eval_Sinceridad.Text
         command.Parameters.Add("@Eval_ProySerenidad", SqlDbType.Int).Value = Eval_ProySerenidad.Text
-        command.Parameters.Add("@Eval_BuenJuicio", SqlDbType.Int).Value = Eval_ProySerenidad.Text
+        command.Parameters.Add("@Eval_BuenJuicio", SqlDbType.Int).Value = eval_buenJuicio.Text
         command.Parameters.Add("@Eval_SentidoComun", SqlDbType.Int).Value = Eval_SentidoComun.Text
 
         command.Parameters.Add("@Eval_Comucnicacion", SqlDbType.Int).Value = Eval_TrabajoComunicacion.Text
