@@ -35,8 +35,8 @@ Public Class Evaluacion
         command.CommandType = CommandType.StoredProcedure
         Dim evalID As String
         evalID = System.Guid.NewGuid().ToString()
-        command.Parameters.Add("@EvaluadorId", SqlDbType.VarChar).Value = evaluador 'evalID
-        command.Parameters.Add("@StudentNumber", SqlDbType.VarChar).Value = estudiante '"841113880"
+        command.Parameters.Add("@EvaluadorId", SqlDbType.VarChar).Value = evaluador
+        command.Parameters.Add("@StudentNumber", SqlDbType.VarChar).Value = estudiante
         command.Parameters.Add("@Eval_AsociacionEst", SqlDbType.VarChar).Value = Eval_AsociacionEst.Text
         command.Parameters.Add("@Eval_ConoceEst", SqlDbType.VarChar).Value = Eval_ConoceEst.Text
         command.Parameters.Add("@Eval_TiempoConEst", SqlDbType.VarChar).Value = Eval_tiempo.Text
