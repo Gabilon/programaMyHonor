@@ -24,7 +24,7 @@
                             <h3>Información General</h3>
                             <p>Descripción de el programa[Misión, Visión y Metas] y benecicios para el estudiante</p>
                             <p>
-                                <a href="infoGeneral.aspx" class="btn btn-primary" role="button">Ver más</a>
+                                <a href="#" class="btn btn-primary" role="button">Ver más</a>
                             </p>
                         </div>
                     </div>

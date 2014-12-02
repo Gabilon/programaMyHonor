@@ -124,6 +124,7 @@
     <Content Include="Aplicar.aspx" />
     <Content Include="AplicarPrueba.aspx" />
     <Content Include="comitesEstu.aspx" />
+    <Content Include="comitesEstu_Admin.aspx" />
     <Content Include="comitesEstu_Estu.aspx" />
     <Content Include="comitesEstu_Mem.aspx" />
     <Content Include="Contacto.aspx" />
@@ -212,6 +213,7 @@
     <Content Include="Images\SelectedTab.png" />
     <Content Include="Images\UnSelectedTab.png" />
     <Content Include="InfoGeneral.aspx" />
+    <Content Include="infoGeneral_Admin.aspx" />
     <Content Include="InfoGeneral_Estu.aspx" />
     <Content Include="InfoGeneral_Mem.aspx" />
     <Content Include="Ingresar.aspx" />
@@ -411,6 +413,13 @@
       <DependentUpon>comitesEstu.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="comitesEstu_Admin.aspx.designer.vb">
+      <DependentUpon>comitesEstu_Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="comitesEstu_Admin.aspx.vb">
+      <DependentUpon>comitesEstu_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="comitesEstu_Estu.aspx.designer.vb">
       <DependentUpon>comitesEstu_Estu.aspx</DependentUpon>
     </Compile>
@@ -542,6 +551,13 @@
     </Compile>
     <Compile Include="InfoGeneral.aspx.vb">
       <DependentUpon>InfoGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="infoGeneral_Admin.aspx.designer.vb">
+      <DependentUpon>infoGeneral_Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="infoGeneral_Admin.aspx.vb">
+      <DependentUpon>infoGeneral_Admin.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="InfoGeneral_Estu.aspx.designer.vb">

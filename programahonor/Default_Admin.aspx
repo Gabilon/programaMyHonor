@@ -17,34 +17,53 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="div_white" style="margin-top: 15px">
-        <ul class="nav nav-tabs" role="tablist" id="myTab">
-            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Solicitudes</a></li>
-            <li role="presentation"><a href="FormularioActividades.aspx" aria-controls="profile" role="tab" data-toggle="tab">Actividades</a></li>
-            <%--<li role="presentation"><a href="#evaluaciones" aria-controls="messages" role="tab" data-toggle="tab">Evaluaciones</a></li>--%>
-            <li role="presentation"><a href="Docentes.aspx" aria-controls="settings" role="tab" data-toggle="tab">Docentes Asesores</a></li>
-            <li role="presentation"><a href="AdminAplicar.aspx" aria-controls="membrecia" role="tab" data-toggle="tab">Membrecías</a></li>
-            <li role="presentation"><a href="#comites" aria-controls="comites" role="tab" data-toggle="tab">Comités</a></li>
-        </ul>
+    <div class="div_white">
+        <h1 style="text-align: center; padding: 5px;">Bienvenidos al Programa de Honor UPRB</h1>
+        <div class="container-fluid">
+            <h3>El Programa de Estudios de Honor ofrece una experiencia única a los estudiantes talentosos que desean aprovechar plenamente su educación universitaria.
+                <br>
+                <br>
+                Su objetivo es enriquecer la formación educativa del estudiante dentro de un marco interdisciplinario.</h3>
+            <div class="row">
+                <div class="col-sm-4 col-md-4">
+                    <div class="thumbnail">
+                        <img data-src="holder.js/300x300" src="images/img8.jpg" style="min-height: 200px; height: 200px;">
+                        <div class="caption">
+                            <h3>Información General</h3>
+                            <p>Descripción de el programa[Misión, Visión y Metas] y benecicios para el estudiante</p>
+                            <p>
+                                <a href="infoGeneral_Admin.aspx" class="btn btn-primary" role="button">Ver más</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="tab-content">
-            <div role="tabpanel" class="tab-pane fade in active" id="solicitudes">...</div>
-            <div role="tabpanel" class="tab-pane fade" id="actividades">...</div>
-            <div role="tabpanel" class="tab-pane fade" id="evaluaciones">
+                <div class="col-sm-4 col-md-4">
+                    <div class="thumbnail">
+                        <img data-src="holder.js/300x300" src="images/img3.jpg" style="min-height: 200px; height: 200px;">
+                        <div class="caption">
+                            <h3>Aspectos Académicos</h3>
+                            <p>El Programa de Estudios de Honor ofrecerá a los estudiantes la oportunidad de un desarrollo académico de excelencia.</p>
+                            <p>
+                                <a href="#" class="btn btn-primary" role="button">Ver más</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-sm-4 col-md-4">
+                    <div class="thumbnail">
+                        <img data-src="holder.js/300x300" src="images/img2.jpg" style="min-height: 200px; height: 200px;">
+                        <div class="caption">
+                            <h3>Comités Estudiantes</h3>
+                            <p>Agrupar estudiantes que desean activarse o continuar un proyecto de servicio voluntario</p>
+                            <p>
+                                <a href="comitesEstu.aspx" class="btn btn-primary" role="button">Ver más</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div role="tabpanel" class="tab-pane fade" id="docentes">
-
-
-            </div>
-            <div role="tabpanel" class="tab-pane fade" id="membrecias">...</div>
-            <div role="tabpanel" class="tab-pane fade" id="comites">...</div>
         </div>
-
-        <script>
-            $(function () {
-                $('#myTab a:first').tab('show')
-            })
-        </script>
     </div>
 </asp:Content>

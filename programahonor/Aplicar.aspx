@@ -224,7 +224,7 @@
                                         </div>
                                          <div class="col-md-2 col-sm-4 col-xs-12">
                                             <div class="form-group">
-                                                <label style="width: 135px; text-align:left;">Correo Electrónico:</label>
+                                                <label style="width: 135px; text-align:left;">Email:</label>
                                                 <asp:TextBox runat="server" ID="eval_Email1" CssClass="form-control"></asp:TextBox>
                                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="eval_Email1" CssClass="label label-warning" ErrorMessage="campo requerido" />
                                             </div>
@@ -272,7 +272,7 @@
                                         </div>
                                          <div class="col-md-2 col-sm-4 col-xs-12">
                                             <div class="form-group">
-                                                <label style="width: 135px; text-align: left;">Correo Electrónico:</label>
+                                                <label style="width: 135px; text-align: left;">Email:</label>
                                                 <asp:TextBox runat="server" ID="eval_Email2" CssClass="form-control"></asp:TextBox>
                                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="eval_Email2" CssClass="label label-warning" ErrorMessage="campo requerido" />
                                             </div>
@@ -320,7 +320,7 @@
                                         </div>
                                         <div class="col-md-2 col-sm-4 col-xs-12">
                                             <div class="form-group">
-                                                <label style="width: 135px; text-align: left;">Correo Electrónico:</label>
+                                                <label style="width: 135px; text-align: left;">Email:</label>
                                                 <asp:TextBox runat="server" ID="eval_Email3" CssClass="form-control"></asp:TextBox>
                                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="eval_Email3" CssClass="label label-warning" ErrorMessage="campo requerido" />
                                             </div>
