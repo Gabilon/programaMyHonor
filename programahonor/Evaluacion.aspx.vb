@@ -26,9 +26,9 @@ Public Class Evaluacion
 
         'Validar el hash en la base de datos
     End Sub
-   
+
     Protected Sub Eval_button_Click(sender As Object, e As EventArgs) Handles Eval_button.Click
-       
+
         Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
         Dim cnDB As SqlConnection = New SqlConnection(cadena)
         Dim command As New SqlCommand("AddEvaluacion", cnDB)
