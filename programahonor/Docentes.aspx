@@ -22,7 +22,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="div_white">
-        <div class="panel-body">
+        <div class="panel-body" style="margin-top:20px;">
             <form role="form" method="post" runat="server" class="form-horizontal">
                 <div class="col-md-11">
                     <div class="col-md-4 col-md-push-5">
@@ -77,7 +77,7 @@
                     <asp:Button ID="btnGuardar" runat="server" Text="Someter" CssClass="btn btn-primary" ToolTip="Someter datos" />
                 </div>
                 <br />
-                <div class="col-md-12 col-sm-12 col-xs-12" style="background-color:whitesmoke">
+                <div class="col-md-12 col-sm-12 col-xs-12" style="background-color:#95AFC7">
                     <asp:GridView CssClass="table table-bordered" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="AsesorDocente_id" DataSourceID="SqlDataSourceDocentes" EnableModelValidation="True"  >
                         <Columns>
                             <asp:BoundField DataField="AsesorDocente_id" HeaderText="AsesorDocente_id" ReadOnly="True" SortExpression="AsesorDocente_id" Visible="False"></asp:BoundField>
