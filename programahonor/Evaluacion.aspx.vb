@@ -100,6 +100,8 @@ Public Class Evaluacion
             'Envio de email a los evaluadores con el link a la evaluación de los estudiantes
             If emailEvalProgHonor() = True Then
                 Response.Write("<script>alert('Email Enviado Satisfactoriamente() '); </script>")
+                Eval_button.Enabled = False
+
             Else
                 Response.Write("<script>alert('Email no Enviado'); </script>")
             End If
@@ -111,5 +113,7 @@ Public Class Evaluacion
             Response.Write("<script>alert('Información No Guardada'); </script>")
 
         End Try
+
+        Response.Redirect("~/")
     End Sub
 End Class
