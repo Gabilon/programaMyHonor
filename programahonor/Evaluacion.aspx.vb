@@ -8,30 +8,6 @@ Public Class Evaluacion
     Dim estudiante As String = " "
     Dim evaluador As String = ""
 
-    Public Function selecEstuEvaluacion(token As String)
-        Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
-        Dim cnDB As SqlConnection = New SqlConnection(cadena)
-        Dim command As New SqlCommand("ValidarToken", cnDB)
-        command.CommandType = CommandType.StoredProcedure
-
-        Try
-            cnDB.Open()
-            Dim reader As SqlDataReader = command.ExecuteReader() 'Lectura del resultado entregado por la BD
-
-            While (reader.Read())
-                estudiante = reader.GetString(0)
-                evaluador = reader.GetString(1)
-            End While
-
-            cnDB.Close()
-
-        Catch ex As Exception
-            Response.Write("<script>alert('Información No Guardada'); </script>")
-        End Try
-
-        Return Nothing
-    End Function
-
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         'Coger el link
         Dim url As String = HttpContext.Current.Request.Url.AbsoluteUri
@@ -113,14 +89,16 @@ Public Class Evaluacion
 
             Response.Write("<script>alert('Información Guardada'); </script>")
 
-            'Envio de notificación al estudiante sobre su confirmación de registro de solicitud
-            If emailEvalEstudiante("emanuel.correa216@gmail.com") = True Then 'Aqui va stumail
+            Dim stumail As String = selecEmailEstu(estudiante)
+
+            'Envio de notificación al estudiante sobre su confirmación de evaluacion
+            If emailEvalEstudiante(stumail) = True Then 'Aqui va stumail
                 Response.Write("<script>alert('Email Enviado Satisfactoriamente() '); </script>")
             Else
                 Response.Write("<script>alert('Email no Enviado'); </script>")
             End If
 
-            'Envio de email a los evaluadores con el link a la evaluación de los estudiantes
+            'Envio de email al programa de honor sobre confirmacion de evaluacion
             If emailEvalProgHonor() = True Then
                 Response.Write("<script>alert('Email Enviado Satisfactoriamente() '); </script>")
                 Eval_button.Enabled = False
@@ -128,8 +106,6 @@ Public Class Evaluacion
             Else
                 Response.Write("<script>alert('Email no Enviado'); </script>")
             End If
-
-
 
         Catch ex As Exception
 
@@ -139,4 +115,42 @@ Public Class Evaluacion
 
         Response.Redirect("~/")
     End Sub
+
+    'Valida al estudiante con el hash del link; guarda el #deEst en estudiante y el evaluador en evaluador
+    Public Function selecEstuEvaluacion(token As String)
+        Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
+        Dim cnDB As SqlConnection = New SqlConnection(cadena)
+        Dim command As New SqlCommand("ValidarToken", cnDB)
+        command.CommandType = CommandType.StoredProcedure
+
+        Try
+            cnDB.Open()
+            Dim reader As SqlDataReader = command.ExecuteReader() 'Lectura del resultado entregado por la BD
+
+            While (reader.Read())
+                estudiante = reader.GetString(0)
+                evaluador = reader.GetString(1)
+            End While
+
+            cnDB.Close()
+
+        Catch ex As Exception
+            Response.Write("<script>alert('Información No Guardada'); </script>")
+        End Try
+
+        Return Nothing
+    End Function
+
+    'Busca el email del estudiante en la base de datos y lo guarda en stumail
+    Public Function selecEmailEstu(estudiante As String) As String
+        Dim cadena1 As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString 'Validacion del estado de los formularios de la aplicacion
+        Dim cnDB1 As SqlConnection = New SqlConnection(cadena1)
+        Dim command1 As New SqlCommand("ValidarParaSometer", cnDB1)
+        command1.CommandType = CommandType.StoredProcedure
+        command1.Parameters.Add("@StudentNumber", SqlDbType.VarChar).Value = estudiante
+        Dim status As SqlDataReader = command1.ExecuteReader()
+
+        Dim stumail As String = status.GetString(4)
+        Return stumail
+    End Function
 End Class
