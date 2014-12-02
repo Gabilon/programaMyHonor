@@ -58,7 +58,7 @@
                             <h3>Comités Estudiantes</h3>
                             <p>Agrupar estudiantes que desean activarse o continuar un proyecto de servicio voluntario</p>
                             <p>
-                                <a href="comitesEstu.aspx" class="btn btn-primary" role="button">Ver más</a>
+                                <a href="comitesEstu_Admin.aspx" class="btn btn-primary" role="button">Ver más</a>
                             </p>
                         </div>
                     </div>
