@@ -171,14 +171,14 @@
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="For_CompanyWebPage" CssClass="label label-warning" ErrorMessage="campo requerido" />
                         </div>
                     </div>
-                    <div class="col-md-1 col-md-offset-10">
+                    <div class="col-md-1 col-md-offset-10" style="margin-bottom: 20px">
                         <asp:Button ID="btnGuardarOferta" runat="server" Text="Guardar" CssClass="btn btn-primary" ToolTip="Guardar Información de Registro de Ofertas" />
                     </div>
                     <div class="col-md-1 col-md-offset-10">
                         <asp:Button ID="btnActualizarOferta" runat="server" Text="Update" CssClass="btn btn-primary" ToolTip="Actualizar Información de de Registro de Ofertas" />
                     </div>
                 </div>
-
+                <div><br /></div>
                 <%--  style="background-color:whitesmoke" 
 <<<<<<< HEAD
                     cssClass="col-md-11 form-control"
@@ -189,16 +189,16 @@
                                 <HeaderStyle BackColor="#F5F5F5" Font-Bold="True" ForeColor="Black" />
                                 <ItemStyle BackColor="White" ForeColor="Blue" />--%>
                 <div>
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="oferta_id" DataSourceID="OfertaSqlDataSource" HorizontalAlign="Justify" AllowPaging="True">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="oferta_id" DataSourceID="OfertaSqlDataSource" HorizontalAlign="Justify" AllowPaging="True" BackColor="White">
                         <Columns>
                             <asp:BoundField DataField="ofr_Tasks" HeaderText="oferta_id" ReadOnly="True" SortExpression="oferta_id" Visible="False" />
-                            <asp:BoundField DataField="ofr_CompanyName" HeaderText="Compañía" SortExpression="ofr_CompanyName" />
+                            <asp:BoundField DataField="ofr_CompanyName" HeaderText=" Compañía" SortExpression="ofr_CompanyName" />
                             <asp:BoundField DataField="ofr_Salary" HeaderText="ofr_Salary" SortExpression="ofr_Salary" Visible="False" />
                             <asp:BoundField DataField="ofr_Extracurricular" HeaderText="ofr_Extracurricular" SortExpression="ofr_Extracurricular" Visible="False" />
-                            <asp:BoundField DataField="ofr_OtherBenefits" HeaderText="Beneficios" SortExpression="ofr_OtherBenefits" />
+                            <asp:BoundField DataField="ofr_OtherBenefits" HeaderText="   Beneficios" SortExpression="ofr_OtherBenefits" />
                             <asp:BoundField DataField="ofr_Schedule" HeaderText="ofr_Schedule" SortExpression="ofr_Schedule" Visible="False" />
                             <asp:BoundField DataField="ofr_Requirements" HeaderText="ofr_Requirements" SortExpression="ofr_Requirements" Visible="False" />
-                            <asp:BoundField DataField="ofr_Tasks" HeaderText="Tareas" SortExpression="ofr_Tasks" />
+                            <asp:BoundField DataField="ofr_Tasks" HeaderText="       Tareas" SortExpression="ofr_Tasks" />
                             <asp:BoundField DataField="ofr_ContactName" HeaderText="Contacto" SortExpression="ofr_ContactName" />
                             <asp:BoundField DataField="ofr_ContactPosition" HeaderText="Poscición" SortExpression="ofr_ContactPosition" />
                             <asp:BoundField DataField="ofr_ContactExt" HeaderText="ofr_ContactExt" SortExpression="ofr_ContactExt" Visible="False" />
@@ -210,11 +210,11 @@
                             <asp:BoundField DataField="ofr_CompanyEmail" HeaderText="ofr_CompanyEmail" SortExpression="ofr_CompanyEmail" Visible="False" />
                             <asp:BoundField DataField="ofr_CompanyWebPage" HeaderText="ofr_CompanyWebPage" SortExpression="ofr_CompanyWebPage" Visible="False" />
                             <asp:CommandField ShowEditButton="True">
-                                <HeaderStyle BorderStyle="None" />
+                                <HeaderStyle BorderStyle="None" BackColor="#F5F5F5" />
                                 <ItemStyle BackColor="#F5F5F5" />
                             </asp:CommandField>
                             <asp:CommandField ShowDeleteButton="True">
-                                <HeaderStyle BorderStyle="None" />
+                                <HeaderStyle BorderStyle="None" BackColor="#F5F5F5" />
                                 <ItemStyle BackColor="#F5F5F5" />             
                             </asp:CommandField>
                         </Columns>
