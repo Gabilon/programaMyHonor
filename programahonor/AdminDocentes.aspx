@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Docentes.aspx.vb" Inherits="programahonor.Docentes" %>
-<%@ Register assembly="System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" namespace="System.Web.UI.WebControls" tagprefix="asp" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="AdminDocentes.aspx.vb" Inherits="programahonor.AdminDocentes" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link href="Content/stylesheet.css" rel="stylesheet" />
@@ -14,70 +13,29 @@
     <!--<img src="http://www.uprb.edu/actividades/UPRB-portal-demo/IMAGES/HEADBANNER/HEADER-BANNER-FW_r2_c2.jpg" class="img-responsive" alt="Responsive image" id = "pic">-->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed dfsdfsdfdf-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="Scripts/bootstrap.min.js"></script>
-    <script>
-
-    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="div_white">
         <div class="panel-body">
+            <div class="panel-heading">
+                 <div class="col-md-11">
+                        <div class="col-md-8 col-md-push-3 ">
+                            <label style="text-align: center">
+                                <strong>Universidad de Puerto Rico en Bayamon
+                                <br />
+                                    Oficina de Internados, Practicas e Investigaciones
+                                <br />
+                                    Solicitud
+                                </strong>
+
+                            </label>
+                        </div>
+                    </div>
+            </div>
             <form role="form" method="post" runat="server" class="form-horizontal">
-                <div class="col-md-11">
-                    <div class="col-md-4 col-md-push-5">
-                        <h4><strong>Información de Docentes</strong></h4>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="form-group">
-                        <label style="width: 160px; text-align: left">Nombre:</label>
-                        <asp:TextBox ID="Asedoc_nombre" runat="server" CssClass="form-control"></asp:TextBox>
-                        <asp:RequiredFieldValidator runat="server" ControlToValidate="Asedoc_nombre" CssClass="label label-warning" ErrorMessage="campo requerido" />
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="form-group">
-                        <label style="width: 160px; text-align: left">Título:</label>
-                        <asp:TextBox ID="Asedoc_Titulo" runat="server" CssClass="form-control"></asp:TextBox>
-                        <asp:RequiredFieldValidator runat="server" ControlToValidate="Asedoc_Titulo" CssClass="label label-warning" ErrorMessage="campo requerido" />
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="form-group">
-                        <label style="width: 160px; text-align: left;">Departamento:</label>
-                        <asp:DropDownList ID="Asedoc_Departamento" runat="server" DataSourceID="XmlDepartamentos" DataTextField="type" DataValueField="id" CssClass="form-control"></asp:DropDownList>
-                        <asp:XmlDataSource ID="XmlDepartamentos" runat="server" DataFile="~/Content/xml/xmlDepartment.xml"></asp:XmlDataSource>
-                        <asp:RequiredFieldValidator runat="server" ControlToValidate="Asedoc_Departamento" CssClass="label label-warning" ErrorMessage="campo requerido." />
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="form-group">
-                        <label style="width: 160px; text-align: left">Email:</label>
-                        <asp:TextBox ID="Asedoc_Email" runat="server" CssClass="form-control"></asp:TextBox>
-                        <asp:RequiredFieldValidator runat="server" ControlToValidate="Asedoc_Email" CssClass="label label-warning" ErrorMessage="campo requerido" />
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="form-group">
-                        <label style="width: 160px; text-align: left">Descripción:</label>
-                        <asp:TextBox ID="Asedoc_Descripcion" runat="server" CssClass="form-control"></asp:TextBox>
-                        <asp:RequiredFieldValidator runat="server" ControlToValidate="Asedoc_Descripcion" CssClass="label label-warning" ErrorMessage="campo requerido" />
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="form-group">
-                        <label style="width: 160px; text-align: left">Status:</label>
-                        <asp:DropDownList ID="Asedoc_Status" runat="server" DataSourceID="XmlDataSource1" DataTextField="type" DataValueField="id" CssClass="form-control"></asp:DropDownList>
-                        <asp:XmlDataSource ID="XmlDataSource1" runat="server" DataFile="~/Content/xml/XMLEstadoDocente.xml"></asp:XmlDataSource>
-                        <asp:RequiredFieldValidator runat="server" ControlToValidate="Asedoc_Status" CssClass="label label-warning" ErrorMessage="campo requerido" />
-                    </div>
-                </div>
-                <div class="col-md-12 col-md-push-10 col-sm-12 col-sm-push-10 col-xs-12 col-xs-push-10">
-                    <asp:Button ID="btnGuardar" runat="server" Text="Someter" CssClass="btn btn-primary" ToolTip="Someter datos" />
-                </div>
-                <br />
-                <div class="col-md-12 col-sm-12 col-xs-12" style="background-color:whitesmoke">
+    <div class="col-md-12 col-sm-12 col-xs-12" style="background-color:whitesmoke">
                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="AsesorDocente_id" DataSourceID="SqlDataSourceDocentes" EnableModelValidation="True">
                         <Columns>
                             <asp:BoundField DataField="AsesorDocente_id" HeaderText="AsesorDocente_id" ReadOnly="True" SortExpression="AsesorDocente_id" Visible="False"></asp:BoundField>
@@ -149,9 +107,6 @@
                         </UpdateParameters>
                     </asp:SqlDataSource>
                 </div>
-            </form>
-        </div>
-    </div>
-    
+                </form>
 
 </asp:Content>

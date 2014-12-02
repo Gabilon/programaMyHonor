@@ -18,7 +18,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div class="div_white">
-        <div class="panel-body">
+         <div class="container-fluid" style="margin-top: 20px;">
+        <div class="panel-body" style="background-color: whitesmoke">
             <div class="panel-heading">
                  <div class="col-md-11">
                         <div class="col-md-8 col-md-push-3 ">
@@ -35,7 +36,7 @@
                     </div>
             </div>
             <form role="form" method="post" runat="server" class="form-horizontal">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="StudentNumber" DataSourceID="SqlDataSourceAplicar">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="StudentNumber" DataSourceID="SqlDataSourceAplicar" CssClass="table table-bordered">
                     <Columns>
                         <asp:BoundField DataField="StudentName" HeaderText="Nombre" SortExpression="StudentName">
                         <HeaderStyle HorizontalAlign="Center" />
@@ -54,30 +55,30 @@
                         <HeaderStyle HorizontalAlign="Center" />
                         <ItemStyle HorizontalAlign="Center" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="Stu_Birthday" DataFormatString="{0:d}" HeaderText="Cumpleaños" SortExpression="Stu_Birthday">
+                        <%--<asp:BoundField DataField="Stu_Birthday" DataFormatString="{0:d}" HeaderText="Cumpleaños" SortExpression="Stu_Birthday">
                         <HeaderStyle HorizontalAlign="Center" />
                         <ItemStyle HorizontalAlign="Center" />
-                        </asp:BoundField>
-                        <asp:BoundField DataField="Stu_Certificate" HeaderText="Certificado" SortExpression="Stu_Certificate">
+                        </asp:BoundField>--%>
+                        <%--<asp:BoundField DataField="Stu_Certificate" HeaderText="Certificado" SortExpression="Stu_Certificate">
                         <HeaderStyle HorizontalAlign="Center" />
                         <ItemStyle HorizontalAlign="Center" />
-                        </asp:BoundField>
-                        <asp:BoundField DataField="Stu_Authorization" HeaderText="Autorización" SortExpression="Stu_Authorization">
+                        </asp:BoundField>--%>
+                        <%--<asp:BoundField DataField="Stu_Authorization" HeaderText="Autorización" SortExpression="Stu_Authorization">
                         <HeaderStyle HorizontalAlign="Center" />
                         <ItemStyle HorizontalAlign="Center" />
-                        </asp:BoundField>
-                        <asp:BoundField DataField="Stu_Ensayo" HeaderText="Ensayo" SortExpression="Stu_Ensayo">
+                        </asp:BoundField>--%>
+                        <%--<asp:BoundField DataField="Stu_Ensayo" HeaderText="Ensayo" SortExpression="Stu_Ensayo">
                         <HeaderStyle HorizontalAlign="Center" />
                         <ItemStyle HorizontalAlign="Center" />
-                        </asp:BoundField>
+                        </asp:BoundField>--%>
                         <asp:BoundField DataField="Stu_Igs" HeaderText="GPA" SortExpression="Stu_Igs">
                         <HeaderStyle HorizontalAlign="Center" />
                         <ItemStyle HorizontalAlign="Center" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="Stu_Department" HeaderText="Departamento" SortExpression="Stu_Department">
+                        <%--<asp:BoundField DataField="Stu_Department" HeaderText="Departamento" SortExpression="Stu_Department">
                         <HeaderStyle HorizontalAlign="Center" />
                         <ItemStyle HorizontalAlign="Center" />
-                        </asp:BoundField>
+                        </asp:BoundField>--%>
                         <asp:BoundField DataField="Stu_Year" HeaderText="Graduación" SortExpression="Stu_Year">
                         <HeaderStyle HorizontalAlign="Center" />
                         <ItemStyle HorizontalAlign="Center" />
@@ -89,9 +90,10 @@
                         <asp:CommandField HeaderText="Seleccionar" ShowSelectButton="True">
                         <ItemStyle HorizontalAlign="Center" />
                         </asp:CommandField>
-                        <asp:CommandField CancelText="Cancelar" DeleteText="Borrar" EditText="Editar" ShowEditButton="True">
+                        <asp:CommandField CancelText="Cancelar" HeaderText="Cancelar" DeleteText="Borrar" EditText="Editar" ShowEditButton="True">
                         <ItemStyle HorizontalAlign="Center" />
                         </asp:CommandField>
+                        <asp:HyperLinkField HeaderText="Ver Evaluacion" DataNavigateUrlFormatString="~/ResultadoEvaluaciones.aspx?value=StudentNumber" Text="ir" />
                     </Columns>
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSourceAplicar" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:WAPHConnectionString %>" DeleteCommand="DELETE FROM [Students] WHERE [StudentNumber] = @original_StudentNumber AND [StudentName] = @original_StudentName AND [Stu_Email] = @original_Stu_Email AND [Stu_Phone] = @original_Stu_Phone AND [Stu_Direccion] = @original_Stu_Direccion AND [Stu_Birthday] = @original_Stu_Birthday AND (([Stu_Certificate] = @original_Stu_Certificate) OR ([Stu_Certificate] IS NULL AND @original_Stu_Certificate IS NULL)) AND [Stu_Authorization] = @original_Stu_Authorization AND (([Stu_Ensayo] = @original_Stu_Ensayo) OR ([Stu_Ensayo] IS NULL AND @original_Stu_Ensayo IS NULL)) AND [Stu_Igs] = @original_Stu_Igs AND [Stu_Department] = @original_Stu_Department AND [Stu_Year] = @original_Stu_Year AND [Stu_Status] = @original_Stu_Status" InsertCommand="INSERT INTO [Students] ([StudentName], [StudentNumber], [Stu_Email], [Stu_Phone], [Stu_Direccion], [Stu_Birthday], [Stu_Certificate], [Stu_Authorization], [Stu_Ensayo], [Stu_Igs], [Stu_Department], [Stu_Year], [Stu_Status]) VALUES (@StudentName, @StudentNumber, @Stu_Email, @Stu_Phone, @Stu_Direccion, @Stu_Birthday, @Stu_Certificate, @Stu_Authorization, @Stu_Ensayo, @Stu_Igs, @Stu_Department, @Stu_Year, @Stu_Status)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT [StudentName], [StudentNumber], [Stu_Email], [Stu_Phone], [Stu_Direccion], [Stu_Birthday], [Stu_Certificate], [Stu_Authorization], [Stu_Ensayo], [Stu_Igs], [Stu_Department], [Stu_Year], [Stu_Status] FROM [Students]" UpdateCommand="UPDATE [Students] SET [StudentName] = @StudentName, [Stu_Email] = @Stu_Email, [Stu_Phone] = @Stu_Phone, [Stu_Direccion] = @Stu_Direccion, [Stu_Birthday] = @Stu_Birthday, [Stu_Certificate] = @Stu_Certificate, [Stu_Authorization] = @Stu_Authorization, [Stu_Ensayo] = @Stu_Ensayo, [Stu_Igs] = @Stu_Igs, [Stu_Department] = @Stu_Department, [Stu_Year] = @Stu_Year, [Stu_Status] = @Stu_Status WHERE [StudentNumber] = @original_StudentNumber AND [StudentName] = @original_StudentName AND [Stu_Email] = @original_Stu_Email AND [Stu_Phone] = @original_Stu_Phone AND [Stu_Direccion] = @original_Stu_Direccion AND [Stu_Birthday] = @original_Stu_Birthday AND (([Stu_Certificate] = @original_Stu_Certificate) OR ([Stu_Certificate] IS NULL AND @original_Stu_Certificate IS NULL)) AND [Stu_Authorization] = @original_Stu_Authorization AND (([Stu_Ensayo] = @original_Stu_Ensayo) OR ([Stu_Ensayo] IS NULL AND @original_Stu_Ensayo IS NULL)) AND [Stu_Igs] = @original_Stu_Igs AND [Stu_Department] = @original_Stu_Department AND [Stu_Year] = @original_Stu_Year AND [Stu_Status] = @original_Stu_Status">
@@ -155,5 +157,6 @@
                 </asp:SqlDataSource>
             </form>
         </div>
+             </div>
      </div>
 </asp:Content>

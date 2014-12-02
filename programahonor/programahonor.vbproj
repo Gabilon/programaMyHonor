@@ -119,6 +119,7 @@
     <Content Include="Actividades_Mem.aspx" />
     <Content Include="AdminAplicar.aspx" />
     <Content Include="AdminSolicitud.aspx" />
+    <Content Include="AdminDocentes.aspx" />
     <Content Include="ajustesCuenta_Admin.aspx" />
     <Content Include="ajustesCuenta_Mem.aspx" />
     <Content Include="Aplicar.aspx" />
@@ -317,6 +318,8 @@
     <Content Include="Solicitud.aspx" />
     <Content Include="testPage.aspx" />
     <Content Include="verAplicacion.aspx" />
+    <Content Include="verOfertas.aspx" />
+    <Content Include="verOfertas_Mem.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -363,13 +366,6 @@
     <Compile Include="AdminAplicar.aspx.vb">
       <DependentUpon>AdminAplicar.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="AdminSolicitud.aspx.designer.vb">
-      <DependentUpon>AdminSolicitud.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AdminSolicitud.aspx.vb">
-      <DependentUpon>AdminSolicitud.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ajustesCuenta_Admin.aspx.designer.vb">
       <DependentUpon>ajustesCuenta_Admin.aspx</DependentUpon>
@@ -669,6 +665,20 @@
     </Compile>
     <Compile Include="verAplicacion.aspx.vb">
       <DependentUpon>verAplicacion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="verOfertas.aspx.designer.vb">
+      <DependentUpon>verOfertas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="verOfertas.aspx.vb">
+      <DependentUpon>verOfertas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="verOfertas_Mem.aspx.designer.vb">
+      <DependentUpon>verOfertas_Mem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="verOfertas_Mem.aspx.vb">
+      <DependentUpon>verOfertas_Mem.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
