@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Docentes.aspx.vb" Inherits="programahonor.Docentes" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Admin.Master" CodeBehind="Docentes.aspx.vb" Inherits="programahonor.Docentes" %>
 <%@ Register assembly="System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" namespace="System.Web.UI.WebControls" tagprefix="asp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -78,7 +78,7 @@
                 </div>
                 <br />
                 <div class="col-md-12 col-sm-12 col-xs-12" style="background-color:whitesmoke">
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="AsesorDocente_id" DataSourceID="SqlDataSourceDocentes" EnableModelValidation="True">
+                    <asp:GridView CssClass="table table-bordered" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="AsesorDocente_id" DataSourceID="SqlDataSourceDocentes" EnableModelValidation="True"  >
                         <Columns>
                             <asp:BoundField DataField="AsesorDocente_id" HeaderText="AsesorDocente_id" ReadOnly="True" SortExpression="AsesorDocente_id" Visible="False"></asp:BoundField>
                             <asp:BoundField DataField="Asedoc_nombre" HeaderText="Nombre Docente" SortExpression="Asedoc_nombre"></asp:BoundField>
@@ -94,6 +94,9 @@
                             <asp:CommandField CancelText="Cancelar" DeleteText="Borrar" EditText="Editar" InsertText="Insertar" NewText="Nuevo" SelectText="Seleccionar" ShowEditButton="True" UpdateText="Actualizar"></asp:CommandField>
                             <asp:CommandField CancelText="Cancelar" DeleteText="Borrar" EditText="Editar" InsertText="Insertar" NewText="Nuevo" SelectText="Seleccionar" ShowDeleteButton="True" UpdateText="Actualizar"></asp:CommandField>
                         </Columns>
+
+
+                        <RowStyle HorizontalAlign="Center" />
 
 
                     </asp:GridView>

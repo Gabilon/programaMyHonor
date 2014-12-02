@@ -16,10 +16,10 @@
                         <tr>
                             <th>Compañía</th>
                             <th>Salario</th>
-                            <th>Otros Beneficios</th>
-                            <th>Contacto</th>
+                            <th>Otros Benefícios</th>
+                            <th>Destrezas</th>
                             <th>Teléfono</th>
-                            <th>Fax</th>
+                            <th>Horario</th>
                             <th>Dirección Física</th>
                             <th>Dirección Postal</th>
                             <th>Comentarios</th>

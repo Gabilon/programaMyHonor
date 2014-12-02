@@ -1,16 +1,16 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Admin.Master" CodeBehind="FormularioActividades.aspx.vb" Inherits="programahonor.FormularioActividades" %>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="Head" runat="server">
-    <link href="Content/bootstrap.min.css" rel="stylesheet" />
-        	<!-- Optional theme -->
-    <link href="Content/stylesheet.css" rel="stylesheet" />
-        <script src="Scripts/jquery-2.1.1.min.js"></script>
-        <script src="Scripts/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="Content/stylesheet.css" rel="stylesheet"/>
+
+    <script src="Scripts/jquery-2.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    
     <div class="div_white">
-        <div class="panel-body">
+        <div class="panel-body" style="margin-top:20px;">
             <form role="form" method="post" runat="server" class="form-horizontal">
                 <div class="col-md-12">
                     <div class="col-md-4 col-md-push-5">

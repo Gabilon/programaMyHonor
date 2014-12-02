@@ -10,7 +10,7 @@
     <div class="div_white">
         <div class="container-fluid" style="margin-top: 20px">
             <div class="panel panel-info" style="margin-top: 10px;">
-                <div class="panel-heading"><h4>Gabriel Bermúdez - 841110690</h4></div>
+                <div class="panel-heading"><h4>Stephanie López - 841113880</h4></div>
   <div class="panel-body"style="background-color:#FFFFFF;">
             <div class="row">
                 <div class="col-md-1" style="padding-right: 15px; margin-right: 20px;">
@@ -43,7 +43,7 @@
                             </tr>
                             <tr>
                                 <td>Email:</td>
-                                <td>gabrielandres2011@hotmail.com</td>
+                                <td>stephanie.lopez14@upr.edu</td>
                             </tr>
                             <tr>
                                 <td>Número de Telefono:</td>
