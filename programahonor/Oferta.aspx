@@ -171,151 +171,132 @@
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="For_CompanyWebPage" CssClass="label label-warning" ErrorMessage="campo requerido" />
                         </div>
                     </div>
-                    <div class="col-md-1 col-md-offset-11">
+                    <div class="col-md-1 col-md-offset-10">
                         <asp:Button ID="btnGuardarOferta" runat="server" Text="Guardar" CssClass="btn btn-primary" ToolTip="Guardar Información de Registro de Ofertas" />
                     </div>
-                    <div class="col-md-1 col-md-offset-11">
+                    <div class="col-md-1 col-md-offset-10">
                         <asp:Button ID="btnActualizarOferta" runat="server" Text="Update" CssClass="btn btn-primary" ToolTip="Actualizar Información de de Registro de Ofertas" />
                     </div>
                 </div>
+
                 <%--  style="background-color:whitesmoke" 
-                    cssClass="col-md-11 form-control"  --%>
-                <div>
-                    <asp:GridView ID="dgvOferta" runat="server" DataSourceID="OfertaSqlDataSource" AutoGenerateColumns="False" DataKeyNames="oferta_id" AllowPaging="True" HorizontalAlign="Center" BackColor="White" ForeColor="Black">
-                        <%--<RowStyle BackColor="WhiteSmoke" ForeColor="Black" />--%>
-                        <Columns>
-                            <asp:BoundField DataField="oferta_id" HeaderText="ID" ReadOnly="True" SortExpression="oferta_id" Visible="False">
-                                <ControlStyle BackColor="#F5F5F5" ForeColor="Black" />
+                    cssClass="col-md-11 form-control"
+                    Class="col-md-8 col col-md-push-0 col-md-pull-0"  --%>
+                <%--<RowStyle BackColor="WhiteSmoke" ForeColor="Black" />--%>
+                <%--<dentro de los Bound FIleds --- ControlStyle BackColor="#F5F5F5" ForeColor="Black" />
                                 <FooterStyle BackColor="#F5F5F5" ForeColor="Black" />
                                 <HeaderStyle BackColor="#F5F5F5" Font-Bold="True" ForeColor="Black" />
-                                <ItemStyle BackColor="White" ForeColor="Blue" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_CompanyName" HeaderText="Nombre Compañía" SortExpression="ofr_CompanyName">
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_Salary" HeaderText="Salario" SortExpression="ofr_Salary">
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_Extracurricular" HeaderText="Extracurricular" SortExpression="ofr_Extracurricular">
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_OtherBenefits" HeaderText="Otros Beneficios" SortExpression="ofr_OtherBenefits" Visible="False">
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_Schedule" HeaderText="Horario" SortExpression="ofr_Schedule">
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_Requirements" HeaderText="Requisitos" SortExpression="ofr_Requirements">
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_Tasks" HeaderText="Tareas" SortExpression="ofr_Tasks">
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_ContactName" HeaderText="Contacto" SortExpression="ofr_ContactName">
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_ContactPosition" HeaderText="Posición" SortExpression="ofr_ContactPosition">
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_ContactOtherPhone" HeaderText="Teléfono" SortExpression="ofr_ContactOtherPhone">
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_ContactExt" HeaderText="Ext." SortExpression="ofr_ContactExt" Visible="False">
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_ContactFax" HeaderText="Fax" SortExpression="ofr_ContactFax" Visible="False">
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_CompanyPhysicalAddress" HeaderText="Dirección Física" SortExpression="ofr_CompanyPhysicalAddress">
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_CompanyPostalAddress" HeaderText="Dirección Postal" SortExpression="ofr_CompanyPostalAddress">
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_Comments" HeaderText="Comentarios" SortExpression="ofr_Comments">
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_CompanyEmail" HeaderText="Email" SortExpression="ofr_CompanyEmail">
-                            </asp:BoundField>
-                            <asp:BoundField DataField="ofr_CompanyWebPage" HeaderText="Pagina Internet" SortExpression="ofr_CompanyWebPage" Visible="False">
-                            </asp:BoundField>
-                            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ButtonType="Button" CancelText="Cancelar" DeleteText="Borrar" EditText="Editar" HeaderText="Opciones">
-                                <ControlStyle BackColor="#F5F5F5" ForeColor="Black" />
-                                <FooterStyle BackColor="#F5F5F5" />
-                                <HeaderStyle BackColor="#F5F5F5" Font-Bold="True" HorizontalAlign="Center" VerticalAlign="Middle" />
-                                <ItemStyle BackColor="WhiteSmoke" ForeColor="Blue" HorizontalAlign="Center" VerticalAlign="Middle" />
+                                <ItemStyle BackColor="White" ForeColor="Blue" />--%>
+                <div>
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="oferta_id" DataSourceID="OfertaSqlDataSource" HorizontalAlign="Justify" AllowPaging="True">
+                        <Columns>
+                            <asp:BoundField DataField="ofr_Tasks" HeaderText="oferta_id" ReadOnly="True" SortExpression="oferta_id" Visible="False" />
+                            <asp:BoundField DataField="ofr_CompanyName" HeaderText="Compañía" SortExpression="ofr_CompanyName" />
+                            <asp:BoundField DataField="ofr_Salary" HeaderText="ofr_Salary" SortExpression="ofr_Salary" Visible="False" />
+                            <asp:BoundField DataField="ofr_Extracurricular" HeaderText="ofr_Extracurricular" SortExpression="ofr_Extracurricular" Visible="False" />
+                            <asp:BoundField DataField="ofr_OtherBenefits" HeaderText="Beneficios" SortExpression="ofr_OtherBenefits" />
+                            <asp:BoundField DataField="ofr_Schedule" HeaderText="ofr_Schedule" SortExpression="ofr_Schedule" Visible="False" />
+                            <asp:BoundField DataField="ofr_Requirements" HeaderText="ofr_Requirements" SortExpression="ofr_Requirements" Visible="False" />
+                            <asp:BoundField DataField="ofr_Tasks" HeaderText="Tareas" SortExpression="ofr_Tasks" />
+                            <asp:BoundField DataField="ofr_ContactName" HeaderText="Contacto" SortExpression="ofr_ContactName" />
+                            <asp:BoundField DataField="ofr_ContactPosition" HeaderText="Poscición" SortExpression="ofr_ContactPosition" />
+                            <asp:BoundField DataField="ofr_ContactExt" HeaderText="ofr_ContactExt" SortExpression="ofr_ContactExt" Visible="False" />
+                            <asp:BoundField DataField="ofr_ContactOtherPhone" HeaderText="Telefono" SortExpression="ofr_ContactOtherPhone" />
+                            <asp:BoundField DataField="ofr_ContactFax" HeaderText="ofr_ContactFax" SortExpression="ofr_ContactFax" Visible="False" />
+                            <asp:BoundField DataField="ofr_CompanyPhysicalAddress" HeaderText="Dirección Física" SortExpression="ofr_CompanyPhysicalAddress" />
+                            <asp:BoundField DataField="ofr_CompanyPostalAddress" HeaderText="ofr_CompanyPostalAddress" SortExpression="ofr_CompanyPostalAddress" Visible="False" />
+                            <asp:BoundField DataField="ofr_Comments" HeaderText="ofr_Comments" SortExpression="ofr_Comments" Visible="False" />
+                            <asp:BoundField DataField="ofr_CompanyEmail" HeaderText="ofr_CompanyEmail" SortExpression="ofr_CompanyEmail" Visible="False" />
+                            <asp:BoundField DataField="ofr_CompanyWebPage" HeaderText="ofr_CompanyWebPage" SortExpression="ofr_CompanyWebPage" Visible="False" />
+                            <asp:CommandField ShowEditButton="True">
+                                <HeaderStyle BorderStyle="None" />
+                                <ItemStyle BackColor="#F5F5F5" />
+                            </asp:CommandField>
+                            <asp:CommandField ShowDeleteButton="True">
+                                <HeaderStyle BorderStyle="None" />
+                                <ItemStyle BackColor="#F5F5F5" />
                             </asp:CommandField>
                         </Columns>
-                        <%--<FooterStyle BackColor="WhiteSmoke" ForeColor="Black" /> 
-                        <PagerStyle BackColor="WhiteSmoke" ForeColor="Black" HorizontalAlign="Center" /> 
-                        <SelectedRowStyle BackColor="WhiteSmoke" Font-Bold="True" ForeColor="Black" /> 
-                        <HeaderStyle BackColor="WhiteSmoke" Font-Bold="True" ForeColor="Black" /> --%>
-                        <EditRowStyle BackColor="White" ForeColor="Black" HorizontalAlign="Center" VerticalAlign="Middle" />
-                        <HeaderStyle BackColor="WhiteSmoke" ForeColor="Black" HorizontalAlign="Center" VerticalAlign="Middle" />
+                        <HeaderStyle BackColor="#F5F5F5" Font-Size="Larger" HorizontalAlign="Center" />
+                        <RowStyle BackColor="White" HorizontalAlign="Center" />
                     </asp:GridView>
-                    <asp:SqlDataSource runat="server" ID="OfertaSqlDataSource" ConflictDetection="CompareAllValues" ConnectionString='<%$ ConnectionStrings:WAPHConnectionString %>'
-                        DeleteCommand="DELETE FROM [Oferta] WHERE [oferta_id] = @original_oferta_id AND [ofr_CompanyName] = @original_ofr_CompanyName AND [ofr_Salary] = @original_ofr_Salary AND [ofr_Extracurricular] = @original_ofr_Extracurricular AND (([ofr_OtherBenefits] = @original_ofr_OtherBenefits) OR ([ofr_OtherBenefits] IS NULL AND @original_ofr_OtherBenefits IS NULL)) AND (([ofr_Schedule] = @original_ofr_Schedule) OR ([ofr_Schedule] IS NULL AND @original_ofr_Schedule IS NULL)) AND [ofr_Requirements] = @original_ofr_Requirements AND [ofr_Tasks] = @original_ofr_Tasks AND [ofr_ContactName] = @original_ofr_ContactName AND [ofr_ContactPosition] = @original_ofr_ContactPosition AND [ofr_ContactExt] = @original_ofr_ContactExt AND (([ofr_ContactOtherPhone] = @original_ofr_ContactOtherPhone) OR ([ofr_ContactOtherPhone] IS NULL AND @original_ofr_ContactOtherPhone IS NULL)) AND (([ofr_ContactFax] = @original_ofr_ContactFax) OR ([ofr_ContactFax] IS NULL AND @original_ofr_ContactFax IS NULL)) AND [ofr_CompanyPhysicalAddress] = @original_ofr_CompanyPhysicalAddress AND (([ofr_CompanyPostalAddress] = @original_ofr_CompanyPostalAddress) OR ([ofr_CompanyPostalAddress] IS NULL AND @original_ofr_CompanyPostalAddress IS NULL)) AND (([ofr_Comments] = @original_ofr_Comments) OR ([ofr_Comments] IS NULL AND @original_ofr_Comments IS NULL)) AND [ofr_CompanyEmail] = @original_ofr_CompanyEmail AND [ofr_CompanyWebPage] = @original_ofr_CompanyWebPage" InsertCommand="INSERT INTO [Oferta] ([oferta_id], [ofr_CompanyName], [ofr_Salary], [ofr_Extracurricular], [ofr_OtherBenefits], [ofr_Schedule], [ofr_Requirements], [ofr_Tasks], [ofr_ContactName], [ofr_ContactPosition], [ofr_ContactExt], [ofr_ContactOtherPhone], [ofr_ContactFax], [ofr_CompanyPhysicalAddress], [ofr_CompanyPostalAddress], [ofr_Comments], [ofr_CompanyEmail], [ofr_CompanyWebPage]) VALUES (@oferta_id, @ofr_CompanyName, @ofr_Salary, @ofr_Extracurricular, @ofr_OtherBenefits, @ofr_Schedule, @ofr_Requirements, @ofr_Tasks, @ofr_ContactName, @ofr_ContactPosition, @ofr_ContactExt, @ofr_ContactOtherPhone, @ofr_ContactFax, @ofr_CompanyPhysicalAddress, @ofr_CompanyPostalAddress, @ofr_Comments, @ofr_CompanyEmail, @ofr_CompanyWebPage)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT [oferta_id], [ofr_CompanyName], [ofr_Salary], [ofr_Extracurricular], [ofr_OtherBenefits], [ofr_Schedule], [ofr_Requirements], [ofr_Tasks], [ofr_ContactName], [ofr_ContactPosition], [ofr_ContactExt], [ofr_ContactOtherPhone], [ofr_ContactFax], [ofr_CompanyPhysicalAddress], [ofr_CompanyPostalAddress], [ofr_Comments], [ofr_CompanyEmail], [ofr_CompanyWebPage] FROM [Oferta] ORDER BY [fecha_creacion], [ofr_CompanyName]" UpdateCommand="UPDATE [Oferta] SET [ofr_CompanyName] = @ofr_CompanyName, [ofr_Salary] = @ofr_Salary, [ofr_Extracurricular] = @ofr_Extracurricular, [ofr_OtherBenefits] = @ofr_OtherBenefits, [ofr_Schedule] = @ofr_Schedule, [ofr_Requirements] = @ofr_Requirements, [ofr_Tasks] = @ofr_Tasks, [ofr_ContactName] = @ofr_ContactName, [ofr_ContactPosition] = @ofr_ContactPosition, [ofr_ContactExt] = @ofr_ContactExt, [ofr_ContactOtherPhone] = @ofr_ContactOtherPhone, [ofr_ContactFax] = @ofr_ContactFax, [ofr_CompanyPhysicalAddress] = @ofr_CompanyPhysicalAddress, [ofr_CompanyPostalAddress] = @ofr_CompanyPostalAddress, [ofr_Comments] = @ofr_Comments, [ofr_CompanyEmail] = @ofr_CompanyEmail, [ofr_CompanyWebPage] = @ofr_CompanyWebPage WHERE [oferta_id] = @original_oferta_id AND [ofr_CompanyName] = @original_ofr_CompanyName AND [ofr_Salary] = @original_ofr_Salary AND [ofr_Extracurricular] = @original_ofr_Extracurricular AND (([ofr_OtherBenefits] = @original_ofr_OtherBenefits) OR ([ofr_OtherBenefits] IS NULL AND @original_ofr_OtherBenefits IS NULL)) AND (([ofr_Schedule] = @original_ofr_Schedule) OR ([ofr_Schedule] IS NULL AND @original_ofr_Schedule IS NULL)) AND [ofr_Requirements] = @original_ofr_Requirements AND [ofr_Tasks] = @original_ofr_Tasks AND [ofr_ContactName] = @original_ofr_ContactName AND [ofr_ContactPosition] = @original_ofr_ContactPosition AND [ofr_ContactExt] = @original_ofr_ContactExt AND (([ofr_ContactOtherPhone] = @original_ofr_ContactOtherPhone) OR ([ofr_ContactOtherPhone] IS NULL AND @original_ofr_ContactOtherPhone IS NULL)) AND (([ofr_ContactFax] = @original_ofr_ContactFax) OR ([ofr_ContactFax] IS NULL AND @original_ofr_ContactFax IS NULL)) AND [ofr_CompanyPhysicalAddress] = @original_ofr_CompanyPhysicalAddress AND (([ofr_CompanyPostalAddress] = @original_ofr_CompanyPostalAddress) OR ([ofr_CompanyPostalAddress] IS NULL AND @original_ofr_CompanyPostalAddress IS NULL)) AND (([ofr_Comments] = @original_ofr_Comments) OR ([ofr_Comments] IS NULL AND @original_ofr_Comments IS NULL)) AND [ofr_CompanyEmail] = @original_ofr_CompanyEmail AND [ofr_CompanyWebPage] = @original_ofr_CompanyWebPage">
+                    <asp:SqlDataSource ID="OfertaSqlDataSource" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:WAPHConnectionString %>" DeleteCommand="DELETE FROM [Oferta] WHERE [oferta_id] = @original_oferta_id AND [ofr_CompanyName] = @original_ofr_CompanyName AND [ofr_Salary] = @original_ofr_Salary AND [ofr_Extracurricular] = @original_ofr_Extracurricular AND (([ofr_OtherBenefits] = @original_ofr_OtherBenefits) OR ([ofr_OtherBenefits] IS NULL AND @original_ofr_OtherBenefits IS NULL)) AND (([ofr_Schedule] = @original_ofr_Schedule) OR ([ofr_Schedule] IS NULL AND @original_ofr_Schedule IS NULL)) AND [ofr_Requirements] = @original_ofr_Requirements AND [ofr_Tasks] = @original_ofr_Tasks AND [ofr_ContactName] = @original_ofr_ContactName AND [ofr_ContactPosition] = @original_ofr_ContactPosition AND [ofr_ContactExt] = @original_ofr_ContactExt AND (([ofr_ContactOtherPhone] = @original_ofr_ContactOtherPhone) OR ([ofr_ContactOtherPhone] IS NULL AND @original_ofr_ContactOtherPhone IS NULL)) AND (([ofr_ContactFax] = @original_ofr_ContactFax) OR ([ofr_ContactFax] IS NULL AND @original_ofr_ContactFax IS NULL)) AND [ofr_CompanyPhysicalAddress] = @original_ofr_CompanyPhysicalAddress AND (([ofr_CompanyPostalAddress] = @original_ofr_CompanyPostalAddress) OR ([ofr_CompanyPostalAddress] IS NULL AND @original_ofr_CompanyPostalAddress IS NULL)) AND (([ofr_Comments] = @original_ofr_Comments) OR ([ofr_Comments] IS NULL AND @original_ofr_Comments IS NULL)) AND [ofr_CompanyEmail] = @original_ofr_CompanyEmail AND [ofr_CompanyWebPage] = @original_ofr_CompanyWebPage" InsertCommand="INSERT INTO [Oferta] ([oferta_id], [ofr_CompanyName], [ofr_Salary], [ofr_Extracurricular], [ofr_OtherBenefits], [ofr_Schedule], [ofr_Requirements], [ofr_Tasks], [ofr_ContactName], [ofr_ContactPosition], [ofr_ContactExt], [ofr_ContactOtherPhone], [ofr_ContactFax], [ofr_CompanyPhysicalAddress], [ofr_CompanyPostalAddress], [ofr_Comments], [ofr_CompanyEmail], [ofr_CompanyWebPage]) VALUES (@oferta_id, @ofr_CompanyName, @ofr_Salary, @ofr_Extracurricular, @ofr_OtherBenefits, @ofr_Schedule, @ofr_Requirements, @ofr_Tasks, @ofr_ContactName, @ofr_ContactPosition, @ofr_ContactExt, @ofr_ContactOtherPhone, @ofr_ContactFax, @ofr_CompanyPhysicalAddress, @ofr_CompanyPostalAddress, @ofr_Comments, @ofr_CompanyEmail, @ofr_CompanyWebPage)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT [oferta_id], [ofr_CompanyName], [ofr_Salary], [ofr_Extracurricular], [ofr_OtherBenefits], [ofr_Schedule], [ofr_Requirements], [ofr_Tasks], [ofr_ContactName], [ofr_ContactPosition], [ofr_ContactExt], [ofr_ContactOtherPhone], [ofr_ContactFax], [ofr_CompanyPhysicalAddress], [ofr_CompanyPostalAddress], [ofr_Comments], [ofr_CompanyEmail], [ofr_CompanyWebPage] FROM [Oferta] ORDER BY [fecha_creacion], [ofr_CompanyName]" UpdateCommand="UPDATE [Oferta] SET [ofr_CompanyName] = @ofr_CompanyName, [ofr_Salary] = @ofr_Salary, [ofr_Extracurricular] = @ofr_Extracurricular, [ofr_OtherBenefits] = @ofr_OtherBenefits, [ofr_Schedule] = @ofr_Schedule, [ofr_Requirements] = @ofr_Requirements, [ofr_Tasks] = @ofr_Tasks, [ofr_ContactName] = @ofr_ContactName, [ofr_ContactPosition] = @ofr_ContactPosition, [ofr_ContactExt] = @ofr_ContactExt, [ofr_ContactOtherPhone] = @ofr_ContactOtherPhone, [ofr_ContactFax] = @ofr_ContactFax, [ofr_CompanyPhysicalAddress] = @ofr_CompanyPhysicalAddress, [ofr_CompanyPostalAddress] = @ofr_CompanyPostalAddress, [ofr_Comments] = @ofr_Comments, [ofr_CompanyEmail] = @ofr_CompanyEmail, [ofr_CompanyWebPage] = @ofr_CompanyWebPage WHERE [oferta_id] = @original_oferta_id AND [ofr_CompanyName] = @original_ofr_CompanyName AND [ofr_Salary] = @original_ofr_Salary AND [ofr_Extracurricular] = @original_ofr_Extracurricular AND (([ofr_OtherBenefits] = @original_ofr_OtherBenefits) OR ([ofr_OtherBenefits] IS NULL AND @original_ofr_OtherBenefits IS NULL)) AND (([ofr_Schedule] = @original_ofr_Schedule) OR ([ofr_Schedule] IS NULL AND @original_ofr_Schedule IS NULL)) AND [ofr_Requirements] = @original_ofr_Requirements AND [ofr_Tasks] = @original_ofr_Tasks AND [ofr_ContactName] = @original_ofr_ContactName AND [ofr_ContactPosition] = @original_ofr_ContactPosition AND [ofr_ContactExt] = @original_ofr_ContactExt AND (([ofr_ContactOtherPhone] = @original_ofr_ContactOtherPhone) OR ([ofr_ContactOtherPhone] IS NULL AND @original_ofr_ContactOtherPhone IS NULL)) AND (([ofr_ContactFax] = @original_ofr_ContactFax) OR ([ofr_ContactFax] IS NULL AND @original_ofr_ContactFax IS NULL)) AND [ofr_CompanyPhysicalAddress] = @original_ofr_CompanyPhysicalAddress AND (([ofr_CompanyPostalAddress] = @original_ofr_CompanyPostalAddress) OR ([ofr_CompanyPostalAddress] IS NULL AND @original_ofr_CompanyPostalAddress IS NULL)) AND (([ofr_Comments] = @original_ofr_Comments) OR ([ofr_Comments] IS NULL AND @original_ofr_Comments IS NULL)) AND [ofr_CompanyEmail] = @original_ofr_CompanyEmail AND [ofr_CompanyWebPage] = @original_ofr_CompanyWebPage">
                         <DeleteParameters>
-                            <asp:Parameter Name="original_oferta_id" Type="Object"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_CompanyName" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_Salary" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_Extracurricular" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_OtherBenefits" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_Schedule" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_Requirements" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_Tasks" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_ContactName" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_ContactPosition" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_ContactExt" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_ContactOtherPhone" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_ContactFax" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_CompanyPhysicalAddress" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_CompanyPostalAddress" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_Comments" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_CompanyEmail" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_CompanyWebPage" Type="String"></asp:Parameter>
+                            <asp:Parameter Name="original_oferta_id" Type="Object" />
+                            <asp:Parameter Name="original_ofr_CompanyName" Type="String" />
+                            <asp:Parameter Name="original_ofr_Salary" Type="String" />
+                            <asp:Parameter Name="original_ofr_Extracurricular" Type="String" />
+                            <asp:Parameter Name="original_ofr_OtherBenefits" Type="String" />
+                            <asp:Parameter Name="original_ofr_Schedule" Type="String" />
+                            <asp:Parameter Name="original_ofr_Requirements" Type="String" />
+                            <asp:Parameter Name="original_ofr_Tasks" Type="String" />
+                            <asp:Parameter Name="original_ofr_ContactName" Type="String" />
+                            <asp:Parameter Name="original_ofr_ContactPosition" Type="String" />
+                            <asp:Parameter Name="original_ofr_ContactExt" Type="String" />
+                            <asp:Parameter Name="original_ofr_ContactOtherPhone" Type="String" />
+                            <asp:Parameter Name="original_ofr_ContactFax" Type="String" />
+                            <asp:Parameter Name="original_ofr_CompanyPhysicalAddress" Type="String" />
+                            <asp:Parameter Name="original_ofr_CompanyPostalAddress" Type="String" />
+                            <asp:Parameter Name="original_ofr_Comments" Type="String" />
+                            <asp:Parameter Name="original_ofr_CompanyEmail" Type="String" />
+                            <asp:Parameter Name="original_ofr_CompanyWebPage" Type="String" />
                         </DeleteParameters>
                         <InsertParameters>
-                            <asp:Parameter Name="oferta_id" Type="Object"></asp:Parameter>
-                            <asp:Parameter Name="ofr_CompanyName" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_Salary" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_Extracurricular" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_OtherBenefits" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_Schedule" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_Requirements" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_Tasks" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_ContactName" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_ContactPosition" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_ContactExt" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_ContactOtherPhone" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_ContactFax" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_CompanyPhysicalAddress" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_CompanyPostalAddress" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_Comments" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_CompanyEmail" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_CompanyWebPage" Type="String"></asp:Parameter>
+                            <asp:Parameter Name="oferta_id" Type="Object" />
+                            <asp:Parameter Name="ofr_CompanyName" Type="String" />
+                            <asp:Parameter Name="ofr_Salary" Type="String" />
+                            <asp:Parameter Name="ofr_Extracurricular" Type="String" />
+                            <asp:Parameter Name="ofr_OtherBenefits" Type="String" />
+                            <asp:Parameter Name="ofr_Schedule" Type="String" />
+                            <asp:Parameter Name="ofr_Requirements" Type="String" />
+                            <asp:Parameter Name="ofr_Tasks" Type="String" />
+                            <asp:Parameter Name="ofr_ContactName" Type="String" />
+                            <asp:Parameter Name="ofr_ContactPosition" Type="String" />
+                            <asp:Parameter Name="ofr_ContactExt" Type="String" />
+                            <asp:Parameter Name="ofr_ContactOtherPhone" Type="String" />
+                            <asp:Parameter Name="ofr_ContactFax" Type="String" />
+                            <asp:Parameter Name="ofr_CompanyPhysicalAddress" Type="String" />
+                            <asp:Parameter Name="ofr_CompanyPostalAddress" Type="String" />
+                            <asp:Parameter Name="ofr_Comments" Type="String" />
+                            <asp:Parameter Name="ofr_CompanyEmail" Type="String" />
+                            <asp:Parameter Name="ofr_CompanyWebPage" Type="String" />
                         </InsertParameters>
                         <UpdateParameters>
-                            <asp:Parameter Name="ofr_CompanyName" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_Salary" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_Extracurricular" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_OtherBenefits" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_Schedule" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_Requirements" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_Tasks" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_ContactName" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_ContactPosition" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_ContactExt" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_ContactOtherPhone" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_ContactFax" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_CompanyPhysicalAddress" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_CompanyPostalAddress" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_Comments" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_CompanyEmail" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="ofr_CompanyWebPage" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_oferta_id" Type="Object"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_CompanyName" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_Salary" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_Extracurricular" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_OtherBenefits" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_Schedule" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_Requirements" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_Tasks" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_ContactName" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_ContactPosition" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_ContactExt" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_ContactOtherPhone" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_ContactFax" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_CompanyPhysicalAddress" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_CompanyPostalAddress" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_Comments" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_CompanyEmail" Type="String"></asp:Parameter>
-                            <asp:Parameter Name="original_ofr_CompanyWebPage" Type="String"></asp:Parameter>
+                            <asp:Parameter Name="ofr_CompanyName" Type="String" />
+                            <asp:Parameter Name="ofr_Salary" Type="String" />
+                            <asp:Parameter Name="ofr_Extracurricular" Type="String" />
+                            <asp:Parameter Name="ofr_OtherBenefits" Type="String" />
+                            <asp:Parameter Name="ofr_Schedule" Type="String" />
+                            <asp:Parameter Name="ofr_Requirements" Type="String" />
+                            <asp:Parameter Name="ofr_Tasks" Type="String" />
+                            <asp:Parameter Name="ofr_ContactName" Type="String" />
+                            <asp:Parameter Name="ofr_ContactPosition" Type="String" />
+                            <asp:Parameter Name="ofr_ContactExt" Type="String" />
+                            <asp:Parameter Name="ofr_ContactOtherPhone" Type="String" />
+                            <asp:Parameter Name="ofr_ContactFax" Type="String" />
+                            <asp:Parameter Name="ofr_CompanyPhysicalAddress" Type="String" />
+                            <asp:Parameter Name="ofr_CompanyPostalAddress" Type="String" />
+                            <asp:Parameter Name="ofr_Comments" Type="String" />
+                            <asp:Parameter Name="ofr_CompanyEmail" Type="String" />
+                            <asp:Parameter Name="ofr_CompanyWebPage" Type="String" />
+                            <asp:Parameter Name="original_oferta_id" Type="Object" />
+                            <asp:Parameter Name="original_ofr_CompanyName" Type="String" />
+                            <asp:Parameter Name="original_ofr_Salary" Type="String" />
+                            <asp:Parameter Name="original_ofr_Extracurricular" Type="String" />
+                            <asp:Parameter Name="original_ofr_OtherBenefits" Type="String" />
+                            <asp:Parameter Name="original_ofr_Schedule" Type="String" />
+                            <asp:Parameter Name="original_ofr_Requirements" Type="String" />
+                            <asp:Parameter Name="original_ofr_Tasks" Type="String" />
+                            <asp:Parameter Name="original_ofr_ContactName" Type="String" />
+                            <asp:Parameter Name="original_ofr_ContactPosition" Type="String" />
+                            <asp:Parameter Name="original_ofr_ContactExt" Type="String" />
+                            <asp:Parameter Name="original_ofr_ContactOtherPhone" Type="String" />
+                            <asp:Parameter Name="original_ofr_ContactFax" Type="String" />
+                            <asp:Parameter Name="original_ofr_CompanyPhysicalAddress" Type="String" />
+                            <asp:Parameter Name="original_ofr_CompanyPostalAddress" Type="String" />
+                            <asp:Parameter Name="original_ofr_Comments" Type="String" />
+                            <asp:Parameter Name="original_ofr_CompanyEmail" Type="String" />
+                            <asp:Parameter Name="original_ofr_CompanyWebPage" Type="String" />
                         </UpdateParameters>
                     </asp:SqlDataSource>
                 </div>
