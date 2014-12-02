@@ -180,7 +180,7 @@
                 </div>
                 <%--  style="background-color:whitesmoke" 
                     cssClass="col-md-11 form-control"  --%>
-                <div>
+                <div class="container-fluid">
                     <asp:GridView ID="dgvOferta" runat="server" DataSourceID="OfertaSqlDataSource" AutoGenerateColumns="False" DataKeyNames="oferta_id" AllowPaging="True" HorizontalAlign="Center" BackColor="White" ForeColor="Black">
                         <%--<RowStyle BackColor="WhiteSmoke" ForeColor="Black" />--%>
                         <Columns>
@@ -191,7 +191,7 @@
                                 <ItemStyle BackColor="White" ForeColor="Blue" />
                             </asp:BoundField>
                             <asp:BoundField DataField="ofr_CompanyName" HeaderText="Nombre Compañía" SortExpression="ofr_CompanyName">
-                            <ControlStyle CssClass="&lt;HeaderStyle CssClass=&quot;table table-hover table-bordered&quot; /&gt;" />
+                            <ControlStyle CssClass="&lt;HeaderStyle CssClass=&quot;table table-hover table-bordered&quot; /&gt; form-control" />
                             <HeaderStyle CssClass="table table-hover table-bordered" />
                             </asp:BoundField>
                             <asp:BoundField DataField="ofr_Salary" HeaderText="Salario" SortExpression="ofr_Salary">

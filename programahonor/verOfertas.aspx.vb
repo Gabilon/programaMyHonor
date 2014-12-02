@@ -25,9 +25,18 @@ Public Class verOfertas
 
                     For_CompanyName.Text = reader.GetString(0)
                     For_Salary.Text = reader.GetString(1)
-                    For_CompanyWebPage.Text = reader.GetString(10)
+                    For_CompanyWebPage.Text = reader.GetString(2)
 
+                    reader.Read()
+                    For_CompanyName1.Text = reader.GetString(0)
+                    For_Salary1.Text = reader.GetString(1)
+                    For_CompanyWebPage1.Text = reader.GetString(2)
 
+                    reader.Read()
+                    For_ComapanyName2.Text = reader.GetString(0)
+                    For_Salary2.Text = reader.GetString(1)
+                    For_CompanyWebPage2.Text = reader.GetString(2)
+                    Exit While
                 End While
                 reader.Close()
                 cnDB.Close()

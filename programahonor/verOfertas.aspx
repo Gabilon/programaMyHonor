@@ -30,6 +30,28 @@
                                 <asp:Label ID="For_CompanyWebPage" runat="server" Text="Label"></asp:Label>
                             </td>
                         </tr>
+                    <tr>
+                            <td>
+                                <asp:Label ID="For_CompanyName1" runat="server" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="For_Salary1" runat="server" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="For_CompanyWebPage1" runat="server" Text="Label"></asp:Label>
+                            </td>
+                        </tr>
+                    <tr>
+                            <td>
+                                <asp:Label ID="For_ComapanyName2" runat="server" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="For_Salary2" runat="server" Text="Label"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="For_CompanyWebPage2" runat="server" Text="Label"></asp:Label>
+                            </td>
+                        </tr>
                 </table>
                 <span class="pull-right" style="padding-right: 15px; margin-right: 20px;padding-top: 10px;padding-left: 25px; margin-bottom:20px;">
                         <a href="LogIn.aspx" class="btn btn-primary" role="button" >Ver más</a>

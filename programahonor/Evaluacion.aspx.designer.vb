@@ -29,7 +29,7 @@ Partial Public Class Evaluacion
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Eval_NombreEstudiante As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Eval_NombreEstudiante As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Eval_NumeroEstudiante control.
@@ -38,7 +38,7 @@ Partial Public Class Evaluacion
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Eval_NumeroEstudiante As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Eval_NumeroEstudiante As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Eval_AsociacionEst control.

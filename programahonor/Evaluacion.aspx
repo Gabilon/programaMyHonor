@@ -16,7 +16,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
- <div class="div_white">
+ <div class="div_white" style="background-color:#95AFC7;">
         <div class="container-fluid" style="margin-top: 20px;">
             <form id="form1" method="post" runat="server" class="form-horizontal">
                 <h1 style="text-align: center; padding: 5px;">Evaluacion </h1>
@@ -25,12 +25,12 @@
                 <div class=" col-md-12">
                     <div class="col-md-6 ">
                         <label>Nombre del estudiante </label>
-                        <asp:TextBox ID="Eval_NombreEstudiante" runat="server"></asp:TextBox>
+                        <asp:Label ID="Eval_NombreEstudiante" runat="server" CssClass="form-control"></asp:Label>
                     </div>
 
                     <div class="col-md-6">
                         <label># de estudiante </label>
-                        <asp:TextBox ID="Eval_NumeroEstudiante" runat="server"></asp:TextBox>
+                        <asp:Label ID="Eval_NumeroEstudiante" runat="server" CssClass="form-control"></asp:Label><br /><br />
                     </div>
                 </div>
                 <div class=" col-md-12">
@@ -40,7 +40,7 @@
                     </div>
 
                     <div class="col-md-6">
-                        <asp:DropDownList ID="Eval_AsociacionEst" runat="server" DataSourceID="Eval_AsociacionData" DataTextField="type" DataValueField="id"></asp:DropDownList>
+                        <asp:DropDownList ID="Eval_AsociacionEst" runat="server" DataSourceID="Eval_AsociacionData" DataTextField="type" DataValueField="id" CssClass="form-control"></asp:DropDownList>
                         <asp:XmlDataSource ID="Eval_AsociacionData" runat="server" DataFile="~/Content/xml/asociacionEstudiante.xml"></asp:XmlDataSource>
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Eval_AsociacionEst" CssClass="label label warning" ErrorMessage="campo requerido" />
                     </div>
@@ -52,7 +52,7 @@
                     </div>
 
                     <div class="col-md-6">
-                        <asp:DropDownList ID="Eval_ConoceEst" runat="server" DataSourceID="Eval_ConoceData" DataTextField="type" DataValueField="id"></asp:DropDownList>
+                        <asp:DropDownList ID="Eval_ConoceEst" runat="server" DataSourceID="Eval_ConoceData" DataTextField="type" DataValueField="id" CssClass="form-control"></asp:DropDownList>
                         <asp:XmlDataSource ID="Eval_ConoceData" runat="server" DataFile="~/Content/xml/xmlConoceBien.xml"></asp:XmlDataSource>
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Eval_ConoceEst" CssClass="label label warning" ErrorMessage="campo requerido" />
                     </div>
@@ -64,7 +64,7 @@
                     </div>
 
                     <div class="col-md-6">
-                        <asp:DropDownList ID="Eval_tiempo" runat="server" DataSourceID="Eval_tiempoData" DataTextField="type" DataValueField="id"></asp:DropDownList>
+                        <asp:DropDownList ID="Eval_tiempo" runat="server" DataSourceID="Eval_tiempoData" DataTextField="type" DataValueField="id" CssClass="form-control"></asp:DropDownList>
                         <asp:XmlDataSource ID="Eval_tiempoData" runat="server" DataFile="~/Content/xml/XmlConoceTiempo.xml"></asp:XmlDataSource>
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="Eval_tiempo" CssClass="label label warning" ErrorMessage="campo requerido" />
                     </div>
@@ -73,28 +73,32 @@
                 <br>
                 <div class="col-md-12">
                     <label>Cual seria su opinion con relacion a que el solicitante aspire a formar parte del Programa de Estudios de Honor&nbsp;&nbsp;&nbsp;&nbsp; </label>
-                    <asp:TextBox ID="Eval_OpinionProfEst" runat="server" CssClass="MultiLineTextBox" Height="80px" MaxLength="600" Width="800px" TextMode="MultiLine"></asp:TextBox><br />
+                    <asp:TextBox ID="Eval_OpinionProfEst" runat="server" CssClass="MultiLineTextBox; form-control" Height="80px" MaxLength="600" Width="800px" TextMode="MultiLine"></asp:TextBox><br />
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="Eval_OpinionProfEst" CssClass="label label warning" ErrorMessage="campo requerido" />
                 </div>
                 <div class="col-md-12">
-                    <label>Tiene conocimiento de que el solicitante haya estado implicado en alguna accion disciplinaria que pueda afectar su participacion como estudiante</label>
-                    <asp:DropDownList ID="Eval_FaltaEst" runat="server" DataSourceID="Eval_ConocimientoData" DataTextField="type" DataValueField="id"></asp:DropDownList>
+                     <label>Tiene conocimiento de que el solicitante haya estado implicado en alguna accion disciplinaria que pueda afectar su participacion como estudiante</label>
+                </div>
+                
+                <div class="col-md-4">
+                    <%--<label>Tiene conocimiento de que el solicitante haya estado implicado en alguna accion disciplinaria que pueda afectar su participacion como estudiante</label>--%>
+                    <asp:DropDownList ID="Eval_FaltaEst" runat="server" DataSourceID="Eval_ConocimientoData" DataTextField="type" DataValueField="id" CssClass="form-control"></asp:DropDownList>
                     <asp:XmlDataSource runat="server" ID="Eval_ConocimientoData" DataFile="~/Content/xml/xmlSINO.xml"></asp:XmlDataSource>
                 </div>
                 <div class="col-md-12">
                     <label>contesto Sí ? Favor de ampliar la información. </label>
-                    <asp:TextBox ID="Eval_FaltaEsttxt" runat="server" CssClass="MultiLineTextBox" Height="80px" MaxLength="600" Width="800px" TextMode="MultiLine"></asp:TextBox><br />
+                    <asp:TextBox ID="Eval_FaltaEsttxt" runat="server"  CssClass="MultiLineTextBox; form-control" Height="80px" MaxLength="600" Width="800px" TextMode="MultiLine"></asp:TextBox><br />
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="Eval_FaltaEsttxt" CssClass="label label warning" ErrorMessage="campo requerido" />
                     <br><br>
                 </div>
                 <div class=" col-md-12">
                     <asp:Label Font-Size="16pt" Text="Favor de identificar las características que corresponden al solicitante:" runat="server" />
+                                    <br>
                 </div>
-                <br>
-                <br>
+
                 <div class=" col-md-12">
                     <div class="col-md-6">
-                        <asp:Label Font-Size="14pt" Text="Caracteristicas:" runat="server" />
+                        <asp:Label Font-Size="14pt" Text="Caracteristicas:" runat="server"  />
 
 
                     </div>
@@ -446,13 +450,13 @@
                 </div>
                 <div class="col-md-12">
                     <label>¿Recomienda usted al solicitante para participar en el Programa de Estudios de Honor? </label>
-                    <asp:DropDownList ID="Eval_finalRecomienda" runat="server" DataSourceID="Eval_ConocimientoData" DataTextField="type" DataValueField="id"></asp:DropDownList>
+                    <asp:DropDownList ID="Eval_finalRecomienda" runat="server" DataSourceID="Eval_ConocimientoData" DataTextField="type" DataValueField="id" ></asp:DropDownList>
                     <asp:XmlDataSource runat="server" ID="XmlDataSource1" DataFile="~/Content/xml/xmlSINO.xml"></asp:XmlDataSource>
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="Eval_finalRecomienda" CssClass="label label warning" ErrorMessage="campo requerido" />
                 </div>
                 <div class="col-md-12">
                     <label>Por que ? </label>
-                    <asp:TextBox ID="Eval_finalRecomiendatxt" runat="server" CssClass="MultiLineTextBox" Height="80px" MaxLength="600" Width="800px" TextMode="MultiLine"></asp:TextBox>
+                    <asp:TextBox ID="Eval_finalRecomiendatxt" runat="server" CssClass="MultiLineTextBox; form-control" Height="80px" MaxLength="600" Width="800px" TextMode="MultiLine"></asp:TextBox>
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="Eval_finalRecomiendatxt" CssClass="label label warning" ErrorMessage="campo requerido" />
                 </div>
                 <div class="col-md-4 col-md-push-5">

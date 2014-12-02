@@ -39,4 +39,58 @@ Partial Public Class verOfertas
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents For_CompanyWebPage As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''For_CompanyName1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents For_CompanyName1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''For_Salary1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents For_Salary1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''For_CompanyWebPage1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents For_CompanyWebPage1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''For_ComapanyName2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents For_ComapanyName2 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''For_Salary2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents For_Salary2 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''For_CompanyWebPage2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents For_CompanyWebPage2 As Global.System.Web.UI.WebControls.Label
 End Class
