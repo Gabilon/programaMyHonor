@@ -14,25 +14,6 @@ Public Class Aplicar
         btnActualizarEstudiante.Visible = False
 
         If (Session("Usuario") Is Nothing) Then
-
-
-            '    // Session is not expired
-            'If (IsPostBack) Then
-
-            '        int Permiso;
-            '        cAcceso objAcceso;
-            '        objAcceso = new cAcceso();
-
-            '        string Grupo = Session["NameGrupo"].ToString();
-            '        Permiso = objAcceso.ValidoAcceso(Grupo, "Producer.aspx");
-
-            '        if (Permiso != 1)
-
-            '            Response.Redirect("AccessDenied.aspx");
-
-            '    Else
-            '    End If
-
             ''Session is expired                
             ScriptManager.RegisterClientScriptBlock(Me, Me.GetType(), "success", "alert('Sesión expirada.'); setInterval(function(){location.href='logIn.aspx';},1000);", True)
         End If
