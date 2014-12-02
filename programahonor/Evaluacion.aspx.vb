@@ -5,11 +5,31 @@ Imports System.Net.Mail
 Public Class Evaluacion
     Inherits System.Web.UI.Page
 
-    Public Function selecEstuEvaluacion(token As String)
-        'Devuelve dos datos
-        'Estos dos datos se van a carga en dos campos, uno visible y otro no visible
-        'Estos dos datos son el nombre del estudiante y el nombre del evaluador
+    Dim estudiante As String = " "
+    Dim evaluador As String = ""
 
+    Public Function selecEstuEvaluacion(token As String)
+        Dim cadena As String = ConfigurationManager.ConnectionStrings("WAPHConnectionString").ConnectionString
+        Dim cnDB As SqlConnection = New SqlConnection(cadena)
+        Dim command As New SqlCommand("ValidarToken", cnDB)
+        command.CommandType = CommandType.StoredProcedure
+
+        Try
+            cnDB.Open()
+            Dim reader As SqlDataReader = command.ExecuteReader() 'Lectura del resultado entregado por la BD
+
+            While (reader.Read())
+                estudiante = reader.GetString(0)
+                evaluador = reader.GetString(1)
+            End While
+
+            cnDB.Close()
+
+        Catch ex As Exception
+            Response.Write("<script>alert('Información No Guardada'); </script>")
+        End Try
+
+        Return Nothing
     End Function
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -21,12 +41,15 @@ Public Class Evaluacion
         Dim sign As String = "?"
         Dim signIndex As Integer = url.IndexOf(sign)
         token = url.Substring(signIndex + 1)
-        'MsgBox(token) 'Quitar
+
+        If token <> url Then
+            selecEstuEvaluacion(token)
+        ElseIf token = url Then
+            Response.Write("<script>alert('Su acceso ha caducado. Por favor contactenos por grupogerenciaccg@gmail.com'); </script>")
+        End If
 
         'Validar el hash en la base de datos
-
     End Sub
-
    
     Protected Sub Eval_button_Click(sender As Object, e As EventArgs) Handles Eval_button.Click
        
@@ -36,8 +59,8 @@ Public Class Evaluacion
         command.CommandType = CommandType.StoredProcedure
         Dim evalID As String
         evalID = System.Guid.NewGuid().ToString()
-        command.Parameters.Add("@EvaluadorId", SqlDbType.VarChar).Value = evalID
-        command.Parameters.Add("@StudentNumber", SqlDbType.VarChar).Value = "841113880"
+        command.Parameters.Add("@EvaluadorId", SqlDbType.VarChar).Value = evaluador 'evalID
+        command.Parameters.Add("@StudentNumber", SqlDbType.VarChar).Value = estudiante '"841113880"
         command.Parameters.Add("@Eval_AsociacionEst", SqlDbType.VarChar).Value = Eval_AsociacionEst.Text
         command.Parameters.Add("@Eval_ConoceEst", SqlDbType.VarChar).Value = Eval_ConoceEst.Text
         command.Parameters.Add("@Eval_TiempoConEst", SqlDbType.VarChar).Value = Eval_tiempo.Text
