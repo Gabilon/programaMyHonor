@@ -29,7 +29,7 @@ Public Class Oferta
         command.Parameters.Add("@ofr_Schedule", SqlDbType.VarChar).Value = For_Schedule.Text
         command.Parameters.Add("@ofr_Requirements", SqlDbType.VarChar).Value = For_Requirements.Text
 
-        command.Parameters.Add("@ofr_Tasks", SqlDbType.Text).Value = For_Tasks.Text
+        command.Parameters.Add("@ofr_Tasks", SqlDbType.VarChar).Value = For_Tasks.Text
 
         command.Parameters.Add("@ofr_ContactName", SqlDbType.VarChar).Value = For_ContactName.Text
         command.Parameters.Add("@ofr_ContactPosition", SqlDbType.VarChar).Value = For_ContactPosition.Text
@@ -39,7 +39,7 @@ Public Class Oferta
         command.Parameters.Add("@ofr_CompanyPhysicalAddress", SqlDbType.VarChar).Value = For_CompanyPhysicalAddress.Text
         command.Parameters.Add("@ofr_CompanyPostalAddress", SqlDbType.VarChar).Value = For_CompanyPostalAddress.Text
 
-        command.Parameters.Add("@ofr_Comments", SqlDbType.Text).Value = For_Comments.Text
+        command.Parameters.Add("@ofr_Comments", SqlDbType.VarChar).Value = For_Comments.Text
 
         command.Parameters.Add("@ofr_CompanyEmail", SqlDbType.VarChar).Value = For_CompanyEmail.Text
         command.Parameters.Add("@ofr_CompanyWebPage", SqlDbType.VarChar).Value = For_CompanyWebPage.Text

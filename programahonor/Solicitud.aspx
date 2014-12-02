@@ -21,23 +21,23 @@
     <div class="div_white">
         <div class="panel-body">
             <div class="panel-heading">
-                 <div class="col-md-11">
-                        <div class="col-md-8 col-md-push-3 ">
-                            <label style="text-align: center">
-                                <strong>Universidad de Puerto Rico en Bayamon
+                <div class="col-md-11">
+                    <div class="col-md-8 col-md-push-3 ">
+                        <label style="text-align: center">
+                            <strong>Universidad de Puerto Rico en Bayamon
                                 <br />
-                                    Oficina de Internados, Practicas e Investigaciones
+                                Oficina de Internados, Practicas e Investigaciones
                                 <br />
-                                    Solicitud
-                                </strong>
+                                Solicitud
+                            </strong>
 
-                            </label>
-                        </div>
+                        </label>
                     </div>
+                </div>
             </div>
             <form role="form" method="post" runat="server" class="form-horizontal">
                 <div class="form-horizontal">
-                   
+
                     <div class="col-md-5 col-sm-7 col-xs-12">
                         <div class="form-group">
                             <label style="width: 160px; text-align: left">Nombres Y Apellidos:</label>
@@ -158,7 +158,7 @@
                         <div class="form-group">
                             <label style="width: 160px; text-align: left;">Resumé:</label>
                             <asp:FileUpload ID="Sol_Resume" runat="server" CssClass="form-control" />
-                           <%--  <label style="width: 160px; text-align: left;">Resumé:</label>
+                            <%--  <label style="width: 160px; text-align: left;">Resumé:</label>
                             <asp:FileUpload ID="Sol_Resume" runat="server" CssClass="form-control" />
                              <asp:Button ID="btnUpload" runat="server" Text="Upload" 
                                 OnClientClick = "return ValidateFile()"  OnClick="btnUpload_Click"  />

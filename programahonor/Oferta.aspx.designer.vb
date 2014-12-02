@@ -203,13 +203,13 @@ Partial Public Class Oferta
     Protected WithEvents btnActualizarOferta As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''dgvOferta control.
+    '''GridView1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents dgvOferta As Global.System.Web.UI.WebControls.GridView
+    Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
     '''OfertaSqlDataSource control.
