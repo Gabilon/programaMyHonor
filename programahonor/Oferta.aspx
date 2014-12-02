@@ -188,7 +188,7 @@
                                 <FooterStyle BackColor="#F5F5F5" ForeColor="Black" />
                                 <HeaderStyle BackColor="#F5F5F5" Font-Bold="True" ForeColor="Black" />
                                 <ItemStyle BackColor="White" ForeColor="Blue" />--%>
-                <div>
+                <%--<div>
                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="oferta_id" DataSourceID="OfertaSqlDataSource" HorizontalAlign="Justify" AllowPaging="True">
                         <Columns>
                             <asp:BoundField DataField="ofr_Tasks" HeaderText="oferta_id" ReadOnly="True" SortExpression="oferta_id" Visible="False" />
@@ -216,11 +216,10 @@
                             <asp:CommandField ShowDeleteButton="True">
                                 <HeaderStyle BorderStyle="None" />
                                 <ItemStyle BackColor="#F5F5F5" />
-=======
-                    cssClass="col-md-11 form-control"  --%>
+                                =======
+                    cssClass="col-md-11 form-control"  --%>--%>
                 <div class="container-fluid">
-                    <asp:GridView ID="dgvOferta" runat="server" DataSourceID="OfertaSqlDataSource" AutoGenerateColumns="False" DataKeyNames="oferta_id" AllowPaging="True" HorizontalAlign="Center" BackColor="White" ForeColor="Black">
-                        <%--<RowStyle BackColor="WhiteSmoke" ForeColor="Black" />--%>
+                    <asp:GridView ID="dgvOferta" runat="server" DataSourceID="OfertaSqlDataSource" AutoGenerateColumns="False" DataKeyNames="oferta_id" AllowPaging="True" HorizontalAlign="Justify" BackColor="White" ForeColor="Black">
                         <Columns>
                             <asp:BoundField DataField="oferta_id" HeaderText="ID" ReadOnly="True" SortExpression="oferta_id" Visible="False">
                                 <ControlStyle BackColor="#F5F5F5" ForeColor="Black" />
@@ -229,11 +228,11 @@
                                 <ItemStyle BackColor="White" ForeColor="Blue" />
                             </asp:BoundField>
                             <asp:BoundField DataField="ofr_CompanyName" HeaderText="Nombre Compañía" SortExpression="ofr_CompanyName">
-                            <ControlStyle CssClass="&lt;HeaderStyle CssClass=&quot;table table-hover table-bordered&quot; /&gt; form-control" />
-                            <HeaderStyle CssClass="table table-hover table-bordered" />
+                                <ControlStyle CssClass="&lt;HeaderStyle CssClass=&quot;table table-hover table-bordered&quot; /&gt; form-control" />
+                                <HeaderStyle CssClass="table table-hover table-bordered" />
                             </asp:BoundField>
                             <asp:BoundField DataField="ofr_Salary" HeaderText="Salario" SortExpression="ofr_Salary">
-                            <HeaderStyle CssClass="table table-hover table-bordered" />
+                                <HeaderStyle CssClass="table table-hover table-bordered" />
                             </asp:BoundField>
                             <asp:BoundField DataField="ofr_Extracurricular" HeaderText="Extracurricular" SortExpression="ofr_Extracurricular">
                                 <HeaderStyle CssClass="table table-hover table-bordered" />
@@ -285,7 +284,7 @@
                                 <FooterStyle BackColor="#F5F5F5" />
                                 <HeaderStyle BackColor="#F5F5F5" Font-Bold="True" HorizontalAlign="Center" VerticalAlign="Middle" />
                                 <ItemStyle BackColor="WhiteSmoke" ForeColor="Blue" HorizontalAlign="Center" VerticalAlign="Middle" />
->>>>>>> origin/master
+                               <%-- >>>>>>> origin/master--%>
                             </asp:CommandField>
                         </Columns>
                         <HeaderStyle BackColor="#F5F5F5" Font-Size="Larger" HorizontalAlign="Center" />

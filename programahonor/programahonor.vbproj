@@ -118,8 +118,6 @@
     <Content Include="Actividades_Estu.aspx" />
     <Content Include="Actividades_Mem.aspx" />
     <Content Include="AdminAplicar.aspx" />
-    <Content Include="AdminSolicitud.aspx" />
-    <Content Include="AdminDocentes.aspx" />
     <Content Include="ajustesCuenta_Admin.aspx" />
     <Content Include="ajustesCuenta_Mem.aspx" />
     <Content Include="Aplicar.aspx" />
