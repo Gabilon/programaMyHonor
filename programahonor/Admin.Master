@@ -47,10 +47,9 @@
               <ul class="nav navbar-nav">
                 <li><a href="Default_Admin.aspx">Inicio</a></li>
                 <li><a href="FormularioActividades.aspx">Actividades</a></li>
-                <li><a href="Solicitud.aspx">Internados</a></li>
-                  <li><a href="Oferta.aspx">Ofertas</a></li>
-                 <li><a href="Docentes.aspx">Docentes</a></li>
-                  <li><a href="AdminAplicar.aspx">Solicitudes</a></li>
+                <li><a href="Oferta.aspx">Ofertas</a></li>
+                <li><a href="Docentes.aspx">Docentes</a></li>
+                <li><a href="AdminAplicar.aspx">Solicitudes</a></li>
 
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Nosotros<span class="caret"></span></a>
@@ -65,7 +64,7 @@
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Cuenta<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                        <li><a href="miCuenta_Admin.aspx">Ajustar Cuenta</a></li>
+                        <li><a href="ajustesCuenta_Admin.aspx">Ajustar Cuenta</a></li>
                         <li><a href="Default.aspx">Salir</a></li>
                     </ul>
                   </li> <!--Equipo, Grupo Acesoro, Membrecias tabs End of Dropdown-->

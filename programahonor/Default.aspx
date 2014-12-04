@@ -37,7 +37,7 @@
                             <h3>Aspectos Académicos</h3>
                             <p>El Programa de Estudios de Honor ofrecerá a los estudiantes la oportunidad de un desarrollo académico de excelencia.</p>
                             <p>
-                                <a href="aspectosAca.html" class="btn btn-primary" role="button">Ver más</a>
+                                <a href="#" class="btn btn-primary" role="button">Ver más</a>
                             </p>
                         </div>
                     </div>
